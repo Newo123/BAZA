@@ -5,16 +5,50 @@
 	align-items: center;
 	justify-content: space-between;
 
+	@media (max-width: 1920px) {
+		@include adaptive-hero(padding-top, 37, 17);
+		@include adaptive-hero(padding-bottom, 51, 29);
+		@include adaptive-hero(padding-left, 60, 15);
+		@include adaptive-hero(padding-right, 60, 15);
+	}
+
+	@media (max-width: 900px) {
+		align-items: flex-start;
+		& .header__list {
+			display: flex;
+			gap: 4;
+			flex-direction: column;
+
+			&_item {
+				@include adaptive-hero(font-size, 20, 12);
+			}
+		}
+	}
+
 	&__left {
 		display: flex;
 		align-items: center;
 		gap: rem(18, 138);
+
+		@media (max-width: 1920px) {
+			@include adaptive-hero(gap, 138, -50);
+		}
+
+		@media (max-width: 900px) {
+			@include adaptive-hero(gap, 138, 50);
+			align-items: flex-start;
+		}
 	}
 
 	&__logo {
 		& img {
 			width: rem(18, 103);
 			height: rem(18, 107);
+
+			@media (max-width: 1920px) {
+				@include adaptive-hero(width, 103, 52);
+				@include adaptive-hero(height, 107, 54);
+			}
 		}
 	}
 
@@ -23,12 +57,27 @@
 		align-items: center;
 		gap: rem(18, 108);
 
+		@media (max-width: 1920px) {
+			@include adaptive-hero(gap, 108, -50);
+		}
+		@media (max-width: 900px) {
+			@include adaptive-hero(gap, 108, 28);
+			flex-direction: column-reverse;
+		}
+
 		& > a {
 			color: #fff;
 			font-family: TeX Gyre Heros;
 			font-size: rem(18, 20);
 			font-weight: 700;
 			line-height: normal;
+
+			@media (max-width: 1920px) {
+				@include adaptive-hero(font-size, 20, 10);
+			}
+			@media (max-width: 900px) {
+				display: none;
+			}
 			&:hover {
 				text-decoration: underline;
 			}
@@ -36,6 +85,8 @@
 	}
 
 	&__contacts {
+		display: flex;
+		flex-direction: column;
 		& a {
 			color: #fff;
 			font-family: TeX Gyre Heros;
@@ -43,17 +94,13 @@
 			font-weight: 700;
 			line-height: normal;
 
+			@media (max-width: 1920px) {
+				@include adaptive-hero(font-size, 20, 10);
+			}
+
 			&:hover {
 				text-decoration: underline;
 			}
-		}
-
-		p {
-			color: #fff;
-			font-family: TeX Gyre Heros;
-			font-size: rem(18, 20);
-			font-weight: 700;
-			line-height: normal;
 		}
 	}
 
@@ -61,6 +108,14 @@
 		display: flex;
 		align-items: center;
 		gap: rem(18, 25);
+
+		@media (max-width: 1920px) {
+			@include adaptive-hero(gap, 25, 0);
+		}
+
+		@media (max-width: 900px) {
+			@include adaptive-hero(gap, 25, 15);
+		}
 
 		& a {
 			transition: all 0.3s ease;
@@ -72,6 +127,21 @@
 				height: rem(18, 58);
 
 				fill: $white;
+
+				@media (max-width: 1920px) {
+					@include adaptive-hero(width, 58, 25);
+					@include adaptive-hero(height, 58, 25);
+				}
+			}
+
+			& img {
+				width: rem(18, 58);
+				height: rem(18, 58);
+
+				@media (max-width: 1920px) {
+					@include adaptive-hero(width, 58, 25);
+					@include adaptive-hero(height, 58, 25);
+				}
 			}
 		}
 	}

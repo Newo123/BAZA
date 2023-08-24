@@ -2,10 +2,30 @@
 	margin: rem(18, 180) 0;
 	padding: 0 rem(18, 120);
 
+	@media (max-width: 1920px) {
+		@include adaptive-hero(margin-top, 180, 80);
+		@include adaptive-hero(margin-bottom, 120, 60);
+
+		@include adaptive-hero(padding-left, 120, 0);
+
+		@include adaptive-hero(padding-right, 120, 0);
+	}
+
+	@media (max-width: 900px) {
+		padding-left: 0;
+		padding-right: 0;
+		@include adaptive-hero(margin-bottom, 180, 80);
+	}
+
 	& .swiper-slide {
 		width: 100%;
 		height: rem(18, 900);
 		position: relative;
+
+		& iframe {
+			width: 100%;
+			height: 100%;
+		}
 	}
 
 	& .swiper {
@@ -20,6 +40,11 @@
 		margin-top: rem(18, 30);
 		gap: rem(18, 30);
 
+		@media (max-width: 900px) {
+			margin-top: rem(18, 60);
+			gap: rem(18, 60);
+		}
+
 		& .swiper-pagination {
 			position: static;
 
@@ -31,6 +56,12 @@
 				height: rem(18, 8);
 				margin: 0 rem(18, 4);
 				flex-shrink: 0;
+
+				@media (max-width: 900px) {
+					width: rem(18, 20);
+					height: rem(18, 20);
+					margin: 0 rem(18, 12);
+				}
 
 				&.swiper-pagination-bullet-active {
 					background-color: #403434;
@@ -53,6 +84,11 @@
 
 			margin: 0;
 
+			@media (max-width: 900px) {
+				width: rem(18, 100);
+				height: rem(18, 100);
+			}
+
 			&:hover {
 				background-color: rgba(0, 0, 0, 0.1);
 			}
@@ -60,6 +96,11 @@
 			& svg {
 				width: rem(18, 30);
 				height: rem(18, 30);
+
+				@media (max-width: 900px) {
+					width: rem(18, 60);
+					height: rem(18, 60);
+				}
 			}
 		}
 	}

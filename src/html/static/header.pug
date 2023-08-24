@@ -2,15 +2,18 @@
   let navigations = [
     {
       name: 'Price',
+      nametwo: 'Цены',
       href: '#',
     },
     {
       name: 'Timetable',
+      nametwo: 'Расписание',
       href: '#',
     },
     {
       name: 'Teachers&Styles',
-      href: '#',
+      nametwo: 'Педагоги и Стили',
+      href: './teachers-styles.html',
     },
   ]
 
@@ -21,12 +24,19 @@ header(class=`header ${headerShadow ? 'header--shadow' : ''} ${headerColor? 'hea
     ul.header__list
       each nav in navigations
         li.header__list_item
-          a(href=nav.href) #{nav.name}
-    .header__language
-      RU
-    .header__language-dropdown
-      span RU
-      span LV
+          a(href=nav.href class="lang" data-primary=nav.name data-secondary=nav.nametwo) #{nav.name}
+    .header__languages
+      span Ru
+      svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 18" fill="none")
+        path(d="M15.1581 17.6475L0.572648 0.384549L29.7436 0.384552L15.1581 17.6475Z")
+      .header__languages-dropdown
+        .header__languages-dropdown_lang Ru
+        .header__languages-dropdown_lang Lv
+    .header__burger
+      span
+      span
+      span
+    
 
   button.header__action
     span IM READY!

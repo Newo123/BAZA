@@ -2,14 +2,36 @@
 	max-height: rem(18, 1000);
 	overflow: hidden;
 
+	@media (max-width: 1920px) {
+		max-height: 100%;
+		overflow: visible;
+	}
+
+	@media (max-width: 900px) {
+		max-height: 100%;
+		overflow: visible;
+	}
+
 	&__container {
 		display: grid;
-		grid-template-columns: 40% 60%;
+		grid-template-columns: 43% 57%;
 		grid-template-rows: 33% 67%;
 
 		grid-template-areas:
 			'head img'
 			'bottom img';
+
+		@media (max-width: 1919px) {
+			grid-template-columns: 50% 50%;
+		}
+
+		@media (max-width: 900px) {
+			grid-template-columns: 60% 40%;
+			grid-template-rows: repeat(2, auto);
+			grid-template-areas:
+				'head img'
+				'bottom bottom';
+		}
 	}
 
 	&__head {
@@ -25,28 +47,52 @@
 			align-items: center;
 		}
 
+		@media (max-width: 900px) {
+			@include adaptive-hero(font-size, 300, 135);
+		}
+
 		& h2 {
 			color: $white;
 			font-family: TeX Gyre Heros Cn;
-			font-size: rem(18, 70);
+			font-size: rem(18, 93);
 			font-weight: 700;
 			line-height: 100%;
 			text-transform: uppercase;
 			margin-left: rem(18, 60);
 			margin-right: rem(18, 60);
 			width: 100%;
+
+			@media (max-width: 1920px) {
+				@include adaptive-hero(font-size, 93, 22);
+				@include adaptive-hero(margin-left, 60, 18);
+				@include adaptive-hero(margin-right, 60, 18);
+				margin-bottom: 0;
+			}
 		}
 	}
 
 	&__img {
 		grid-area: img;
 
+		@media (max-width: 900px) {
+			@include adaptive-hero(font-size, 300, 135);
+		}
+
 		& .swiper-slide {
+			@media (max-width: 900px) {
+				@include adaptive-hero(font-size, 300, 135);
+			}
+
 			& img {
 				width: 100%;
-				height: 100%;
+				height: rem(18, 1000);
+				// height: 100%;
 				object-fit: cover;
-				object-position: center;
+				object-position: top;
+
+				@media (max-width: 900px) {
+					height: rem(18, 500);
+				}
 			}
 		}
 	}
@@ -55,11 +101,26 @@
 		grid-area: bottom;
 		margin: rem(18, 130) 0 0 0;
 
+		@media (max-width: 1920px) {
+			@include adaptive-hero(margin-top, 100, -50);
+		}
+		@media (max-width: 900px) {
+			@include adaptive-hero(margin-top, 100, 37);
+		}
+
 		& .swiper {
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
 			gap: rem(18, 100);
+			height: 100%;
+			@media (max-width: 1920px) {
+				@include adaptive-hero(gap, 100, -50);
+			}
+
+			@media (max-width: 900px) {
+				gap: 30px;
+			}
 		}
 
 		& .swiper-slide {
@@ -67,12 +128,21 @@
 			align-items: center;
 			padding: 0 rem(18, 80) 0 rem(18, 60);
 
+			@media (max-width: 900px) {
+				@include adaptive-hero(padding-left, 60, 15);
+				@include adaptive-hero(padding-right, 60, 15);
+			}
+
 			& p {
 				color: #898989;
 				font-family: TeX Gyre Heros;
 				font-size: rem(18, 20);
 				font-weight: 700;
 				line-height: 140%;
+
+				@media (max-width: 1920px) {
+					@include adaptive-hero(font-size, 20, 10);
+				}
 			}
 		}
 	}
@@ -82,8 +152,21 @@
 		align-items: center;
 		justify-content: space-between;
 
-		margin: 0 rem(18, 80) 0 rem(18, 60);
+		margin: 0 rem(18, 80) rem(18, 70) rem(18, 60);
 
+		@media (max-width: 1920px) {
+			@include adaptive-hero(margin-left, 80, 15);
+			@include adaptive-hero(margin-right, 60, 15);
+		}
+
+		@media (max-width: 900px) {
+			@include adaptive-hero(margin-left, 60, 15);
+
+			@include adaptive-hero(margin-right, 60, 15);
+			max-width: 360px;
+			align-self: center;
+			width: 100%;
+		}
 		& .swiper-button-prev,
 		& .swiper-button-next {
 			transform: rotate(0);
@@ -97,6 +180,12 @@
 
 			border-radius: 50%;
 
+			@media (max-width: 1920px) {
+				@include adaptive-hero(width, 60, 30);
+
+				@include adaptive-hero(height, 60, 30);
+			}
+
 			&:hover {
 				background-color: rgba(0, 0, 0, 0.1);
 			}
@@ -104,6 +193,12 @@
 			& svg {
 				width: rem(18, 40);
 				height: rem(18, 40);
+
+				@media (max-width: 1920px) {
+					@include adaptive-hero(width, 40, 20);
+
+					@include adaptive-hero(height, 40, 20);
+				}
 			}
 		}
 	}
@@ -115,6 +210,14 @@
 		overflow: hidden;
 		position: relative;
 
+		@media (max-width: 1920px) {
+			border-width: 1px;
+			@include adaptive-hero(padding-top, 18, 9);
+			@include adaptive-hero(padding-bottom, 18, 9);
+			@include adaptive-hero(padding-right, 36, 13);
+			@include adaptive-hero(padding-left, 36, 13);
+		}
+
 		& span {
 			color: #403434;
 			font-family: TeX Gyre Heros Cn;
@@ -123,6 +226,10 @@
 			font-weight: 700;
 			line-height: normal;
 			transition: all 0.3s ease;
+
+			@media (max-width: 1920px) {
+				@include adaptive-hero(font-size, 22, 16);
+			}
 		}
 
 		&::after {

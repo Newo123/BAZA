@@ -1,0 +1,130 @@
+.body-teachers-styles {
+	& .header__list_item:last-child {
+		color: #f45200;
+	}
+}
+
+.hero-second {
+	height: 480px;
+	height: rem(18, 480);
+	padding-bottom: rem(18, 30);
+	background-color: #403434;
+	position: relative;
+
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+
+	@media (min-width: 1921px) {
+		height: rem(18, 480);
+	}
+
+	@media (max-width: 900px) {
+		height: 100dvh;
+		align-items: center;
+	}
+
+	@media (max-width: 600px) {
+		align-items: flex-start;
+	}
+
+	&__title {
+		color: #f45200;
+		font-family: TeX Gyre Heros Cn;
+		font-size: rem(18, 175);
+		font-weight: 400;
+		line-height: 85%;
+		text-transform: uppercase;
+		width: 30%;
+
+		@media (max-width: 1440px) {
+			@include adaptive-hero(margin-right, 0, 160);
+		}
+
+		@media (max-width: 900px) {
+			margin-right: 0;
+			width: 45%;
+			margin: auto 0;
+		}
+
+		@media (max-width: 680px) {
+			font-size: 67px;
+		}
+
+		@media (max-width: 600px) {
+			width: 55%;
+			margin: initial;
+			margin-top: 141px;
+		}
+
+		@media (max-width: 480px) {
+			width: 70%;
+		}
+
+		@media (max-width: 400px) {
+			width: 100%;
+			margin-left: 15px;
+			margin-right: 15px;
+		}
+	}
+
+	&__actions {
+		position: absolute;
+		bottom: rem(18, 30);
+		right: rem(18, 60);
+
+		display: flex;
+		align-items: center;
+		z-index: 10;
+		transition: all 0.3s ease;
+
+		@media (max-width: 900px) {
+			position: fixed;
+			@include adaptive-hero(bottom, 73, 63);
+			right: 0;
+			left: 0;
+			width: 100%;
+			z-index: 3;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+	&__tab {
+		min-width: rem(18, 113);
+		padding: rem(18, 6) 0;
+		border: 2px solid #000;
+		background-color: #fff;
+
+		color: #898989;
+		text-align: center;
+		font-family: TeX Gyre Heros Cn;
+		font-size: rem(18, 20);
+		font-weight: 700;
+		line-height: normal;
+		text-transform: uppercase;
+
+		cursor: pointer;
+		transition: all 0.3s ease;
+
+		&:last-child {
+			border-top: 2px solid #000;
+			border-right: 2px solid #000;
+			border-bottom: 2px solid #000;
+			border-left: none;
+
+			@media (max-width: 900px) {
+				border-width: 1px;
+			}
+		}
+		@media (max-width: 900px) {
+			padding: 8px 0;
+			@include adaptive-hero(font-size, 20, 14);
+			border-width: 1px;
+		}
+		&:hover,
+		&.active {
+			color: #403434;
+			background-color: #d9d9d9;
+		}
+	}
+}

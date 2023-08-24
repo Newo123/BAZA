@@ -1,0 +1,114 @@
+._anim-show-scale {
+	transform: scale(0);
+	opacity: 0;
+	transition: all 0.8s ease 0s;
+}
+
+._anim-show-scale._active {
+	opacity: 1;
+	transform: scale(1);
+}
+
+._anim-show-right {
+	transform: translate(30%, 0px);
+	opacity: 0;
+	transition: all 0.8s ease 0s;
+}
+
+._anim-show-right._active {
+	opacity: 1;
+	transform: translate(0px, 0px);
+}
+
+._anim-show-left {
+	transform: translate(-30%, 0px);
+	opacity: 0;
+	transition: all 0.8s ease 0s;
+}
+
+._anim-show-left._active {
+	opacity: 1;
+	transform: translate(0px, 0px);
+}
+
+._anim-show-top {
+	transform: translate(0px, -120%);
+	opacity: 0;
+	transition: all 0.8s ease 0s;
+}
+
+._anim-show-top._active {
+	opacity: 1;
+	transform: translate(0px, 0px);
+}
+
+._anim-show {
+	transform: translate(0px, 100%);
+	opacity: 0;
+	transition: all 0.8s ease 0s;
+}
+
+._anim-show._active,
+._active ._anim-show {
+	opacity: 1;
+	transform: translate(0px, 0px);
+}
+
+._anim-delay__1 {
+	transition-delay: 0.2s !important;
+}
+
+._anim-delay__2 {
+	transition-delay: 0.5s !important;
+}
+
+._anim-delay__3 {
+	transition-delay: 0.7s !important;
+}
+
+._anim-delay__4 {
+	transition-delay: 0.9s !important;
+}
+
+._anim-delay__5 {
+	transition-delay: 1.1s !important;
+}
+
+._anim-delay__6 {
+	transition-delay: 1.3s !important;
+}
+
+._anim-delay__card-1 {
+	transition-delay: 0.2s !important;
+	@media (max-width: 640px) {
+		transition-delay: 0s !important;
+	}
+}
+
+._anim-delay__card-2 {
+	transition-delay: 0.5s !important;
+	@media (max-width: 640px) {
+		transition-delay: 0s !important;
+	}
+}
+
+._anim-delay__card-3 {
+	transition-delay: 0.7s;
+	@media (max-width: 640px) {
+		transition-delay: 0s !important;
+	}
+}
+
+._anim-delay__card-4 {
+	transition-delay: 0.9s !important;
+	@media (max-width: 640px) {
+		transition-delay: 0s !important;
+	}
+}
+
+._anim-delay__card-5 {
+	transition-delay: 1.1s !important;
+	@media (max-width: 640px) {
+		transition-delay: 0s !important;
+	}
+}

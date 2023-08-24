@@ -1,15 +1,28 @@
 .remains {
 	margin-top: rem(18, 20);
 
+	@media (max-width: 900px) {
+		margin-top: 50px;
+	}
+
 	&__title {
 		display: flex;
 		flex-direction: column;
 		color: #f45200;
 		font-family: TeX Gyre Heros Cn;
-		font-size: rem(18, 210);
-		font-weight: 400;
+		font-size: rem(18, 250);
+		font-weight: 700;
 		line-height: 85%;
 		margin: 0 0 rem(18, 40) rem(18, 60);
+		text-transform: uppercase;
+
+		@media (max-width: 1920px) {
+			@include adaptive-hero(font-size, 250, 50);
+		}
+
+		@media (max-width: 900px) {
+			display: none;
+		}
 
 		& span {
 			white-space: nowrap;
@@ -20,6 +33,10 @@
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: 0;
+
+		@media (max-width: 900px) {
+			grid-template-columns: 1fr;
+		}
 
 		&-item {
 			width: 100%;
@@ -34,6 +51,14 @@
 
 			&:last-child {
 				grid-column: 1 / span 2;
+			}
+
+			@media (max-width: 900px) {
+				&:last-child {
+					grid-column: 1;
+				}
+				@include adaptive-hero(height, 375, 130);
+				filter: grayscale(0);
 			}
 
 			&:hover {
@@ -72,14 +97,32 @@
 
 				display: flex;
 				align-items: center;
-				gap: rem(18, 50);
+				gap: rem(18, 25);
+
+				@media (max-width: 1920px) {
+					@include adaptive-hero(gap, 25, 9);
+					@include adaptive-hero(font-size, 64, 20);
+					padding: 0;
+					@include adaptive-hero(padding-left, 98, 15);
+					@include adaptive-hero(padding-bottom, 28, 20);
+					@include adaptive-hero(padding-top, 28, 20);
+				}
 
 				& svg {
 					width: rem(18, 41);
 					height: rem(18, 16);
+
+					@media (max-width: 1920px) {
+						@include adaptive-hero(width, 41, 23);
+						@include adaptive-hero(height, 16, 10);
+					}
 					& path {
 						width: rem(18, 41);
 						height: rem(18, 16);
+						@media (max-width: 1920px) {
+							@include adaptive-hero(width, 41, 23);
+							@include adaptive-hero(height, 16, 10);
+						}
 					}
 				}
 

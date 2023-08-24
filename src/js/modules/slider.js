@@ -36,4 +36,59 @@ document.addEventListener('DOMContentLoaded', () => {
 	slider2.on('slideChange', () => swipeAllSliders(slider2.activeIndex))
 	slider3.on('slideChange', () => swipeAllSliders(slider3.activeIndex))
 	slider4.on('slideChange', () => swipeAllSliders(slider4.activeIndex))
+
+	const slider5 = new Swiper('.teachers .swiper', {
+		direction: 'horizontal',
+		loop: true,
+		slidesPerView: 3,
+		centredSlides: true,
+		speed: 500,
+		grabCursor: true,
+		spaceBetween: 6,
+		breakpoints: {
+			768: {
+				centredSlides: false,
+				slidesPerView: 4,
+				spaceBetween: 0,
+			},
+		},
+	})
+
+	if (localStorage.getItem('lang') === 'primary') {
+		document.querySelector('.teachers__info-title').innerText =
+			document.querySelector('.teachers .swiper-slide-next').dataset.name
+		document.querySelector('.teachers__info-description').innerText =
+			document.querySelector('.teachers .swiper-slide-next').dataset.skill
+	} else {
+		document.querySelector('.teachers__info-title').innerText =
+			document.querySelector(
+				'.teachers .swiper-slide-next'
+			).dataset.namesecondary
+		document.querySelector('.teachers__info-description').innerText =
+			document.querySelector(
+				'.teachers .swiper-slide-next'
+			).dataset.skillsecondary
+	}
+	const observer = new MutationObserver(function (mutations) {
+		mutations.forEach(function (mutationRecord) {
+			if (localStorage.getItem('lang') === 'primary') {
+				document.querySelector('.teachers__info-title').innerText =
+					document.querySelector('.teachers .swiper-slide-next').dataset.name
+				document.querySelector('.teachers__info-description').innerText =
+					document.querySelector('.teachers .swiper-slide-next').dataset.skill
+			} else {
+				document.querySelector('.teachers__info-title').innerText =
+					document.querySelector(
+						'.teachers .swiper-slide-next'
+					).dataset.namesecondary
+				document.querySelector('.teachers__info-description').innerText =
+					document.querySelector(
+						'.teachers .swiper-slide-next'
+					).dataset.skillsecondary
+			}
+		})
+	})
+
+	const target = document.querySelector('.teachers .swiper-wrapper')
+	observer.observe(target, { attributes: true, attributeFilter: ['style'] })
 })

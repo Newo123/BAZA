@@ -1,0 +1,9 @@
+.card {
+	height: calc(321px + 153 * ((100vw - 360px) / 1560));
+	& iframe {
+		height: 100%;
+	}
+	@media (min-width: 1921px) {
+		height: 26.333rem;
+	}
+}

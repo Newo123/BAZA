@@ -4,6 +4,7 @@ block variables
     - var subtitle = 'Мы делаем правовой сегмент доступным и понятным для граждан. Несём ответственность за свою работу и результат.'
     - var img = '/img/descriptors/index'
     - var lang = 'ru'
+    - var classBody = 'body-home'
 
 doctype html
 html(lang=lang)
@@ -19,5 +20,5 @@ html(lang=lang)
     link(href=`css/style.min.css` type="text/css" rel="stylesheet")
     script(src="js/vendor.min.js")
     script(src="js/app.min.js")
-  body.body.common-home
+  body(class=classBody).body.common-home
     block content

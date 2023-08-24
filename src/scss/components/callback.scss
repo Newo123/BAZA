@@ -1,6 +1,11 @@
 .callback {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
+	padding: 0;
+
+	@media (max-width: 900px) {
+		grid-template-columns: 1fr;
+	}
 
 	&__img {
 		& img {
@@ -8,6 +13,10 @@
 			height: 100%;
 			object-fit: cover;
 			object-position: center;
+		}
+
+		@media (max-width: 768px) {
+			display: none;
 		}
 	}
 
@@ -19,6 +28,19 @@
 		justify-content: center;
 		flex-direction: column;
 		gap: rem(18, 13);
+
+		@media (max-width: 1920px) {
+			@include adaptive-hero(padding-left, 268, 15);
+			@include adaptive-hero(padding-right, 268, 15);
+			@include adaptive-hero(padding-top, 70, 60);
+			@include adaptive-hero(padding-bottom, 70, 60);
+			@include adaptive-hero(gap, 13, 10);
+		}
+
+		@media (max-width: 900px) {
+			border: none;
+			padding-top: 0;
+		}
 	}
 
 	&__title {
@@ -30,6 +52,17 @@
 		line-height: 100%;
 		width: rem(18, 500);
 		margin-bottom: rem(18, 50);
+
+		@media (max-width: 1920px) {
+			@include adaptive-hero(width, 500, 330);
+			@include adaptive-hero(font-size, 64, 41);
+
+			@include adaptive-hero(margin-bottom, 50, 3);
+		}
+
+		@media (max-width: 900px) {
+			width: 100%;
+		}
 	}
 
 	&__label {
@@ -49,12 +82,21 @@
 		border: 1px solid #000;
 		outline: none;
 
+		@media (max-width: 1920px) {
+			padding: 8px 0;
+			@include adaptive-hero(font-size, 50, 24);
+		}
+
 		&::placeholder {
 			color: #d9d9d9;
 			font-family: TeX Gyre Heros;
 			font-size: rem(18, 50);
 			font-weight: 700;
 			line-height: normal;
+
+			@media (max-width: 1920px) {
+				@include adaptive-hero(font-size, 50, 24);
+			}
 		}
 	}
 
@@ -73,6 +115,12 @@
 		overflow: hidden;
 		cursor: pointer;
 		position: relative;
+
+		@media (max-width: 1920px) {
+			@include adaptive-hero(padding-top, 63, 60);
+			@include adaptive-hero(padding-bottom, 63, 60);
+			@include adaptive-hero(font-size, 64, 50);
+		}
 
 		& span {
 			position: relative;
