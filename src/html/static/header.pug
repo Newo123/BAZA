@@ -1,0 +1,32 @@
+-
+  let navigations = [
+    {
+      name: 'Price',
+      href: '#',
+    },
+    {
+      name: 'Timetable',
+      href: '#',
+    },
+    {
+      name: 'Teachers&Styles',
+      href: '#',
+    },
+  ]
+
+header(class=`header ${headerShadow ? 'header--shadow' : ''} ${headerColor? 'header--color' : ''}`)
+  .a(href="#" class="header__logo")
+    img(src="./img/icons/logo.svg")
+  nav.header__nav
+    ul.header__list
+      each nav in navigations
+        li.header__list_item
+          a(href=nav.href) #{nav.name}
+    .header__language
+      RU
+    .header__language-dropdown
+      span RU
+      span LV
+
+  button.header__action
+    span IM READY!

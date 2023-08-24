@@ -1,0 +1,38 @@
+// fonts
+$montserrat: 'Montserrat',Helvetica,Arial,sans-serif;
+$radio: 'radiotechnika',Helvetica,Arial,sans-serif;
+
+// media
+$xxl: 'screen and (max-width: 1600px)'; //до 1400
+$xl: 'screen and (max-width: 1400px)'; //до 1200
+$lg: 'screen and (max-width: 1200px)'; // до 992
+$md: 'screen and (max-width: 992px)'; // до 768 
+$sm: 'screen and (max-width: 768px)'; //до 576
+$esm: 'screen and (max-width: 576px)'; 
+ 
+//colors
+$white: #ffffff;
+$black: #000000;
+$gray: #4D4D4D;
+$gray-l: #EBEBEB;
+$blue: #233656;
+$blue-d: #18263F;
+$blue-l: #597098;
+$sky: #E2EDFF;
+
+
+// для файла base
+
+$default_pageFontSize: 10px;
+$font_default: 'Montserrat',Helvetica,Arial,sans-serif;
+$font_title: 'Montserrat',Helvetica,Arial,sans-serif;
+$color_title: #410C23;
+
+//z-index
+$ui-index-1: 1; // для элементов наползающих друг на друга
+$ui-index-2: 2; // для элементов наползающих друг на друга
+$ui-index-3: 3; // для элементов наползающих друг на друга
+$ui-index-4: 4; // затемнения
+$ui-index-5: 5; // сайдбары
+$ui-index-6: 6; // модальные окна
+$ui-index-10: 10; // элементы перекрывающие все

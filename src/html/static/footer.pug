@@ -1,0 +1,36 @@
+-
+  let navigation = [
+    {
+      name: 'Price',
+      href: '#',
+    },
+    {
+      name: 'Timetable',
+      href: '#',
+    },
+    {
+      name: 'Teachers&Styles',
+      href: '#',
+    },
+  ]
+
+footer.footer
+  .footer__left
+    a(href="#" class="footer__logo")
+      img(src="./img/icons/logo.svg")
+    ul.header__list
+      each nav in navigation
+        li.header__list_item
+          a(href=nav.href) #{nav.name}
+  .footer__right
+    .footer__contacts
+      a(href="tel:+371 20 397 080") +371 20 397 080
+      p Jāņa Asara iela 13
+    a(href="mailto:bazadancelv@gmail.com") bazadancelv@gmail.com
+    .footer__socials
+      a(href="#")
+        svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 97 97" fill="none")
+          path(fill-rule="evenodd" clip-rule="evenodd" d="M54.9024 96.5812C78.6622 93.4478 97 73.1154 97 48.5C97 21.7142 75.2858 0 48.5 0C21.7142 0 0 21.7142 0 48.5C0 72.7181 17.7506 92.7902 40.9512 96.416V61.7355H27V49.8129H40.9512C40.9512 49.8129 40.4225 37.861 42.0244 31.929C44.7073 21.9935 53.2927 21.9935 53.2927 21.9935L71 21V32.9226C71 32.9226 60.8049 31.929 57.5854 34.9097C54.622 37.6532 54.9024 49.8129 54.9024 49.8129H71L67.7805 61.7355H54.9024V96.5812Z")
+      a(href="#")
+        svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 95 95" fill="none")
+          path(fill-rule="evenodd" clip-rule="evenodd" d="M0 26C0 11.6406 11.6406 0 26 0H69C83.3594 0 95 11.6406 95 26V69C95 83.3594 83.3594 95 69 95H26C11.6406 95 0 83.3594 0 69V26ZM81 19.5C81 21.9853 78.9854 24 76.5 24C74.0146 24 72 21.9853 72 19.5C72 17.0147 74.0146 15 76.5 15C78.9854 15 81 17.0147 81 19.5ZM64 48C64 56.8366 56.8367 64 48 64C39.1633 64 32 56.8366 32 48C32 39.1634 39.1633 32 48 32C56.8367 32 64 39.1634 64 48ZM72 48C72 61.2548 61.2549 72 48 72C34.7451 72 24 61.2548 24 48C24 34.7452 34.7451 24 48 24C61.2549 24 72 34.7452 72 48Z")

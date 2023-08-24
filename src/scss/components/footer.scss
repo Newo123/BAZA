@@ -1,0 +1,78 @@
+.footer {
+	background-color: #403434;
+	padding: rem(18, 37) rem(18, 60) rem(18, 51);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	&__left {
+		display: flex;
+		align-items: center;
+		gap: rem(18, 138);
+	}
+
+	&__logo {
+		& img {
+			width: rem(18, 103);
+			height: rem(18, 107);
+		}
+	}
+
+	&__right {
+		display: flex;
+		align-items: center;
+		gap: rem(18, 108);
+
+		& > a {
+			color: #fff;
+			font-family: TeX Gyre Heros;
+			font-size: rem(18, 20);
+			font-weight: 700;
+			line-height: normal;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&__contacts {
+		& a {
+			color: #fff;
+			font-family: TeX Gyre Heros;
+			font-size: rem(18, 20);
+			font-weight: 700;
+			line-height: normal;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+		p {
+			color: #fff;
+			font-family: TeX Gyre Heros;
+			font-size: rem(18, 20);
+			font-weight: 700;
+			line-height: normal;
+		}
+	}
+
+	&__socials {
+		display: flex;
+		align-items: center;
+		gap: rem(18, 25);
+
+		& a {
+			transition: all 0.3s ease;
+			&:hover {
+				opacity: 0.8;
+			}
+			& svg {
+				width: rem(18, 58);
+				height: rem(18, 58);
+
+				fill: $white;
+			}
+		}
+	}
+}

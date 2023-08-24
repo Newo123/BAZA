@@ -1,0 +1,11 @@
+block variables
+    - var title = 'Ошибка'
+    - var page = 'error'
+    
+html(lang='ru')
+    head 
+        include html/static/head
+    body.body
+        include html/static/header
+        include html/components/404
+        include html/static/footer

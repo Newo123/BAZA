@@ -1,0 +1,153 @@
+.jazz {
+	max-height: rem(18, 1000);
+	overflow: hidden;
+
+	&__container {
+		display: grid;
+		grid-template-columns: 40% 60%;
+		grid-template-rows: 33% 67%;
+
+		grid-template-areas:
+			'head img'
+			'bottom img';
+	}
+
+	&__head {
+		grid-area: head;
+		background-color: #f45200;
+
+		& .swiper {
+			height: 100%;
+		}
+
+		& .swiper-slide {
+			display: flex;
+			align-items: center;
+		}
+
+		& h2 {
+			color: $white;
+			font-family: TeX Gyre Heros Cn;
+			font-size: rem(18, 70);
+			font-weight: 700;
+			line-height: 100%;
+			text-transform: uppercase;
+			margin-left: rem(18, 60);
+			margin-right: rem(18, 60);
+			width: 100%;
+		}
+	}
+
+	&__img {
+		grid-area: img;
+
+		& .swiper-slide {
+			& img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				object-position: center;
+			}
+		}
+	}
+
+	&__bottom {
+		grid-area: bottom;
+		margin: rem(18, 130) 0 0 0;
+
+		& .swiper {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			gap: rem(18, 100);
+		}
+
+		& .swiper-slide {
+			display: flex;
+			align-items: center;
+			padding: 0 rem(18, 80) 0 rem(18, 60);
+
+			& p {
+				color: #898989;
+				font-family: TeX Gyre Heros;
+				font-size: rem(18, 20);
+				font-weight: 700;
+				line-height: 140%;
+			}
+		}
+	}
+
+	&__navigation {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		margin: 0 rem(18, 80) 0 rem(18, 60);
+
+		& .swiper-button-prev,
+		& .swiper-button-next {
+			transform: rotate(0);
+
+			width: rem(18, 60);
+			height: rem(18, 60);
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			border-radius: 50%;
+
+			&:hover {
+				background-color: rgba(0, 0, 0, 0.1);
+			}
+
+			& svg {
+				width: rem(18, 40);
+				height: rem(18, 40);
+			}
+		}
+	}
+
+	&__more {
+		padding: rem(18, 18) rem(18, 36);
+
+		border: 2px solid #000;
+		overflow: hidden;
+		position: relative;
+
+		& span {
+			color: #403434;
+			font-family: TeX Gyre Heros Cn;
+			font-size: rem(18, 22);
+			font-style: normal;
+			font-weight: 700;
+			line-height: normal;
+			transition: all 0.3s ease;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			width: 100%;
+			height: 100%;
+			background-color: #000;
+			transform: translateY(110%);
+			transition: all 0.3s ease;
+			z-index: -1;
+		}
+
+		&:hover {
+			& span {
+				color: $white;
+			}
+
+			&::after {
+				transform: translateY(0);
+			}
+		}
+	}
+}

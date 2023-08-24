@@ -1,0 +1,16 @@
+@font-face {
+	font-family: 'TeX Gyre Heros Cn';
+	src: url('../fonts/texgyreheros-bold.woff2') format('woff2'),
+		url('../fonts/texgyreheros-bold.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'TeX Gyre Heros';
+	src: url('../fonts/texgyreheroscn-bold.woff2') format('woff2'),
+		url('../fonts/texgyreheroscn-bold.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}

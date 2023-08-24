@@ -1,0 +1,29 @@
+.video {
+    height: 653px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    @media screen and (min-width: 769px) {
+        background-image: url('../img/descriptor1.jpg')!important; // что б не перебивалось скриптами видео на телефоне
+    }
+    @media #{$md} {
+        height: 498px;
+    }
+    @media #{$sm} {
+        height: 460px;
+    }
+    &-2 {
+        margin-top: 0;
+        height: 710px;
+        @media #{$md} {
+            height: 460px;
+        }
+        @media #{$sm} {
+            height: 100vw;
+        }
+        @media screen and (min-width: 769px) {
+            background-image: url('../img/photo-block.jpg')!important; // что б не перебивалось скриптами видео на телефоне
+        }
+    }
+}

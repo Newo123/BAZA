@@ -1,0 +1,594 @@
+.callback {
+    padding: 40px 0 50px;
+    &--bg {
+        background-color: #F5F8F4;
+    }
+    &__title {
+        font-size: 2.4rem;
+        line-height: 1.5;
+        color: $black;
+        @media #{$lg} {
+          width: 100%;
+        }
+        @media #{$sm} {
+          margin-bottom: 6px;
+        }
+    }
+    &__subtitle {
+        font-family: $montserrat;
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 1.8;
+        color: $black;
+        @media #{$md} {
+          margin-top: 13px;
+          width: 100%;
+        }
+    }
+    &-btn {
+      font-family: $montserrat;
+      padding: 18px 39.5px;
+      font-size: 1.4rem;
+      line-height: 1.3;
+      font-weight: 600;
+    }
+}
+.callback__form {
+  & .contacts__title {
+      font-size: 3rem;
+      @media #{$sm} {
+          font-size: 2.4rem;
+      }
+  }
+  @media #{$md} {
+      display: flex;
+      flex-wrap: wrap;
+  }
+  @media #{$sm} {
+      display: block;
+  }
+  & .btn {
+      @media #{$lg} {
+          font-size: 1.4rem;
+          font-weight: 600;
+          white-space: nowrap;
+      }
+      @media #{$md} {
+          margin-left: auto;
+      }
+      @media #{$sm} {
+          margin-top: 35px;
+      }
+  }
+  & .callback-form {
+    &.form_block--inputs {
+      margin-top: 32px;
+        @media #{$md} {
+            width: 39%;
+            margin-right: 24px;
+        }
+        @media #{$sm} {
+            width: 100%;
+      }
+      & .fw-placeholder {
+        &:not(:first-child) {
+          margin-top: 30px;
+        }
+      }
+      & .fw-input {
+        border-radius: 6px;
+      }
+      & .error-placeholder {
+        top: calc(100% - 10px);
+      }
+    }
+    &.form_block--textarea {
+      margin-top: 25px;
+        @media #{$md} {
+            margin-top: 32px;
+            width: calc(61% - 24px)
+        }
+        @media #{$sm} {
+            width: 100%;
+        }
+        & .fw-placeholder textarea{
+          border-radius: 6px;
+            @media #{$md} {
+                height: 134px;
+            }
+            @media #{$sm} {
+                height: 192px;
+            }
+        }
+    }
+    &.form_block--checkbox {
+      margin-top: 30px;
+        @media #{$md} {
+          width: calc(100% - 39% - 24px);
+          margin-left: auto;
+        }
+        @media #{$sm} {
+          width: 100%;
+        }
+        & .fw-placeholder {
+            @media #{$sm} {
+                display: block;
+            }
+        }
+        & .checkbox:not(checked)+label {
+          font-size: 1.2rem;
+          @media #{$sm} {
+            font-size: 1.4rem;
+            margin-bottom: 35px;
+          }
+        }
+    }
+  }
+}
+.thirdrow-form {
+  width: 100%;
+  & .form_block--inputs {
+    margin-top: 32px;
+    display: flex;
+    justify-content: space-between;
+    @media #{$md} {
+        display: block;
+    }
+    & .fw-placeholder {
+      width: calc(50% - 9px);
+      @media #{$md} {
+        width: 100%;
+        &:not(:first-of-type) {
+          margin-top: 32px;
+        }
+      }
+    }
+  }
+  & .form_block--textarea {
+    margin-top: 32px;
+  }
+  & .form_block--checkbox {
+    margin-top: 26px;
+    display: flex;
+    align-items: center;
+    @media #{$md} {
+      & .checkbox:not(checked)+label {
+        font-size: 1rem;
+      }
+    }
+    @media #{$sm} {
+      display: block;
+      & .checkbox:not(checked)+label {
+        font-size: 1.4rem;
+      }
+    }
+  }
+  & .btn {
+    padding: 15px 45px;
+    @media #{$lg} {
+      padding: 15px 50px;
+      margin-left: 10px;
+    }
+    @media #{$md} {
+      padding: 15px 32px;
+      margin-left: 10px;
+    }
+    @media #{$sm} {
+      border-radius: 0;
+      margin-top: 25px;
+      padding: 15px 40px;
+      margin-left: 0;
+    }
+  }
+  & .checkbox:not(checked)+label::after {
+    width: 22px;
+    height: 22px;
+  }
+  & .checkbox:not(checked)+label p{
+    @media #{$sm} {
+      text-align: left;
+    }
+  }
+  & .checkbox:not(checked)+label span{
+    color: $blue;
+  }
+  & .checkbox+label span{
+    @media (hover: hover) {
+      &:hover {
+        background: linear-gradient($blue, $blue) no-repeat left bottom;
+        background-size: 100% 1px;
+      }
+    }
+  }
+  & .fw-placeholder .fw-input.wrong, & .fw-placeholder textarea.wrong, & .fw-placeholder-select .fw-input.wrong, & .fw-placeholder-select textarea.wrong {
+    background-color: transparent;
+  }
+}
+form .fw-placeholder-select,
+form .fw-placeholder {
+   position: relative;
+   display: flex;
+   align-items: center;
+   font-size: 0;
+ 
+   .fw-input {
+        height: 52px;
+        font-size: 14px;
+        font-weight: 500;
+        @media #{$sm} {
+          font-size: 18px;
+        }
+        + .placeholder {
+            font-size: 14px;
+            font-weight: 600;
+            top: -7px;
+            background: #f2f2f2;
+            color: $black;
+            @media #{$md} {
+              background: #f2f2f2;
+            }
+            @media #{$sm} {
+              font-size: 16px;
+          }
+     }
+   }
+ 
+ 
+   .fw-input, textarea {
+     font-family: $montserrat;
+     width: 100%;
+     padding: 17px 18px;
+     font-weight: 500;
+     font-size: 1.6rem;
+     background: transparent;
+     border: 1px #919191 solid;
+     color: $gray;
+     -webkit-transition: 0.4s;
+     -moz-transition: 0.4s;
+     -ms-transition: 0.4s;
+     -o-transition: 0.4s;
+     transition: 0.4s;
+  
+     &:focus {
+       + .placeholder {
+         top: -7px;
+         font-size: 14px;
+         cursor: default;
+         @media #{$sm} {
+           font-size: 16px;
+         }
+       }
+     }
+ 
+     &.wrong {
+       + .placeholder {
+         + .error-placeholder {
+           opacity: 1;
+           top: 100%;
+         }
+       }
+     }
+   }
+ 
+   textarea {
+    padding: 17px 18px;
+    height: 158px;
+    font-family: $montserrat;
+    font-weight: 500;
+    @media #{$sm} {
+      padding: 17px 16px;
+    }
+    &::placeholder {
+      font-family: $montserrat;
+      font-size: 1.6rem;
+      font-weight: 500;
+      line-height: 1.5;
+      color: $black;
+      opacity: .3;
+      @media #{$sm} {
+        font-size: 16px;
+      }
+    }
+    + .placeholder {
+      font-size: 14px;
+      font-weight: 600;
+      top: -7px;
+      background: #f2f2f2;
+      color: $black;
+      @media #{$sm} {
+        font-size: 16px;
+      }
+    }
+   }
+ 
+   &.wrong {
+ 
+     &:before {
+       display: none;
+       content: "!";
+      // нужна переменная font: 19px/19px $font_default;
+       color: #fff;
+       margin-top: -10px;
+       position: absolute;
+       right: 5px;
+       height: 21px;
+       width: 21px;
+       border-radius: 21px;
+       background: #e90000;
+       align-items: center;
+       justify-content: center;
+     }
+   }
+ 
+   textarea.fw-input {
+     height: 200px;
+     @media #{$sm} {
+      height: 140px;
+     }
+   }
+ 
+   .placeholder {
+     position: absolute;
+     left: 12px;
+     top: 15px;
+    // нужна переменная font-family: $font_default;
+     font-size: 14px;
+     line-height: 1;
+     cursor: text;
+     padding: 0 5px;
+     -webkit-transition: 0.4s;
+     -moz-transition: 0.4s;
+     -ms-transition: 0.4s;
+     -o-transition: 0.4s;
+     transition: 0.4s;
+     color: #838383;
+     user-select: none;
+     background: transparent;
+     @media #{$sm} {
+       font-size: 16px;
+     }
+   }
+ 
+   &.active {
+     .placeholder {
+       top: -7px;
+       font-size: 14px;
+       cursor: default;
+       opacity: 1;
+       color: $gray;
+       -webkit-user-select: none;
+       -moz-user-select: none;
+       -ms-user-select: none;
+       user-select: none;
+       @media #{$sm} {
+         font-size: 16px;
+       }
+     }
+ 
+   }
+ 
+   .error-placeholder {
+     display: block;
+     position: absolute;
+     left: 0;
+     top: calc(100% - 5px);
+    // нужна переменная font-family: $font_default;
+     font-size: 14px;
+     opacity: 0;
+     -webkit-user-select: none;
+     -moz-user-select: none;
+     -ms-user-select: none;
+     user-select: none;
+     color: #e90000;
+   }
+ }
+ 
+ .float-box {
+   form .fw-placeholder {
+     .placeholder {
+       background: #fff !important;
+     }
+ 
+     .fw-input, textarea {
+       &.wrong {
+         background-color: #ffe6e6;
+ 
+         + .placeholder {
+           color: #e90000 !important;
+           background-color: #ffe6e6 !important;
+         }
+       }
+     }
+    }
+}
+.checkbox {
+    vertical-align: top;
+    margin: 0;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  
+    &:not(checked) {
+      position: absolute;
+      opacity: 0;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+      -webkit-filter: alpha(opacity=0);
+      -moz-filter: alpha(opacity=0);
+      -o-filter: alpha(opacity=0);
+      filter: alpha(opacity=0);
+  
+      & + label {
+        position: relative;
+        padding: 0 0 0 36px;
+        margin-right: auto;
+        color: $black;
+        font-weight: 500;
+        font-size: 1.4rem;
+        // нужна переменная font-family: $font_default;
+        cursor: pointer;
+        line-height: 1.8;
+        display: flex;
+        align-items: flex-start;
+        @media #{$md} {
+          font-size: 1.2rem;
+          padding: 0 0 0 36px;
+        }     
+        p, span {
+          font-weight: inherit;
+          color: #212121;
+        }
+  
+        span {
+          cursor: pointer;
+          color: $blue;
+        }
+  
+        &::after {
+          font-weight: 500;
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 20px;
+          height: 20px;
+          background: transparent;
+          -webkit-transition: none;
+          -moz-transition: none;
+          -o-transition: none;
+          transition: none;
+          border: 1px solid #999999 ;
+          @media #{$md} {
+            width: 20px;
+            height: 20px;
+          }
+          @media #{$sm} {
+            width: 26px;
+            height: 26px;
+          }
+          @media #{$esm} {
+            top: 2px;
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+    }
+  
+    &:checked + label:after {
+      //content: '';
+      background-image: url("../img/icons/check.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 15px;
+      background-color: transparent;
+      cursor: pointer;
+    }
+  }
+ 
+ form .wrong,
+ .checkbox:not(checked).wrong + label:after {
+   border-color: #e90000;
+ }
+ 
+ form .wrong,
+ .checkbox:checked.wrong + label:after {
+  background-color: transparent;
+ }
+ .checkbox:not(checked).wrong + label:after {
+   background-color: #ffe6e6;
+ }
+ .checkbox:checked.wrong + label:after {
+  background-image: url("../img/icons/check.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 15px;
+  border: 1px solid $black;
+ }
+ 
+.order-form {
+  display: flex;
+  align-items: center;
+  margin-top: 27px;
+  @media #{$md} {
+    display: block;
+    width: 100%;
+  }
+  @media #{$sm} {
+    margin-top: 37px;
+  }
+  .form_block {
+      display: flex;
+      @media #{$sm} {
+        flex-wrap: wrap;
+      }
+  }
+  & .fw-placeholder {
+      width: 300px;
+      &:not(:first-of-type) {
+          margin-left: 32px;
+          @media #{$md} {
+            margin-left: 26px;
+          }
+          @media #{$esm} {
+            margin-top: 30px;
+            margin-left: 0;
+          }
+      }
+      @media #{$lg} {
+        width: 216px;
+      }
+      @media #{$md} {
+        width: calc(50% - 13px);
+      }
+      @media #{$esm} {
+        width: 100%;
+      }
+  }
+  & .fw-placeholder .fw-input {
+    border: 1px solid rgba(0, 0, 0, 0.4);
+  }
+  & .fw-placeholder .fw-input+.placeholder, .fw-placeholder-select .fw-input+.placeholder {
+    background-color: #DBD4DA;
+  }
+  & .form_block--checkbox {
+      margin-left: 35px;
+      align-items: center;
+      & .checkbox+label {
+        font-size: 12px;
+      }
+      & .checkbox:not(checked)+label::after {
+        border: 1px solid rgba(0, 0, 0, 0.4);
+      }
+      & .checkbox+label span {
+        @media (hover: hover) {
+          &:hover {
+            background: linear-gradient($blue, $blue) no-repeat left bottom;
+            background-size: 100% 1px;
+          }
+        }
+      }
+      @media #{$md} {
+        margin-top: 30px;
+        margin-left: 0;
+      }
+      @media #{$esm} {
+        display: block;
+        text-align: center;
+      }
+      & .btn {
+          margin-left: 38px;
+          align-self: flex-start;
+          padding: 15px 45px;
+          @media #{$md} {
+            margin-left: 0;
+          }
+          @media #{$sm} {
+            margin-top: 0;
+          }
+          @media #{$esm} {
+            margin: 30px auto 0;
+          }
+      }
+  }
+}
+ 
