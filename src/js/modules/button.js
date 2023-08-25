@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 			if (tabs) {
 				tabs.style.bottom = '0'
+				tabs.style.transform = 'translateY(110%)'
 			}
 		} else {
 			button.removeAttribute('style')
