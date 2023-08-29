@@ -1,0 +1,22 @@
+extends html/static/head
+block variables
+    - var title = 'Учителя и Стили'
+    - var page = 'styles'
+    - var subtitle = ''
+    - var img = '/img/descriptors/index'
+    - var lang = 'ru'
+    - var classMain = 'main-styles'
+    - var classBody = 'body-styles'
+    - var titleSecondHero = 'Stretching'
+
+block content
+  include html/static/header
+  main(class=classMain)
+    include html/components/hero-second-styles
+    include html/components/styles-content
+    include html/components/teachers-styles-videos
+    include html/components/schedule
+    include html/components/teachers
+    include html/components/callback
+    include html/components/card
+  include html/static/footer

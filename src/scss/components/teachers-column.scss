@@ -82,10 +82,10 @@
 		font-family: TeX Gyre Heros Cn;
 		font-size: rem(18, 100);
 		font-weight: 400;
-		line-height: 85%;
+		line-height: 90%;
 
 		@media (max-width: 900px) {
-			@include adaptive-hero(font-size, 100, 53);
+			@include adaptive-hero(font-size, 100, 45);
 		}
 
 		@media (max-width: 680px) {
@@ -133,7 +133,7 @@
 		border: 1px solid #000;
 		overflow: hidden;
 		position: relative;
-
+		min-width: rem(18, 240);
 		@media (min-width: 1921px) {
 			border-width: 2px;
 		}
@@ -172,7 +172,7 @@
 			bottom: 0;
 			width: 100%;
 			height: 100%;
-			background-color: #000;
+			background-color: #f45200;
 			transform: translateY(110%);
 			transition: all 0.3s ease;
 		}
@@ -189,6 +189,11 @@
 	}
 
 	&__right {
+		height: rem(18, 867);
+
+		@media (max-width: 900px) {
+			height: 100%;
+		}
 		& img {
 			width: 95%;
 			height: 100%;

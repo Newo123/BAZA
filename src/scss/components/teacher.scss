@@ -1,0 +1,166 @@
+.teacher-hero {
+	height: rem(18, 690);
+	width: 100%;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	flex-direction: column;
+
+	@media (max-width: 767px) {
+		height: 100dvh;
+		align-items: flex-start;
+		padding-left: 15px;
+	}
+	&__title {
+		color: #f45200;
+		font-family: TeX Gyre Heros;
+		font-size: rem(18, 150);
+		font-weight: 700;
+		line-height: 85%;
+		position: relative;
+		z-index: 2;
+
+		&:last-child {
+			margin-bottom: rem(18, 30);
+			@media (max-width: 768px) {
+				@include adaptive-hero(margin-bottom, 105, 102);
+			}
+		}
+
+		@media (max-width: 768px) {
+			@include adaptive-hero(font-size, 150, 48);
+		}
+	}
+
+	&__img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba($color: #000000, $alpha: 0.7);
+		& img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+			position: relative;
+			z-index: -1;
+		}
+	}
+}
+
+.teacher-content {
+	margin-bottom: rem(18, 140);
+
+	@media (max-width: 768px) {
+		@include adaptive-hero(margin-bottom, 140, 80);
+	}
+
+	& .teachers-styles-videos {
+		padding-left: 0;
+		padding-right: 0;
+		padding-bottom: 0;
+	}
+
+	&__container {
+		margin: 0 rem(18, 60);
+		@media (max-width: 768px) {
+			@include adaptive-hero(margin-left, 60, 15);
+			@include adaptive-hero(margin-right, 60, 15);
+		}
+	}
+
+	&__box {
+		display: grid;
+		grid-template-columns: 67% 33%;
+		margin-bottom: rem(18, 70);
+
+		@media (max-width: 767px) {
+			grid-template-columns: 1fr;
+			gap: 20px;
+			@include adaptive-hero(margin-bottom, 70, 30);
+		}
+
+		&-text {
+			padding-top: rem(18, 40);
+			padding-bottom: rem(18, 22);
+			padding-left: rem(18, 80);
+			@media (max-width: 767px) {
+				padding-left: 0;
+				padding-bottom: 0;
+				padding-top: 0;
+			}
+
+			&:first-child {
+				border-right: 1px solid #c1c1c1;
+				padding-right: rem(18, 44);
+				padding-left: 0;
+
+				@media (min-width: 1921px) {
+					border-right: 2px solid #c1c1c1;
+				}
+
+				@media (max-width: 767px) {
+					border: none;
+					padding-top: 80px;
+				}
+			}
+		}
+
+		&-video {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: rem(18, 41);
+			margin-top: rem(18, 70);
+
+			& iframe,
+			& img,
+			& video {
+				height: rem(18, 496);
+				width: 100%;
+				object-fit: cover;
+				object-position: center;
+			}
+		}
+	}
+
+	&__about {
+		&-title {
+			color: #403434;
+			font-family: TeX Gyre Heros;
+			font-size: rem(18, 64);
+			font-weight: 700;
+			line-height: 100%;
+			margin-bottom: rem(18, 30);
+			max-width: rem(18, 355);
+
+			@media (max-width: 768px) {
+				max-width: 100%;
+				margin-bottom: 10px;
+				@include adaptive-hero(font-size, 64, 23);
+			}
+		}
+
+		&-description {
+			color: #898989;
+			font-family: TeX Gyre Heros;
+			font-size: rem(18, 20);
+			font-weight: 700;
+			line-height: 140%;
+			@media (max-width: 768px) {
+				@include adaptive-hero(font-size, 20, 10);
+			}
+		}
+	}
+}
+
+.main-teacher {
+	& .schedule {
+		margin-bottom: rem(18, 180);
+		@include adaptive-hero(margin-bottom, 180, 80);
+	}
+}

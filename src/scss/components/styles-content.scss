@@ -1,0 +1,41 @@
+.styles-content {
+	padding: rem(18, 80) rem(18, 60) rem(18, 140);
+
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: rem(18, 73);
+
+	@media (max-width: 768px) {
+		grid-template-columns: 1fr;
+		padding: 80px 15px;
+		gap: 30px;
+	}
+
+	&__img {
+		max-height: rem(18, 505);
+
+		@media (max-width: 768px) {
+			max-height: 100%;
+		}
+
+		& img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+
+	&__text {
+		color: #898989;
+		font-family: TeX Gyre Heros;
+		font-size: rem(18, 20);
+		font-weight: 700;
+		line-height: 140%;
+
+		@media (max-width: 768px) {
+			@include adaptive-hero(font-size, 20, 10);
+			grid-row: 1;
+		}
+	}
+}

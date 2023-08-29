@@ -23,12 +23,13 @@ document.addEventListener('DOMContentLoaded', () => {
 			button.style.transform = 'translateY(110%)'
 
 			if (tabs) {
-				tabs.style.bottom = '0'
-				tabs.style.transform = 'translateY(110%)'
+				tabs.classList.add('hide')
 			}
 		} else {
 			button.removeAttribute('style')
-			tabs.removeAttribute('style')
+			if (tabs) {
+				tabs.classList.remove('hide')
+			}
 		}
 	})
 })

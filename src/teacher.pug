@@ -1,0 +1,40 @@
+extends html/static/head
+block variables
+    - var title = 'Педагог'
+    - var page = 'index'
+    - var subtitle = ''
+    - var img = '/img/descriptors/index'
+    - var lang = 'ru'
+    - var classMain = 'main-teacher'
+    - var classBody = 'body-teacher'
+
+block content
+  include html/static/header
+  main(class=classMain)
+    section.teacher-hero
+      .teacher-hero__container
+        h1.teacher-hero__title Лиза
+        h1.teacher-hero__title Ясинская
+      .teacher-hero__img
+        img(src='./img/teacher-gb.png')
+
+    section.teacher-content
+      .teacher-content__container
+        .teacher-content__box
+          .teacher-content__box-text
+            h2.teacher-content__about-title Кратко о педагоге
+            p.teacher-content__about-description My dance-sports path began at an early age. I went through 4 years of rhythmic gymnastics, as well as 8 years in the choreographic ensemble "Pērlīte", where I received the basics in the dances of different peoples of the world, pop and modern dance. But I continued to look for myself in different dance styles and sports. took various stretching and fitness courses, including getting a “C” category trainer and in 2019 I started teaching stretching in fitness clubs. In 2015, I got my first Breaking class at Baza Dance Company and fell in love. Breaking combines my two passions - dance and sports! I got so carried away that already in 2017 I won prizes in Latvia.
+          .teacher-content__box-text
+            h2.teacher-content__about-title Награды и подготовка
+            p.teacher-content__about-description 2019 Outbreak Europe Slovakia TOP8
+            p.teacher-content__about-description 2019 Finland bgirl TOP4
+            p.teacher-content__about-description 2020 “NBC” 2nd place Belarus
+            p.teacher-content__about-description 2021 “Gorska Bitwa” 1st place Poland
+            p.teacher-content__about-description 2021 TOP1 best female breaking dancers in Latvia
+        include html/components/teachers-styles-videos
+    include html/components/schedule
+    include html/components/callback
+    include html/components/card
+
+
+  include html/static/footer

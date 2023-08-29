@@ -128,13 +128,13 @@ h6 {
 	line-height: 1.3;
 }
 
-h1 {
-	font-size: 6rem;
-	@media #{$sm} {
-		font-size: 3.2rem;
-		margin-bottom: 20px;
-	}
-}
+// h1 {
+// 	font-size: 6rem;
+// 	@media #{$sm} {
+// 		font-size: 3.2rem;
+// 		margin-bottom: 20px;
+// 	}
+// }
 
 h2 {
 	font-size: 36px;
@@ -1107,5 +1107,25 @@ form.sent {
 .mobile {
 	@media (min-width: 768px) {
 		display: none;
+	}
+}
+
+.main-styles {
+	display: flex;
+	flex-direction: column;
+	& .teachers {
+		margin-bottom: rem(18, 180);
+
+		@media (max-width: 1919px) {
+			@include adaptive-hero(margin-bottom, 180, 80);
+		}
+
+		@media (max-width: 768px) {
+			order: 10;
+		}
+	}
+
+	& .card {
+		order: 11;
 	}
 }

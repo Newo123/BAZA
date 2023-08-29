@@ -1,0 +1,57 @@
+.hero-second-styles {
+	height: rem(18, 483);
+	position: relative;
+	z-index: 2;
+	display: flex;
+	align-items: flex-end;
+
+	padding: 0 rem(18, 350) rem(18, 62) rem(18, 400);
+
+	@media (max-width: 900px) {
+		height: 100dvh;
+		padding: 0;
+		padding-bottom: rem(18, 450);
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba(0, 0, 0, 0.7);
+		width: 100%;
+		height: 100%;
+	}
+	&__title {
+		color: #f45200;
+		font-family: TeX Gyre Heros Cn;
+		font-size: rem(18, 200);
+		font-weight: 700;
+		line-height: 85%;
+		position: relative;
+		margin-left: rem(18, 150);
+		z-index: 2;
+
+		@media (max-width: 900px) {
+			margin-left: 15px;
+			margin-right: 15px;
+
+			@include adaptive-hero(font-size, 250, 52);
+		}
+	}
+
+	& img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+		z-index: -1;
+	}
+}

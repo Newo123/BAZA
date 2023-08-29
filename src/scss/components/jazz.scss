@@ -210,6 +210,9 @@
 		overflow: hidden;
 		position: relative;
 
+		min-width: rem(18, 267);
+		text-align: center;
+
 		@media (max-width: 1920px) {
 			border-width: 1px;
 			@include adaptive-hero(padding-top, 18, 9);

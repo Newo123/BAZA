@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	slider3.on('slideChange', () => swipeAllSliders(slider3.activeIndex))
 	slider4.on('slideChange', () => swipeAllSliders(slider4.activeIndex))
 
-	const slider5 = new Swiper('.teachers .swiper', {
+	new Swiper('.teachers .swiper', {
 		direction: 'horizontal',
 		loop: true,
 		slidesPerView: 3,
@@ -54,38 +54,57 @@ document.addEventListener('DOMContentLoaded', () => {
 		},
 	})
 
-	if (localStorage.getItem('lang') === 'primary') {
-		document.querySelector('.teachers__info-title').innerText =
-			document.querySelector('.teachers .swiper-slide-next').dataset.name
-		document.querySelector('.teachers__info-description').innerText =
-			document.querySelector('.teachers .swiper-slide-next').dataset.skill
+	if (document.querySelectorAll('.teachers swiper-slide').length > 3) {
 	} else {
-		document.querySelector('.teachers__info-title').innerText =
-			document.querySelector(
-				'.teachers .swiper-slide-next'
-			).dataset.namesecondary
-		document.querySelector('.teachers__info-description').innerText =
-			document.querySelector(
-				'.teachers .swiper-slide-next'
-			).dataset.skillsecondary
+		// new Swiper('.teachers .swiper', {
+		// 	direction: 'horizontal',
+		// 	loop: false,
+		// 	slidesPerView: 'auto',
+		// 	centredSlides: true,
+		// 	speed: 500,
+		// 	grabCursor: true,
+		// 	spaceBetween: 6,
+		// 	breakpoints: {
+		// 		768: {
+		// 			centredSlides: false,
+		// 			slidesPerView: 4,
+		// 			spaceBetween: 0,
+		// 		},
+		// 	},
+		// })
 	}
+
+	if (matchMedia('(max-width: 768px)').matches) {
+		const slider6 = new Swiper('.teachers-styles-videos .swiper', {
+			direction: 'horizontal',
+			loop: true,
+			slidesPerView: 1,
+			speed: 500,
+			grabCursor: true,
+
+			navigation: {
+				nextEl: '.teachers-styles-videos__navigation .swiper-button-next',
+				prevEl: '.teachers-styles-videos__navigation .swiper-button-prev',
+			},
+
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'bullets',
+			},
+		})
+	}
+
+	document.querySelector('.teachers__info-title').innerText =
+		document.querySelector('.teachers .swiper-slide-next').dataset.name
+
+	document.querySelector('.teachers__info-description').innerText =
+		document.querySelector('.teachers .swiper-slide-next').dataset.skill
 	const observer = new MutationObserver(function (mutations) {
 		mutations.forEach(function (mutationRecord) {
-			if (localStorage.getItem('lang') === 'primary') {
-				document.querySelector('.teachers__info-title').innerText =
-					document.querySelector('.teachers .swiper-slide-next').dataset.name
-				document.querySelector('.teachers__info-description').innerText =
-					document.querySelector('.teachers .swiper-slide-next').dataset.skill
-			} else {
-				document.querySelector('.teachers__info-title').innerText =
-					document.querySelector(
-						'.teachers .swiper-slide-next'
-					).dataset.namesecondary
-				document.querySelector('.teachers__info-description').innerText =
-					document.querySelector(
-						'.teachers .swiper-slide-next'
-					).dataset.skillsecondary
-			}
+			document.querySelector('.teachers__info-title').innerText =
+				document.querySelector('.teachers .swiper-slide-next').dataset.name
+			document.querySelector('.teachers__info-description').innerText =
+				document.querySelector('.teachers .swiper-slide-next').dataset.skill
 		})
 	})
 

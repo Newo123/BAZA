@@ -1,0 +1,126 @@
+.teachers-styles-videos {
+	padding: 0 rem(18, 60) rem(18, 140);
+
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: rem(18, 20);
+
+	@media (max-width: 768px) {
+		grid-template-columns: 1fr;
+	}
+
+	@media (max-width: 768px) {
+		padding: 0 15px 80px;
+	}
+
+	& .swiper {
+		width: 100%;
+
+		display: flex;
+		flex-direction: column;
+		@include adaptive-hero(gap, 30, 8);
+
+		@media (min-width: 768px) {
+			display: none;
+		}
+
+		& .swiper-wrapper {
+			@include adaptive-hero(height, 1000, 188);
+		}
+		& .swiper-slide {
+			height: 100%;
+
+			& iframe {
+				width: 100%;
+				height: 100%;
+				user-select: none;
+			}
+		}
+	}
+
+	&__navigation {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: rem(18, 30);
+		gap: rem(18, 30);
+
+		@media (max-width: 900px) {
+			margin-top: rem(18, 60);
+			gap: rem(18, 60);
+		}
+
+		& .swiper-pagination {
+			position: static;
+			width: auto;
+
+			& .swiper-pagination-bullet {
+				background-color: #c1c1c1;
+				border-radius: 0;
+				opacity: 1;
+				width: rem(18, 8);
+				height: rem(18, 8);
+				margin: 0 rem(18, 4);
+				flex-shrink: 0;
+
+				@media (max-width: 900px) {
+					width: rem(18, 20);
+					height: rem(18, 20);
+					margin: 0 rem(18, 12);
+				}
+
+				&.swiper-pagination-bullet-active {
+					background-color: #403434;
+					opacity: 1;
+				}
+			}
+		}
+
+		& .swiper-button-prev {
+			transform: rotate(0deg);
+		}
+
+		& .swiper-button-prev,
+		& .swiper-button-next {
+			width: rem(18, 50);
+			height: rem(18, 50);
+			display: flex;
+			align-items: center;
+			flex-shrink: 0;
+
+			margin: 0;
+
+			@media (max-width: 900px) {
+				width: rem(18, 150);
+				height: rem(18, 150);
+			}
+
+			&:hover {
+				background-color: rgba(0, 0, 0, 0.1);
+			}
+
+			& svg {
+				width: rem(18, 30);
+				height: rem(18, 30);
+
+				@media (max-width: 900px) {
+					width: rem(18, 60);
+					height: rem(18, 60);
+				}
+			}
+		}
+	}
+
+	&__block {
+		width: 100%;
+		height: rem(18, 505);
+		@media (max-width: 768px) {
+			display: none;
+		}
+
+		& iframe {
+			width: 100%;
+			height: 100%;
+		}
+	}
+}

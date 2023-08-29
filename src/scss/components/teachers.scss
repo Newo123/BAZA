@@ -7,9 +7,24 @@
 		@include adaptive-hero(margin-top, 140, 80);
 	}
 
+	@media (max-width: 640px) {
+		margin-left: 0;
+		margin-right: 0;
+		overflow: hidden;
+	}
+
 	&__info {
 		display: flex;
 		justify-content: space-between;
+
+		& .swiper {
+			& .swiper-slide {
+				display: flex;
+				justify-content: flex-end;
+				padding-right: rem(18, 157);
+				min-width: 100%;
+			}
+		}
 
 		@media (max-width: 900px) {
 			flex-direction: column;
@@ -22,6 +37,7 @@
 			@media (max-width: 900px) {
 				min-width: 0;
 				align-self: flex-end;
+				margin-right: 20px;
 			}
 		}
 
@@ -60,7 +76,7 @@
 		}
 	}
 
-	& .swiper {
+	& > .swiper {
 		padding: rem(18, 67) 0;
 
 		@media (max-width: 640px) {
