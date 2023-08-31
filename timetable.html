@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="description" content="site">
+  <meta name="keywords" content="site">
+  <title>Расписание</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link href="css/style.min.css" type="text/css" rel="stylesheet">
+  <script src="js/vendor.min.js"></script>
+  <script src="js/app.min.js"></script>
+</head>
+
+<body class="body-timetable body common-home">
+  <header class="header  ">
+    <div class="a header__logo" href="#">
+      <img src="./img/icons/logo.svg">
+    </div>
+    <nav class="header__nav">
+      <ul class="header__list">
+        <li class="header__list_item">
+          <a class="lang" href="#" data-primary="Price" data-secondary="Цены">Price</a>
+        </li>
+        <li class="header__list_item">
+          <a class="lang" href="#" data-primary="Timetable" data-secondary="Расписание">Timetable</a>
+        </li>
+        <li class="header__list_item">
+          <a class="lang" href="./teachers-styles.html" data-primary="Teachers&amp;Styles" data-secondary="Педагоги и Стили">Teachers&amp;Styles</a>
+        </li>
+      </ul>
+      <div class="pll-parent-menu-item">
+        <a>Ru</a>
+        <ul class="sub-menu">
+          <li class="lang-item">
+            <a href="#">Lv</a>
+          </li>
+        </ul>
+      </div>
+      <div class="header__burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+    <button class="header__action">
+      <span>IM READY!</span>
+    </button>
+  </header>
+  <main class="main-timetable">
+    <section class="hero-timetable">
+      <h1 class="hero-timetable__title">TIMETABLE</h1>
+    </section>
+    <section class="timetable">
+      <div class="timetable__head">
+        <div class="timetable__head-left">
+          <p>РЕГИОН:</p>
+          <div class="timetable__head-list">
+            <div class="timetable__head-dropdown one">
+              <div class="timetable__head-dropdown_button active">ГРИЗИНКАЛНС</div>
+              <div class="timetable__head-dropdown_button">ИМАНТА</div>
+            </div>
+            <div class="timetable__head-dropdown_open-left">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38 22" fill="none">
+                <path d="M17.2322 20.7678C18.2085 21.7441 19.7915 21.7441 20.7678 20.7678L36.6777 4.85786C37.654 3.88155 37.654 2.29864 36.6777 1.32233C35.7014 0.346019 34.1184 0.346019 33.1421 1.32233L19 15.4645L4.85786 1.32233C3.88155 0.34602 2.29864 0.34602 1.32233 1.32233C0.346019 2.29864 0.346019 3.88155 1.32233 4.85787L17.2322 20.7678ZM16.5 17L16.5 19L21.5 19L21.5 17L16.5 17Z" fill="#F45200"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="timetable__head-right">
+          <p>СТИЛИ:</p>
+          <div class="timetable__head-list">
+            <div class="timetable__head-dropdown two">
+              <div class="timetable__head-dropdown_button active">РАСТЯЖКА</div>
+              <div class="timetable__head-dropdown_button">ДАНСХОЛЛ</div>
+              <div class="timetable__head-dropdown_button">БРЕЙК</div>
+              <div class="timetable__head-dropdown_button">БРЕЙК КИДС</div>
+              <div class="timetable__head-dropdown_button">ХАЙ ХИЛЛС</div>
+              <div class="timetable__head-dropdown_button">ЛЕДИ СТАЙЛ</div>
+              <div class="timetable__head-dropdown_button">ХИП-ХОП</div>
+              <div class="timetable__head-dropdown_button">ХИП-ХОП КИДС</div>
+              <div class="timetable__head-dropdown_button">ХИП-ХОП 12+</div>
+              <div class="timetable__head-dropdown_button">РАСТЯЖКА</div>
+              <div class="timetable__head-dropdown_button">ДАНСХОЛЛ</div>
+              <div class="timetable__head-dropdown_button">БРЕЙК</div>
+              <div class="timetable__head-dropdown_button">БРЕЙК КИДС</div>
+              <div class="timetable__head-dropdown_button">ХАЙ ХИЛЛС</div>
+              <div class="timetable__head-dropdown_button">ЛЕДИ СТАЙЛ</div>
+              <div class="timetable__head-dropdown_button">ХИП-ХОП</div>
+              <div class="timetable__head-dropdown_button">ХИП-ХОП КИДС</div>
+              <div class="timetable__head-dropdown_button">ХИП-ХОП 12+</div>
+            </div>
+            <div class="timetable__head-dropdown_open-right">
+              <svg xmlns="http://www.w3.org/2000/svg" width="38" height="22" viewBox="0 0 38 22" fill="none">
+                <path d="M17.2322 20.7678C18.2085 21.7441 19.7915 21.7441 20.7678 20.7678L36.6777 4.85786C37.654 3.88155 37.654 2.29864 36.6777 1.32233C35.7014 0.346019 34.1184 0.346019 33.1421 1.32233L19 15.4645L4.85786 1.32233C3.88155 0.34602 2.29864 0.34602 1.32233 1.32233C0.346019 2.29864 0.346019 3.88155 1.32233 4.85787L17.2322 20.7678ZM16.5 17L16.5 19L21.5 19L21.5 17L16.5 17Z" fill="#F45200"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <table class="timetable__table" align="center">
+        <tr>
+          <td> </td>
+          <td>
+            <p>ПН</p>
+          </td>
+          <td>
+            <p>ВТ</p>
+          </td>
+          <td>
+            <p>СР</p>
+          </td>
+          <td>
+            <p>ЧТ</p>
+          </td>
+          <td>
+            <p>ПТ</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>09:00</p>
+          </td>
+          <td> </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td> </td>
+          <td> </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <p>10:30</p>
+          </td>
+          <td> </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td> </td>
+          <td> </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <p>14:00</p>
+          </td>
+          <td> </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td> </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <p>16:00</p>
+          </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td> </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td> </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <p>17:00</p>
+          </td>
+          <td> </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td> </td>
+          <td> </td>
+          <td></td>
+        </tr>
+      </table>
+    </section>
+    <section class="callback">
+      <div class="callback__img">
+        <img src="./img/callback-img.png">
+      </div>
+      <form class="callback__form" action="#" id="callback" name="callback">
+        <h2 class="callback__title">We will help you become better</h2>
+        <label class="callback__label" for="name">
+          <input class="callback__input lang-input" id="name" name="name" placeholder="NAME">
+        </label>
+        <label class="callback__label" for="phone">
+          <input class="callback__input lang-input" id="phone" name="phone" placeholder="NUMBER">
+        </label>
+        <button class="callback__action" type="submit">
+          <span>IM READY!</span>
+        </button>
+      </form>
+    </section>
+    <section class="card _lazy _load-map" data-map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d543.8867822388027!2d24.154759421192477!3d56.95655991355993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eece3841b9b989%3A0x8c9ce5482ed42553!2zSsSBxYZhIEFzYXJhIGllbGEgMTMsIExhdGdhbGVzIHByaWVrxaFwaWxzxJN0YSwgUsSrZ2EsIExWLTEwMDksINCb0LDRgtCy0LjRjw!5e0!3m2!1sru!2sru!4v1691209873241!5m2!1sru!2sru"></section>
+  </main>
+  <footer class="footer">
+    <div class="footer__left">
+      <a class="footer__logo" href="#">
+        <img src="./img/icons/logo.svg">
+      </a>
+      <ul class="header__list">
+        <li class="header__list_item">
+          <a href="#">Price</a>
+        </li>
+        <li class="header__list_item">
+          <a href="#">Timetable</a>
+        </li>
+        <li class="header__list_item">
+          <a href="#">Teachers&amp;Styles</a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer__right">
+      <div class="footer__contacts">
+        <a href="tel:+371 20 397 080">+371 20 397 080</a>
+        <a href="#">Jāņa Asara iela 13</a>
+      </div>
+      <a href="mailto:bazadancelv@gmail.com">bazadancelv@gmail.com</a>
+      <div class="footer__socials">
+        <a href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 97 97" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M54.9024 96.5812C78.6622 93.4478 97 73.1154 97 48.5C97 21.7142 75.2858 0 48.5 0C21.7142 0 0 21.7142 0 48.5C0 72.7181 17.7506 92.7902 40.9512 96.416V61.7355H27V49.8129H40.9512C40.9512 49.8129 40.4225 37.861 42.0244 31.929C44.7073 21.9935 53.2927 21.9935 53.2927 21.9935L71 21V32.9226C71 32.9226 60.8049 31.929 57.5854 34.9097C54.622 37.6532 54.9024 49.8129 54.9024 49.8129H71L67.7805 61.7355H54.9024V96.5812Z"></path>
+          </svg>
+        </a>
+        <a href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 95 95" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 26C0 11.6406 11.6406 0 26 0H69C83.3594 0 95 11.6406 95 26V69C95 83.3594 83.3594 95 69 95H26C11.6406 95 0 83.3594 0 69V26ZM81 19.5C81 21.9853 78.9854 24 76.5 24C74.0146 24 72 21.9853 72 19.5C72 17.0147 74.0146 15 76.5 15C78.9854 15 81 17.0147 81 19.5ZM64 48C64 56.8366 56.8367 64 48 64C39.1633 64 32 56.8366 32 48C32 39.1634 39.1633 32 48 32C56.8367 32 64 39.1634 64 48ZM72 48C72 61.2548 61.2549 72 48 72C34.7451 72 24 61.2548 24 48C24 34.7452 34.7451 24 48 24C61.2549 24 72 34.7452 72 48Z"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

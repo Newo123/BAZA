@@ -9300,3 +9300,327 @@ form .wrong,
 		80px + 100 * ((100vw - 360px) / 1560)
 	);
 }
+
+.hero-timetable {
+  height: 480px;
+  height: 26.6666666667rem;
+  padding-bottom: 1.6666666667rem;
+  background-color: #403434;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media (min-width: 1921px) {
+  .hero-timetable {
+    height: 26.6666666667rem;
+  }
+}
+@media (max-width: 900px) {
+  .hero-timetable {
+    height: 100dvh;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+@media (max-width: 600px) {
+  .hero-timetable {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+.hero-timetable__title {
+  color: #f45200;
+  font-family: TeX Gyre Heros Cn;
+  font-size: 9.7222222222rem;
+  font-weight: 400;
+  line-height: 90%;
+  text-transform: uppercase;
+  text-wrap: balance;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: calc(
+		-100px + 350 * ((100vw - 360px) / 1560)
+	);
+}
+@media (min-width: 1921px) {
+  .hero-timetable__title {
+    margin-left: 13.8888888889rem;
+  }
+}
+@media (max-width: 900px) {
+  .hero-timetable__title {
+    margin-right: 0;
+    margin: auto 0;
+  }
+}
+@media (max-width: 680px) {
+  .hero-timetable__title {
+    font-size: 67px;
+  }
+}
+@media (max-width: 600px) {
+  .hero-timetable__title {
+    margin: initial;
+    margin-top: 141px;
+  }
+}
+@media (max-width: 400px) {
+  .hero-timetable__title {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+
+.timetable {
+  margin: 0 3.3333333333rem 5rem;
+}
+.timetable__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 2.2222222222rem;
+}
+.timetable__head-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.timetable__head-right > p {
+  padding-top: 0.5555555556rem;
+  margin-right: 0.6944444444rem;
+  color: #f45200;
+  font-family: TeX Gyre Heros Cn;
+  font-size: 1.3333333333rem;
+  font-weight: 700;
+  line-height: 85%;
+}
+.timetable__head-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.timetable__head-left > p {
+  padding-top: 0.5555555556rem;
+  margin-right: 0.6944444444rem;
+  color: #f45200;
+  font-family: TeX Gyre Heros Cn;
+  font-size: 1.3333333333rem;
+  font-weight: 700;
+  line-height: 85%;
+}
+.timetable__head-list {
+  border-right: 1px solid #000000;
+  border-left: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.timetable__head-list .timetable__head-dropdown_open-left {
+  height: 1.5rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.05)), to(rgba(0, 0, 0, 0.05))), #fff;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%), #fff;
+}
+.timetable__head-list .timetable__head-dropdown_open-left:hover {
+  background-color: #d9d9d9;
+}
+.timetable__head-list .timetable__head-dropdown_open-left svg {
+  height: 0.6111111111rem;
+  width: 1.2222222222rem;
+}
+.timetable__head-list .timetable__head-dropdown_open-right {
+  height: 1.5rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.05)), to(rgba(0, 0, 0, 0.05))), #fff;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%), #fff;
+}
+.timetable__head-list .timetable__head-dropdown_open-right:hover {
+  background-color: #d9d9d9;
+}
+.timetable__head-list .timetable__head-dropdown_open-right.active svg {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.timetable__head-list .timetable__head-dropdown_open-right svg {
+  height: 0.6111111111rem;
+  width: 1.2222222222rem;
+}
+.timetable__head-dropdown.one {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (7.5rem)[2];
+  grid-template-columns: repeat(2, 7.5rem);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.timetable__head-dropdown.one .timetable__head-dropdown_button {
+  background-color: #ffffff;
+  border-bottom: 1px solid #000000;
+  width: 100%;
+  text-align: center;
+  color: #898989;
+  text-align: center;
+  font-family: TeX Gyre Heros Cn;
+  font-size: 1.1111111111rem;
+  font-weight: 700;
+  line-height: normal;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.timetable__head-dropdown.one .timetable__head-dropdown_button:hover {
+  background-color: #d9d9d9;
+  color: #403434;
+}
+.timetable__head-dropdown.one .timetable__head-dropdown_button:nth-child(even) {
+  border-left: 1px solid #000000;
+}
+.timetable__head-dropdown.one .timetable__head-dropdown_button.active {
+  background-color: #d9d9d9;
+  color: #403434;
+}
+.timetable__head-dropdown.two {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (7.5rem)[9];
+  grid-template-columns: repeat(9, 7.5rem);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-height: 2.7222222222rem;
+  overflow: hidden;
+}
+.timetable__head-dropdown.two.active {
+  max-height: 100%;
+}
+.timetable__head-dropdown.two .timetable__head-dropdown_button {
+  background-color: #ffffff;
+  border-bottom: 1px solid #000000;
+  border-right: 1px solid #000000;
+  width: 100%;
+  text-align: center;
+  color: #898989;
+  text-align: center;
+  font-family: TeX Gyre Heros Cn;
+  font-size: 1.1111111111rem;
+  font-weight: 700;
+  line-height: normal;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.timetable__head-dropdown.two .timetable__head-dropdown_button:nth-child(9n) {
+  border-right: none;
+}
+.timetable__head-dropdown.two .timetable__head-dropdown_button:hover {
+  background-color: #d9d9d9;
+  color: #403434;
+}
+.timetable__head-dropdown.two .timetable__head-dropdown_button.active {
+  background-color: #d9d9d9;
+  color: #403434;
+}
+.timetable__head-dropdown_button {
+  padding: 0.5555555556rem 0;
+}
+.timetable__table {
+  width: 100%;
+  height: 100%;
+}
+.timetable__table td {
+  border-bottom: 1px solid #c1c1c1;
+  border-right: 1px solid #c1c1c1;
+  height: 3.6666666667rem;
+  color: #403434;
+  font-family: TeX Gyre Heros Cn;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 100%;
+}
+.timetable__table td span {
+  color: #403434;
+  font-family: TeX Gyre Heros Cn;
+  font-size: 1.5555555556rem;
+  font-weight: 700;
+  line-height: 85%;
+  text-transform: uppercase;
+}
+.timetable__table td span:last-child {
+  color: #898989;
+  font-family: TeX Gyre Heros Cn;
+  font-size: 1.1111111111rem;
+  font-weight: 700;
+  line-height: 85%;
+  text-transform: uppercase;
+}
+.timetable__table td > p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.2222222222rem;
+}
+.timetable__table tr td {
+  width: 18.3333333333rem;
+  vertical-align: middle;
+}
+.timetable__table tr:first-child td {
+  border-top: 1px solid #c1c1c1;
+}
+.timetable__table tr td:first-child {
+  border-left: 1px solid #c1c1c1;
+  width: 8.3888888889rem;
+}
