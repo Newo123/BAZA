@@ -1,13 +1,32 @@
 .timetable {
 	margin: 0 rem(18, 60) rem(18, 90);
 
+	@media (max-width: 768px) {
+		margin-bottom: 80px;
+	}
+
 	&__head {
 		display: flex;
 		justify-content: space-between;
 		margin-bottom: rem(18, 40);
 
+		@media (max-width: 900px) {
+			margin-top: 21px;
+
+			margin-bottom: 20px;
+		}
+
+		@media (max-width: 350px) {
+			flex-direction: column;
+			gap: 20px;
+		}
+
 		&-right {
 			display: flex;
+			@media (max-width: 900px) {
+				flex-direction: column;
+				gap: 5px;
+			}
 			& > p {
 				padding-top: rem(18, 10);
 				margin-right: rem(18, 12.5);
@@ -17,12 +36,19 @@
 				font-size: rem(18, 24);
 				font-weight: 700;
 				line-height: 85%;
+
+				@media (max-width: 900px) {
+					font-size: 14px;
+				}
 			}
 		}
 
 		&-left {
 			display: flex;
-
+			@media (max-width: 900px) {
+				flex-direction: column;
+				gap: 5px;
+			}
 			& > p {
 				padding-top: rem(18, 10);
 				margin-right: rem(18, 12.5);
@@ -32,6 +58,9 @@
 				font-size: rem(18, 24);
 				font-weight: 700;
 				line-height: 85%;
+				@media (max-width: 900px) {
+					font-size: 14px;
+				}
 			}
 		}
 
@@ -40,6 +69,9 @@
 			border-left: 1px solid $black;
 			border-bottom: 1px solid $black;
 			height: fit-content;
+			@media (max-width: 900px) {
+				border-top: 1px solid $black;
+			}
 
 			& .timetable__head-dropdown_open-left {
 				height: rem(18, 27);
@@ -59,10 +91,18 @@
 				&:hover {
 					background-color: #d9d9d9;
 				}
+				@media (max-width: 900px) {
+					height: 26px;
+				}
 
 				& svg {
 					height: rem(18, 11);
 					width: rem(18, 22);
+
+					@media (max-width: 900px) {
+						height: 9px;
+						width: 16px;
+					}
 				}
 			}
 
@@ -91,9 +131,18 @@
 					}
 				}
 
+				@media (max-width: 900px) {
+					height: 26px;
+				}
+
 				& svg {
 					height: rem(18, 11);
 					width: rem(18, 22);
+
+					@media (max-width: 900px) {
+						height: 9px;
+						width: 16px;
+					}
 				}
 			}
 		}
@@ -104,6 +153,26 @@
 				$col: rem(18, 135);
 				grid-template-columns: repeat(2, $col);
 				align-items: center;
+
+				max-height: rem(18, 49);
+				overflow: hidden;
+
+				&.active {
+					max-height: 100%;
+				}
+
+				@media (max-width: 900px) {
+					grid-template-columns: repeat(1, 100px);
+					max-height: 28px;
+				}
+
+				@media (max-width: 768px) {
+					max-height: 56px;
+				}
+
+				@media (max-width: 350px) {
+					grid-template-columns: 1fr;
+				}
 
 				& .timetable__head-dropdown_button {
 					background-color: $white;
@@ -123,13 +192,25 @@
 						background-color: #d9d9d9;
 						color: #403434;
 					}
-					&:nth-child(even) {
-						border-left: 1px solid $black;
+					&:nth-child(odd) {
+						@media (min-width: 900px) {
+							border-right: 1px solid $black;
+						}
+					}
+
+					&:first-child {
 					}
 
 					&.active {
 						background-color: #d9d9d9;
 						color: #403434;
+						grid-column: 1;
+						grid-row: 1;
+					}
+
+					@media (max-width: 900px) {
+						font-size: 14px;
+						white-space: nowrap;
 					}
 				}
 			}
@@ -141,6 +222,19 @@
 				align-items: center;
 				max-height: rem(18, 49);
 				overflow: hidden;
+
+				@media (max-width: 900px) {
+					grid-template-columns: repeat(6, 100px);
+					max-height: 28px;
+				}
+
+				@media (max-width: 768px) {
+					grid-template-columns: repeat(2, 100px);
+					max-height: 56px;
+				}
+				@media (max-width: 350px) {
+					grid-template-columns: 1fr;
+				}
 
 				&.active {
 					max-height: 100%;
@@ -161,8 +255,30 @@
 					cursor: pointer;
 					transition: all 0.3s ease;
 
-					&:nth-child(9n) {
+					@media (max-width: 900px) {
+						font-size: 14px;
+						white-space: nowrap;
+					}
+
+					@media (max-width: 350px) {
 						border-right: none;
+					}
+
+					&:nth-child(9n) {
+						@media (min-width: 901px) {
+							border-right: none;
+						}
+					}
+
+					&:nth-child(6n) {
+						@media (max-width: 900px) {
+							border-right: none;
+						}
+					}
+					&:nth-child(2n) {
+						@media (max-width: 768px) {
+							border-right: none;
+						}
 					}
 
 					&:hover {
@@ -179,6 +295,10 @@
 
 			&_button {
 				padding: rem(18, 10) 0;
+
+				@media (max-width: 900px) {
+					padding: 4px 0;
+				}
 			}
 		}
 	}
@@ -186,6 +306,16 @@
 	&__table {
 		width: 100%;
 		height: 100%;
+		display: none;
+
+		&.active {
+			display: table;
+		}
+
+		@media (max-width: 768px) {
+			border: 1px solid #c1c1c1;
+		}
+
 		& td {
 			border-bottom: 1px solid #c1c1c1;
 			border-right: 1px solid #c1c1c1;
@@ -196,6 +326,28 @@
 			font-weight: 700;
 			line-height: 100%;
 
+			@media (max-width: 768px) {
+				font-size: 12px;
+				border-bottom: none;
+				height: auto;
+				padding-top: 22px;
+
+				padding-left: 6px;
+			}
+
+			&:last-child {
+				@media (max-width: 768px) {
+					border-right: none;
+				}
+			}
+
+			&:first-child {
+				@media (max-width: 768px) {
+					padding-right: 5px;
+					padding-left: 4px;
+				}
+			}
+
 			& span {
 				color: #403434;
 				font-family: TeX Gyre Heros Cn;
@@ -203,6 +355,10 @@
 				font-weight: 700;
 				line-height: 85%;
 				text-transform: uppercase;
+
+				@media (max-width: 768px) {
+					font-size: 10px;
+				}
 				&:last-child {
 					color: #898989;
 					font-family: TeX Gyre Heros Cn;
@@ -210,6 +366,9 @@
 					font-weight: 700;
 					line-height: 85%;
 					text-transform: uppercase;
+					@media (max-width: 768px) {
+						font-size: 7px;
+					}
 				}
 			}
 
@@ -223,6 +382,13 @@
 		}
 
 		& tr {
+			&:last-child {
+				& td {
+					@media (max-width: 768px) {
+						padding-bottom: 22px;
+					}
+				}
+			}
 			& td {
 				width: rem(18, 330);
 				vertical-align: middle;
@@ -230,6 +396,25 @@
 			&:first-child {
 				& td {
 					border-top: 1px solid #c1c1c1;
+					@media (max-width: 768px) {
+						border: none;
+						border-bottom: 1px solid #c1c1c1;
+						border-right: 1px solid #c1c1c1;
+						padding: 0;
+						height: 37px;
+					}
+
+					&:first-child {
+						@media (max-width: 768px) {
+							border-bottom: 1px solid #c1c1c1;
+						}
+					}
+
+					&:last-child {
+						@media (max-width: 768px) {
+							border-right: none;
+						}
+					}
 				}
 			}
 			& td {
@@ -237,6 +422,13 @@
 					border-left: 1px solid #c1c1c1;
 
 					width: rem(18, 151);
+
+					@media (max-width: 768px) {
+						border: none;
+						border-right: 1px solid #c1c1c1;
+						&:first-child {
+						}
+					}
 				}
 			}
 		}

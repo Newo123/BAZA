@@ -23,10 +23,10 @@
     <nav class="header__nav">
       <ul class="header__list">
         <li class="header__list_item">
-          <a class="lang" href="#" data-primary="Price" data-secondary="Цены">Price</a>
+          <a class="lang" href="./price.html" data-primary="Price" data-secondary="Цены">Price</a>
         </li>
         <li class="header__list_item">
-          <a class="lang" href="#" data-primary="Timetable" data-secondary="Расписание">Timetable</a>
+          <a class="lang" href="./timetable.html" data-primary="Timetable" data-secondary="Расписание">Timetable</a>
         </li>
         <li class="header__list_item">
           <a class="lang" href="./teachers-styles.html" data-primary="Teachers&amp;Styles" data-secondary="Педагоги и Стили">Teachers&amp;Styles</a>
@@ -164,6 +164,31 @@
         </button>
       </form>
     </section>
+    <section class="teachers">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide trank" data-name="VANYA LEE1" data-skill="LOW HEELS1">
+            <img src="./img/slide1.png">
+          </div>
+          <div class="swiper-slide trank" data-name="VANYA LEE2" data-skill="LOW HEELS2">
+            <img src="./img/slide2.png">
+          </div>
+          <div class="swiper-slide trank" data-name="VANYA LEE3" data-skill="LOW HEELS3">
+            <img src="./img/slide3.png">
+          </div>
+          <div class="swiper-slide trank" data-name="VANYA LEE4" data-skill="LOW HEELS4">
+            <img src="./img/slide4.png">
+          </div>
+        </div>
+      </div>
+      <div class="teachers__info">
+        <h2 class="teachers__title">teachers</h2>
+        <div class="teachers__info-teacher">
+          <h3 class="teachers__info-title"> </h3>
+          <p class="teachers__info-description"></p>
+        </div>
+      </div>
+    </section>
     <section class="card _lazy _load-map" data-map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d543.8867822388027!2d24.154759421192477!3d56.95655991355993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eece3841b9b989%3A0x8c9ce5482ed42553!2zSsSBxYZhIEFzYXJhIGllbGEgMTMsIExhdGdhbGVzIHByaWVrxaFwaWxzxJN0YSwgUsSrZ2EsIExWLTEwMDksINCb0LDRgtCy0LjRjw!5e0!3m2!1sru!2sru!4v1691209873241!5m2!1sru!2sru"></section>
   </main>
   <footer class="footer">
@@ -201,6 +226,27 @@
           </svg>
         </a>
       </div>
+    </div>
+    <div class="modal">
+      <form class="modal__form" action="#" name="callback" id="callback">
+        <div class="modal__close">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+            <path x="0.5" y="0.5" fill="white" stroke="black"></path>
+            <line x1="27.0216" y1="25.9784" x2="73.9151" y2="72.8718" stroke="#F45200" stroke-width="4"></line>
+            <line x1="73.9142" y1="26.9142" x2="27.0208" y2="73.8076" stroke="#F45200" stroke-width="4"></line>
+          </svg>
+        </div>
+        <h2 class="modal__title">мы поможем тебе стать лучше</h2>
+        <label class="modal__form-label" for="name">
+          <input class="modal__form-input" id="name" name="name" type="text" placeholder="ИМЯ">
+        </label>
+        <label class="modal__form-label" for="phone">
+          <input class="modal__form-input" id="phone" name="phone" type="text" placeholder="НОМЕР">
+        </label>
+        <button class="modal__form-button" type="submit">
+          <span>Записаться!</span>
+        </button>
+      </form>
     </div>
   </footer>
 </body>

@@ -34,3 +34,18 @@ footer.footer
       a(href="#")
         svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 95 95" fill="none")
           path(fill-rule="evenodd" clip-rule="evenodd" d="M0 26C0 11.6406 11.6406 0 26 0H69C83.3594 0 95 11.6406 95 26V69C95 83.3594 83.3594 95 69 95H26C11.6406 95 0 83.3594 0 69V26ZM81 19.5C81 21.9853 78.9854 24 76.5 24C74.0146 24 72 21.9853 72 19.5C72 17.0147 74.0146 15 76.5 15C78.9854 15 81 17.0147 81 19.5ZM64 48C64 56.8366 56.8367 64 48 64C39.1633 64 32 56.8366 32 48C32 39.1634 39.1633 32 48 32C56.8367 32 64 39.1634 64 48ZM72 48C72 61.2548 61.2549 72 48 72C34.7451 72 24 61.2548 24 48C24 34.7452 34.7451 24 48 24C61.2549 24 72 34.7452 72 48Z")
+
+  .modal
+    form(action="#" name="callback" id="callback").modal__form
+      .modal__close
+        svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none")
+          path(x="0.5" y="0.5" fill="white" stroke="black")
+          line(x1="27.0216" y1="25.9784" x2="73.9151" y2="72.8718" stroke="#F45200" stroke-width="4")
+          line(x1="73.9142" y1="26.9142" x2="27.0208" y2="73.8076" stroke="#F45200" stroke-width="4")
+      h2.modal__title мы поможем тебе стать лучше
+      label(for="name" class="modal__form-label")
+        input(id="name" name="name" type="text" class="modal__form-input" placeholder="ИМЯ")
+      label(for="phone" class="modal__form-label")
+        input(id="phone" name="phone" type="text" class="modal__form-input" placeholder="НОМЕР")
+      button(type="submit" class="modal__form-button")
+        span Записаться!

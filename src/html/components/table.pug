@@ -1,11 +1,12 @@
-section.timetable
+section.timetable#timetable
   .timetable__head
     .timetable__head-left
       p РЕГИОН:
       .timetable__head-list
         .timetable__head-dropdown.one
-          .timetable__head-dropdown_button.active ГРИЗИНКАЛНС
-          .timetable__head-dropdown_button ИМАНТА
+          a(href="#").country-tab.timetable__head-dropdown_button.active ГРИЗИНКАЛНС
+          a(href="#").country-tab.timetable__head-dropdown_button ИМАНТА
+          a(href="#").country-tab.timetable__head-dropdown_button ИМАНТА
         .timetable__head-dropdown_open-left
           svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38 22" fill="none")
             path(d="M17.2322 20.7678C18.2085 21.7441 19.7915 21.7441 20.7678 20.7678L36.6777 4.85786C37.654 3.88155 37.654 2.29864 36.6777 1.32233C35.7014 0.346019 34.1184 0.346019 33.1421 1.32233L19 15.4645L4.85786 1.32233C3.88155 0.34602 2.29864 0.34602 1.32233 1.32233C0.346019 2.29864 0.346019 3.88155 1.32233 4.85787L17.2322 20.7678ZM16.5 17L16.5 19L21.5 19L21.5 17L16.5 17Z" fill="#F45200")
@@ -13,28 +14,611 @@ section.timetable
       p СТИЛИ:
       .timetable__head-list
         .timetable__head-dropdown.two
-          .timetable__head-dropdown_button.active РАСТЯЖКА
-          .timetable__head-dropdown_button ДАНСХОЛЛ
-          .timetable__head-dropdown_button БРЕЙК
-          .timetable__head-dropdown_button БРЕЙК КИДС
-          .timetable__head-dropdown_button ХАЙ ХИЛЛС
-          .timetable__head-dropdown_button ЛЕДИ СТАЙЛ
-          .timetable__head-dropdown_button ХИП-ХОП
-          .timetable__head-dropdown_button ХИП-ХОП КИДС
-          .timetable__head-dropdown_button ХИП-ХОП 12+
-          .timetable__head-dropdown_button РАСТЯЖКА
-          .timetable__head-dropdown_button ДАНСХОЛЛ
-          .timetable__head-dropdown_button БРЕЙК
-          .timetable__head-dropdown_button БРЕЙК КИДС
-          .timetable__head-dropdown_button ХАЙ ХИЛЛС
-          .timetable__head-dropdown_button ЛЕДИ СТАЙЛ
-          .timetable__head-dropdown_button ХИП-ХОП
-          .timetable__head-dropdown_button ХИП-ХОП КИДС
-          .timetable__head-dropdown_button ХИП-ХОП 12+
+          div(data-name="РАСТЯЖКА").cat-tab.timetable__head-dropdown_button РАСТЯЖКА
+          div(data-name="ДАНСХОЛЛ").cat-tab.timetable__head-dropdown_button ДАНСХОЛЛ
+          div(data-name="БРЕЙК").cat-tab.timetable__head-dropdown_button БРЕЙК
+          div(data-name="БРЕЙК КИДС").cat-tab.timetable__head-dropdown_button БРЕЙК КИДС
+          div(data-name="ХАЙ ХИЛЛС").cat-tab.timetable__head-dropdown_button ХАЙ ХИЛЛС
+          div(data-name="ЛЕДИ СТАЙЛ").cat-tab.timetable__head-dropdown_button ЛЕДИ СТАЙЛ
+          div(data-name="ХИП-ХОП").cat-tab.timetable__head-dropdown_button ХИП-ХОП
+          div(data-name="ХИП-ХОП КИДС").cat-tab.timetable__head-dropdown_button ХИП-ХОП КИДС
+          div(data-name="ХИП-ХОП 12+").cat-tab.timetable__head-dropdown_button ХИП-ХОП 12+          
         .timetable__head-dropdown_open-right
           svg(xmlns="http://www.w3.org/2000/svg" width="38" height="22" viewBox="0 0 38 22" fill="none")
             path(d="M17.2322 20.7678C18.2085 21.7441 19.7915 21.7441 20.7678 20.7678L36.6777 4.85786C37.654 3.88155 37.654 2.29864 36.6777 1.32233C35.7014 0.346019 34.1184 0.346019 33.1421 1.32233L19 15.4645L4.85786 1.32233C3.88155 0.34602 2.29864 0.34602 1.32233 1.32233C0.346019 2.29864 0.346019 3.88155 1.32233 4.85787L17.2322 20.7678ZM16.5 17L16.5 19L21.5 19L21.5 17L16.5 17Z" fill="#F45200")
-  table(align="center").timetable__table
+  table(align="center" data-name="РАСТЯЖКА").timetable__table
+    tr
+      td 
+      td
+        p ПН
+      td
+        p ВТ
+      td
+        p СР
+      td
+        p ЧТ
+      td
+        p ПТ
+    tr
+      td
+        p 09:00
+      td 
+      td
+        p
+          span ХИП-ХОП КИДС / НАЧ
+          span ДАРЬЯ ШУБИНА / ЗАЛ 1
+      td 
+      td 
+      td
+    tr
+      td
+        p 10:30
+      td 
+      td
+        p
+          span ХИП-ХОП КИДС / НАЧ
+          span ДАРЬЯ ШУБИНА / ЗАЛ 1
+      td 
+      td 
+      td
+    tr
+      td
+        p 14:00
+      td 
+      td
+        p
+          span ХИП-ХОП КИДС / НАЧ
+          span ДАРЬЯ ШУБИНА / ЗАЛ 1
+      td 
+      td
+        p
+          span ХИП-ХОП КИДС / НАЧ
+          span ДАРЬЯ ШУБИНА / ЗАЛ 1
+      td
+    tr
+      td
+        p 16:00
+      td
+        p
+          span ХИП-ХОП КИДС / НАЧ
+          span ДАРЬЯ ШУБИНА / ЗАЛ 1
+      td 
+      td
+        p
+          span ХИП-ХОП КИДС / НАЧ
+          span ДАРЬЯ ШУБИНА / ЗАЛ 1
+      td 
+      td
+    tr
+      td
+        p 17:00
+      td 
+      td
+        p
+          span ХИП-ХОП КИДС / НАЧ
+          span ДАРЬЯ ШУБИНА / ЗАЛ 1
+      td 
+      td 
+      td
+  table(align="center" data-name="ДАНСХОЛЛ").timetable__table
+    tr
+      td 
+      td
+        p ПН
+      td
+        p ВТ
+      td
+        p СР
+      td
+        p ЧТ
+      td
+        p ПТ
+    tr
+      td
+        p 09:00
+      td 
+      td
+        p
+          span ХИП-ХОП КИДС / НАЧ
+          span ДАРЬЯ ШУБИНА / ЗАЛ 1
+      td 
+      td 
+      td
+    tr
+      td
+        p 10:30
+      td 
+      td
+        p
+          span ХИП-ХОП КИДС / НАЧ
+          span ДАРЬЯ ШУБИНА / ЗАЛ 1
+      td 
+      td 
+      td
+    tr
+      td
+        p 14:00
+      td 
+      td
+        p
+          span ХИП-ХОП КИДС / НАЧ
+          span ДАРЬЯ ШУБИНА / ЗАЛ 1
+      td 
+      td
+        p
+          span ХИП-ХОП КИДС / НАЧ
+          span ДАРЬЯ ШУБИНА / ЗАЛ 1
+      td
+    tr
+      td
+        p 16:00
+      td
+        p
+          span ХИП-ХОП КИДС / НАЧ
+          span ДАРЬЯ ШУБИНА / ЗАЛ 1
+      td 
+      td
+        p
+          span ХИП-ХОП КИДС / НАЧ
+          span ДАРЬЯ ШУБИНА / ЗАЛ 1
+      td 
+      td
+    tr
+      td
+        p 17:00
+      td 
+      td
+        p
+          span ХИП-ХОП КИДС / НАЧ
+          span ДАРЬЯ ШУБИНА / ЗАЛ 1
+      td 
+      td 
+      td
+  table(align="center" data-name="БРЕЙК").timetable__table
+    tr
+      td 
+      td
+        p ПН
+      td
+        p ВТ
+      td
+        p СР
+      td
+        p ЧТ
+      td
+        p ПТ
+    tr
+      td
+        p 09:00
+      td 
+      td
+        p
+          span ХИП-ХОП КИДС / НАЧ
+          span ДАРЬЯ ШУБИНА / ЗАЛ 1
+      td 
+      td 
+      td
+    tr
+      td
+        p 10:30
+      td 
+      td
+        p
+          span ХИП-ХОП КИДС / НАЧ
+          span ДАРЬЯ ШУБИНА / ЗАЛ 1
+      td 
+      td 
+      td
+    tr
+      td
+        p 14:00
+      td 
+      td
+        p
+          span ХИП-ХОП КИДС / НАЧ
+          span ДАРЬЯ ШУБИНА / ЗАЛ 1
+      td 
+      td
+        p
+          span ХИП-ХОП КИДС / НАЧ
+          span ДАРЬЯ ШУБИНА / ЗАЛ 1
+      td
+    tr
+      td
+        p 16:00
+      td
+        p
+          span ХИП-ХОП КИДС / НАЧ
+          span ДАРЬЯ ШУБИНА / ЗАЛ 1
+      td 
+      td
+        p
+          span ХИП-ХОП КИДС / НАЧ
+          span ДАРЬЯ ШУБИНА / ЗАЛ 1
+      td 
+      td
+    tr
+      td
+        p 17:00
+      td 
+      td
+        p
+          span ХИП-ХОП КИДС / НАЧ
+          span ДАРЬЯ ШУБИНА / ЗАЛ 1
+      td 
+      td 
+      td
+  table(align="center" data-name="БРЕЙК КИДС").timetable__table
+    tr
+      td 
+      td
+        p ПН
+      td
+        p ВТ
+      td
+        p СР
+      td
+        p ЧТ
+      td
+        p ПТ
+    tr
+      td
+        p 09:00
+      td 
+      td
+        p
+          span ХИП-ХОП КИДС / НАЧ
+          span ДАРЬЯ ШУБИНА / ЗАЛ 1
+      td 
+      td 
+      td
+    tr
+      td
+        p 10:30
+      td 
+      td
+        p
+          span ХИП-ХОП КИДС / НАЧ
+          span ДАРЬЯ ШУБИНА / ЗАЛ 1
+      td 
+      td 
+      td
+    tr
+      td
+        p 14:00
+      td 
+      td
+        p
+          span ХИП-ХОП КИДС / НАЧ
+          span ДАРЬЯ ШУБИНА / ЗАЛ 1
+      td 
+      td
+        p
+          span ХИП-ХОП КИДС / НАЧ
+          span ДАРЬЯ ШУБИНА / ЗАЛ 1
+      td
+    tr
+      td
+        p 16:00
+      td
+        p
+          span ХИП-ХОП КИДС / НАЧ
+          span ДАРЬЯ ШУБИНА / ЗАЛ 1
+      td 
+      td
+        p
+          span ХИП-ХОП КИДС / НАЧ
+          span ДАРЬЯ ШУБИНА / ЗАЛ 1
+      td 
+      td
+    tr
+      td
+        p 17:00
+      td 
+      td
+        p
+          span ХИП-ХОП КИДС / НАЧ
+          span ДАРЬЯ ШУБИНА / ЗАЛ 1
+      td 
+      td 
+      td
+  table(align="center" data-name="ХАЙ ХИЛЛС").timetable__table
+    tr
+      td 
+      td
+        p ПН
+      td
+        p ВТ
+      td
+        p СР
+      td
+        p ЧТ
+      td
+        p ПТ
+    tr
+      td
+        p 09:00
+      td 
+      td
+        p
+          span ХИП-ХОП КИДС / НАЧ
+          span ДАРЬЯ ШУБИНА / ЗАЛ 1
+      td 
+      td 
+      td
+    tr
+      td
+        p 10:30
+      td 
+      td
+        p
+          span ХИП-ХОП КИДС / НАЧ
+          span ДАРЬЯ ШУБИНА / ЗАЛ 1
+      td 
+      td 
+      td
+    tr
+      td
+        p 14:00
+      td 
+      td
+        p
+          span ХИП-ХОП КИДС / НАЧ
+          span ДАРЬЯ ШУБИНА / ЗАЛ 1
+      td 
+      td
+        p
+          span ХИП-ХОП КИДС / НАЧ
+          span ДАРЬЯ ШУБИНА / ЗАЛ 1
+      td
+    tr
+      td
+        p 16:00
+      td
+        p
+          span ХИП-ХОП КИДС / НАЧ
+          span ДАРЬЯ ШУБИНА / ЗАЛ 1
+      td 
+      td
+        p
+          span ХИП-ХОП КИДС / НАЧ
+          span ДАРЬЯ ШУБИНА / ЗАЛ 1
+      td 
+      td
+    tr
+      td
+        p 17:00
+      td 
+      td
+        p
+          span ХИП-ХОП КИДС / НАЧ
+          span ДАРЬЯ ШУБИНА / ЗАЛ 1
+      td 
+      td 
+      td
+  table(align="center" data-name="ЛЕДИ СТАЙЛ").timetable__table
+    tr
+      td 
+      td
+        p ПН
+      td
+        p ВТ
+      td
+        p СР
+      td
+        p ЧТ
+      td
+        p ПТ
+    tr
+      td
+        p 09:00
+      td 
+      td
+        p
+          span ХИП-ХОП КИДС / НАЧ
+          span ДАРЬЯ ШУБИНА / ЗАЛ 1
+      td 
+      td 
+      td
+    tr
+      td
+        p 10:30
+      td 
+      td
+        p
+          span ХИП-ХОП КИДС / НАЧ
+          span ДАРЬЯ ШУБИНА / ЗАЛ 1
+      td 
+      td 
+      td
+    tr
+      td
+        p 14:00
+      td 
+      td
+        p
+          span ХИП-ХОП КИДС / НАЧ
+          span ДАРЬЯ ШУБИНА / ЗАЛ 1
+      td 
+      td
+        p
+          span ХИП-ХОП КИДС / НАЧ
+          span ДАРЬЯ ШУБИНА / ЗАЛ 1
+      td
+    tr
+      td
+        p 16:00
+      td
+        p
+          span ХИП-ХОП КИДС / НАЧ
+          span ДАРЬЯ ШУБИНА / ЗАЛ 1
+      td 
+      td
+        p
+          span ХИП-ХОП КИДС / НАЧ
+          span ДАРЬЯ ШУБИНА / ЗАЛ 1
+      td 
+      td
+    tr
+      td
+        p 17:00
+      td 
+      td
+        p
+          span ХИП-ХОП КИДС / НАЧ
+          span ДАРЬЯ ШУБИНА / ЗАЛ 1
+      td 
+      td 
+      td
+  table(align="center" data-name="ХИП-ХОП").timetable__table
+    tr
+      td 
+      td
+        p ПН
+      td
+        p ВТ
+      td
+        p СР
+      td
+        p ЧТ
+      td
+        p ПТ
+    tr
+      td
+        p 09:00
+      td 
+      td
+        p
+          span ХИП-ХОП КИДС / НАЧ
+          span ДАРЬЯ ШУБИНА / ЗАЛ 1
+      td 
+      td 
+      td
+    tr
+      td
+        p 10:30
+      td 
+      td
+        p
+          span ХИП-ХОП КИДС / НАЧ
+          span ДАРЬЯ ШУБИНА / ЗАЛ 1
+      td 
+      td 
+      td
+    tr
+      td
+        p 14:00
+      td 
+      td
+        p
+          span ХИП-ХОП КИДС / НАЧ
+          span ДАРЬЯ ШУБИНА / ЗАЛ 1
+      td 
+      td
+        p
+          span ХИП-ХОП КИДС / НАЧ
+          span ДАРЬЯ ШУБИНА / ЗАЛ 1
+      td
+    tr
+      td
+        p 16:00
+      td
+        p
+          span ХИП-ХОП КИДС / НАЧ
+          span ДАРЬЯ ШУБИНА / ЗАЛ 1
+      td 
+      td
+        p
+          span ХИП-ХОП КИДС / НАЧ
+          span ДАРЬЯ ШУБИНА / ЗАЛ 1
+      td 
+      td
+    tr
+      td
+        p 17:00
+      td 
+      td
+        p
+          span ХИП-ХОП КИДС / НАЧ
+          span ДАРЬЯ ШУБИНА / ЗАЛ 1
+      td 
+      td 
+      td
+  table(align="center" data-name="ХИП-ХОП КИДС").timetable__table
+    tr
+      td 
+      td
+        p ПН
+      td
+        p ВТ
+      td
+        p СР
+      td
+        p ЧТ
+      td
+        p ПТ
+    tr
+      td
+        p 09:00
+      td 
+      td
+        p
+          span ХИП-ХОП КИДС / НАЧ
+          span ДАРЬЯ ШУБИНА / ЗАЛ 1
+      td 
+      td 
+      td
+    tr
+      td
+        p 10:30
+      td 
+      td
+        p
+          span ХИП-ХОП КИДС / НАЧ
+          span ДАРЬЯ ШУБИНА / ЗАЛ 1
+      td 
+      td 
+      td
+    tr
+      td
+        p 14:00
+      td 
+      td
+        p
+          span ХИП-ХОП КИДС / НАЧ
+          span ДАРЬЯ ШУБИНА / ЗАЛ 1
+      td 
+      td
+        p
+          span ХИП-ХОП КИДС / НАЧ
+          span ДАРЬЯ ШУБИНА / ЗАЛ 1
+      td
+    tr
+      td
+        p 16:00
+      td
+        p
+          span ХИП-ХОП КИДС / НАЧ
+          span ДАРЬЯ ШУБИНА / ЗАЛ 1
+      td 
+      td
+        p
+          span ХИП-ХОП КИДС / НАЧ
+          span ДАРЬЯ ШУБИНА / ЗАЛ 1
+      td 
+      td
+    tr
+      td
+        p 17:00
+      td 
+      td
+        p
+          span ХИП-ХОП КИДС / НАЧ
+          span ДАРЬЯ ШУБИНА / ЗАЛ 1
+      td 
+      td 
+      td
+  table(align="center" data-name="ХИП-ХОП 12+").timetable__table
     tr
       td 
       td

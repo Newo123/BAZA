@@ -1,0 +1,257 @@
+.hero-price {
+	height: 480px;
+	background-color: #403434;
+	position: relative;
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-start;
+
+	@media (min-width: 1921px) {
+		height: rem(18, 480);
+	}
+
+	@media (max-width: 900px) {
+		height: 100dvh;
+		align-items: center;
+		justify-content: flex-start;
+	}
+
+	&__title {
+		color: #f45200;
+		font-family: TeX Gyre Heros;
+		font-size: rem(18, 174);
+		font-weight: 700;
+		line-height: 85%;
+		max-width: rem(18, 630);
+		margin-bottom: rem(18, 30);
+		margin-left: rem(18, 690);
+		@media (max-width: 900px) {
+			margin: 0;
+			@include adaptive-hero(font-size, 174, 92);
+			@include adaptive-hero(max-width, 630, 320);
+			@include adaptive-hero(margin-left, 60, 15);
+			@include adaptive-hero(margin-right, 60, 15);
+		}
+	}
+
+	&__tabs {
+		position: absolute;
+		bottom: rem(18, 30);
+		right: rem(18, 60);
+
+		display: grid;
+		$col: rem(18, 113);
+		grid-template-columns: repeat(3, $col);
+		z-index: 6;
+
+		transition: all 0.3s ease;
+
+		@media (max-width: 900px) {
+			position: fixed;
+			@include adaptive-hero(bottom, 73, 63);
+			left: 0;
+			grid-template-columns: repeat(3, 1fr);
+			width: 100%;
+		}
+
+		&.hide {
+			transform: translateY(110%);
+			bottom: 0;
+		}
+		& button {
+			height: rem(18, 40);
+			color: #898989;
+			text-align: center;
+			font-family: TeX Gyre Heros Cn;
+			font-size: rem(18, 20);
+			font-style: normal;
+			font-weight: 700;
+			line-height: normal;
+			background-color: $white;
+			border: 1px solid #000;
+			cursor: pointer;
+			transition: all 0.3s ease;
+			outline: none;
+
+			@media (max-width: 900px) {
+				@include adaptive-hero(height, 40, 36);
+				font-size: 20px;
+			}
+
+			&:hover,
+			&.active {
+				color: #f45200;
+				border-color: #f45200;
+				background-color: #d9d9d9;
+			}
+		}
+	}
+}
+
+.price {
+	margin: 0 rem(18, 60) rem(18, 90);
+
+	@media (max-width: 768px) {
+		@include adaptive-hero(margin-left, 60, 15);
+		@include adaptive-hero(margin-right, 60, 15);
+		@include adaptive-hero(margin-top, 90, 80);
+		@include adaptive-hero(margin-bottom, 90, 80);
+	}
+
+	&__container {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		transition: all 0.4s ease;
+		opacity: 0;
+		visibility: hidden;
+		overflow: hidden;
+		max-height: 0;
+
+		&.active {
+			opacity: 1;
+			visibility: visible;
+			overflow: visible;
+			max-height: 100%;
+		}
+
+		@media (max-width: 768px) {
+			grid-template-columns: repeat(2, 1fr);
+			border-top: 1px solid #c1c1c1;
+		}
+	}
+
+	&__item {
+		border: 1px solid #c1c1c1;
+		border-top: none;
+		border-left: none;
+		&:nth-child(5n),
+		&:first-child {
+			border-left: 1px solid #c1c1c1;
+		}
+
+		&:nth-child(5n) {
+			@media (max-width: 768px) {
+				border-left: none;
+			}
+		}
+
+		&:nth-child(odd) {
+			@media (max-width: 768px) {
+				border-left: 1px solid #c1c1c1;
+			}
+		}
+		@media (max-width: 768px) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		&-top {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: rem(18, 25);
+			padding: 0 rem(18, 34) 0 rem(18, 40);
+			border-bottom: 1px solid #c1c1c1;
+			height: rem(18, 210);
+
+			@media (max-width: 768px) {
+				gap: 15px;
+				padding: 24px 30px;
+				flex-direction: column;
+				border-bottom: none;
+				height: auto;
+				justify-content: center;
+			}
+
+			& p {
+				color: #898989;
+				font-family: TeX Gyre Heros Cn;
+				font-size: rem(18, 36);
+				font-weight: 700;
+				line-height: 100%;
+
+				@media (max-width: 768px) {
+					@include adaptive-hero(font-size, 36, 16);
+				}
+			}
+
+			& h5 {
+				color: #403434;
+				font-family: TeX Gyre Heros Cn;
+				font-size: rem(18, 64);
+				font-weight: 700;
+				line-height: 85%;
+
+				@media (max-width: 768px) {
+					@include adaptive-hero(font-size, 64, 23);
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		&-bottom {
+			height: rem(18, 170);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			@media (max-width: 768px) {
+				height: auto;
+				@include adaptive-hero(padding-left, 94, 27);
+				@include adaptive-hero(padding-right, 94, 27);
+				@include adaptive-hero(padding-bottom, 46, 20);
+			}
+			& button {
+				padding: rem(18, 26) rem(18, 40);
+				background-color: transparent;
+				border: 1px solid $black;
+				position: relative;
+				overflow: hidden;
+				cursor: pointer;
+
+				@media (max-width: 768px) {
+					padding: 0;
+					@include adaptive-hero(padding-bottom, 26, 9);
+					@include adaptive-hero(padding-top, 26, 9);
+					margin-bottom: 0;
+					width: 100%;
+				}
+
+				& span {
+					color: #403434;
+					font-family: TeX Gyre Heros Cn;
+					font-size: rem(18, 32);
+					font-weight: 700;
+					line-height: 100%;
+					position: relative;
+					z-index: 1;
+					transition: all 0.3s ease;
+
+					@media (max-width: 768px) {
+						@include adaptive-hero(font-size, 32, 16);
+					}
+				}
+
+				&::before {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					background-color: #f45200;
+					transition: all 0.3s ease;
+					transform: translateY(110%);
+				}
+
+				&:hover {
+					& span {
+						color: $white;
+					}
+
+					&::before {
+						transform: translateY(0);
+					}
+				}
+			}
+		}
+	}
+}

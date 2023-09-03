@@ -23,10 +23,10 @@
     <nav class="header__nav">
       <ul class="header__list">
         <li class="header__list_item">
-          <a class="lang" href="#" data-primary="Price" data-secondary="Цены">Price</a>
+          <a class="lang" href="./price.html" data-primary="Price" data-secondary="Цены">Price</a>
         </li>
         <li class="header__list_item">
-          <a class="lang" href="#" data-primary="Timetable" data-secondary="Расписание">Timetable</a>
+          <a class="lang" href="./timetable.html" data-primary="Timetable" data-secondary="Расписание">Timetable</a>
         </li>
         <li class="header__list_item">
           <a class="lang" href="./teachers-styles.html" data-primary="Teachers&amp;Styles" data-secondary="Педагоги и Стили">Teachers&amp;Styles</a>
@@ -67,7 +67,7 @@
       <div class="remains__nav">
         <div class="remains__nav-item">
           <img src="./img/remains-1.png">
-          <a href="#">PRICE
+          <a href="./price.html">PRICE
             <svg xmlns="http://www.w3.org/2000/svg" width="42" height="16" viewBox="0 0 42 16" fill="none">
               <path d="M41.7071 8.70711C42.0976 8.31659 42.0976 7.68343 41.7071 7.2929L35.3431 0.928939C34.9526 0.538414 34.3195 0.538414 33.9289 0.928939C33.5384 1.31946 33.5384 1.95263 33.9289 2.34315L39.5858 8.00001L33.9289 13.6569C33.5384 14.0474 33.5384 14.6805 33.9289 15.0711C34.3195 15.4616 34.9526 15.4616 35.3431 15.0711L41.7071 8.70711ZM-4.04055e-08 9L41 9.00001L41 7.00001L4.04055e-08 7L-4.04055e-08 9Z" fill="white"></path>
             </svg>
@@ -75,7 +75,7 @@
         </div>
         <div class="remains__nav-item">
           <img src="./img/remains-2.png">
-          <a href="#">TIMETABLE
+          <a href="./timetable.html">TIMETABLE
             <svg xmlns="http://www.w3.org/2000/svg" width="42" height="16" viewBox="0 0 42 16" fill="none">
               <path d="M41.7071 8.70711C42.0976 8.31659 42.0976 7.68343 41.7071 7.2929L35.3431 0.928939C34.9526 0.538414 34.3195 0.538414 33.9289 0.928939C33.5384 1.31946 33.5384 1.95263 33.9289 2.34315L39.5858 8.00001L33.9289 13.6569C33.5384 14.0474 33.5384 14.6805 33.9289 15.0711C34.3195 15.4616 34.9526 15.4616 35.3431 15.0711L41.7071 8.70711ZM-4.04055e-08 9L41 9.00001L41 7.00001L4.04055e-08 7L-4.04055e-08 9Z" fill="white"></path>
             </svg>
@@ -95,19 +95,58 @@
       <div class="swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <iframe src="https://www.youtube.com/embed/NlhUQDoPB-w?si=EVB84W2mV-FW9rP_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="player-video" data-id="player-1" id="player-1"></div>
+            <div class="to-play" data-video="uMMDq46r8wM">
+              <img src="https://img.youtube.com/vi/uMMDq46r8wM/maxresdefault.jpg">
+              <svg viewBox="0 0 68 48" version="1.1" height="100%" width="100%">
+                <path class="ytp-large-play-button-bg" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f00"></path>
+                <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+              </svg>
+            </div>
           </div>
           <div class="swiper-slide">
-            <iframe src="https://www.youtube.com/embed/lAjWfI2UChg?si=MSMh0_0KMbZvdceD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="player-video" id="player-2">
+              <div class="to-play" data-id="player-2" data-video="uMMDq46r8wM">
+                <img src="https://img.youtube.com/vi/uMMDq46r8wM/maxresdefault.jpg">
+                <svg viewBox="0 0 68 48" version="1.1" height="100%" width="100%">
+                  <path class="ytp-large-play-button-bg" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f00"></path>
+                  <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+                </svg>
+              </div>
+            </div>
           </div>
           <div class="swiper-slide">
-            <iframe src="https://www.youtube.com/embed/iZgilEeefR8?si=s_uAPudMcar9GKuo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="player-video" id="player-3">
+              <div class="to-play" data-id="player-3" data-video="uMMDq46r8wM">
+                <img src="https://img.youtube.com/vi/uMMDq46r8wM/maxresdefault.jpg">
+                <svg viewBox="0 0 68 48" version="1.1" height="100%" width="100%">
+                  <path class="ytp-large-play-button-bg" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f00"></path>
+                  <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+                </svg>
+              </div>
+            </div>
           </div>
           <div class="swiper-slide">
-            <iframe src="https://www.youtube.com/embed/NlhUQDoPB-w?si=EVB84W2mV-FW9rP_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="player-video" id="player-4">
+              <div class="to-play" data-id="player-4" data-video="uMMDq46r8wM">
+                <img src="https://img.youtube.com/vi/uMMDq46r8wM/maxresdefault.jpg">
+                <svg viewBox="0 0 68 48" version="1.1" height="100%" width="100%">
+                  <path class="ytp-large-play-button-bg" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f00"></path>
+                  <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+                </svg>
+              </div>
+            </div>
           </div>
           <div class="swiper-slide">
-            <iframe src="https://www.youtube.com/embed/3rENJsl4azY?si=czcPzRS6clSbJjt3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="player-video" id="player-5">
+              <div class="to-play" data-id="player-5" data-video="uMMDq46r8wM">
+                <img src="https://img.youtube.com/vi/uMMDq46r8wM/maxresdefault.jpg">
+                <svg viewBox="0 0 68 48" version="1.1" height="100%" width="100%">
+                  <path class="ytp-large-play-button-bg" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f00"></path>
+                  <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+                </svg>
+              </div>
+            </div>
           </div>
         </div>
         <div class="videos__navigation">
@@ -125,6 +164,54 @@
         </div>
       </div>
     </section>
+    <script>document.addEventListener('DOMContentLoaded', () => {
+	const players = Array.from(document.querySelectorAll('.player-video'))
+	// const slides = Array.from(document.querySelectorAll('swiper-slide')).filter(
+	// 	slide => {
+	// 		if (
+	// 			!slide.classList.contains('swiper-slide-duplicate') &&
+	// 			!slide.classList.contains('swiper-slide-duplicate-prev')
+	// 		) {
+	// 			return slide
+	// 		}
+	// 	}
+	// )
+
+	// console.log(slides)
+
+	players.forEach(player => {
+		const playerId = player.getAttribute('id')
+		player.children[0].setAttribute('data-id', playerId)
+		console.log(player.children[0])
+	})
+
+	var tag = document.createElement('script')
+
+	tag.src = 'https://www.youtube.com/iframe_api'
+	var firstScriptTag = document.getElementsByTagName('script')[0]
+	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag)
+
+	document.querySelectorAll('.to-play').forEach(play => {
+		play.addEventListener('click', e => {
+			let btn = e.currentTarget
+			let videoId = btn.dataset.video
+			let playerId = btn.dataset.id
+
+			player = new YT.Player(playerId, {
+				videoId: videoId,
+				playerVars: {
+					playsinline: 1,
+					rel: 1,
+					showinfo: 0,
+					autoplay: 1,
+				},
+				events: {},
+			})
+		})
+	})
+})
+
+      </script>
     <section class="jazz">
       <div class="jazz__container">
         <div class="jazz__head">
@@ -309,6 +396,27 @@
           </svg>
         </a>
       </div>
+    </div>
+    <div class="modal">
+      <form class="modal__form" action="#" name="callback" id="callback">
+        <div class="modal__close">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+            <path x="0.5" y="0.5" fill="white" stroke="black"></path>
+            <line x1="27.0216" y1="25.9784" x2="73.9151" y2="72.8718" stroke="#F45200" stroke-width="4"></line>
+            <line x1="73.9142" y1="26.9142" x2="27.0208" y2="73.8076" stroke="#F45200" stroke-width="4"></line>
+          </svg>
+        </div>
+        <h2 class="modal__title">мы поможем тебе стать лучше</h2>
+        <label class="modal__form-label" for="name">
+          <input class="modal__form-input" id="name" name="name" type="text" placeholder="ИМЯ">
+        </label>
+        <label class="modal__form-label" for="phone">
+          <input class="modal__form-input" id="phone" name="phone" type="text" placeholder="НОМЕР">
+        </label>
+        <button class="modal__form-button" type="submit">
+          <span>Записаться!</span>
+        </button>
+      </form>
     </div>
   </footer>
 </body>

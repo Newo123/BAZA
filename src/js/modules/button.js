@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			document.documentElement.scrollTop) - callback.offsetHeight
 	const button = document.querySelector('.header__action')
 	const tabs = document.querySelector('.hero-second__actions')
+	const tabsPrice = document.querySelector('.hero-price__tabs')
 
 	if (window.scrollY >= elTop) {
 		button.removeAttribute('style')
@@ -25,10 +26,17 @@ document.addEventListener('DOMContentLoaded', () => {
 			if (tabs) {
 				tabs.classList.add('hide')
 			}
+
+			if (tabsPrice) {
+				tabsPrice.classList.add('hide')
+			}
 		} else {
 			button.removeAttribute('style')
 			if (tabs) {
 				tabs.classList.remove('hide')
+			}
+			if (tabsPrice) {
+				tabsPrice.classList.remove('hide')
 			}
 		}
 	})

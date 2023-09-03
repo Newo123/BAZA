@@ -19,12 +19,37 @@
 
 	& .swiper-slide {
 		width: 100%;
-		height: rem(18, 900);
+		height: rem(18, 800);
 		position: relative;
 
 		& iframe {
 			width: 100%;
 			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		& .to-play {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			& img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				object-position: center;
+				z-index: 0;
+			}
 		}
 	}
 
@@ -113,5 +138,16 @@
 		height: 100%;
 		object-fit: cover;
 		object-position: center;
+	}
+}
+
+.to-play {
+	cursor: pointer;
+
+	& svg {
+		width: rem(18, 68);
+		height: rem(18, 48);
+		position: relative;
+		z-index: 1;
 	}
 }

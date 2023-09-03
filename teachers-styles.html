@@ -23,10 +23,10 @@
     <nav class="header__nav">
       <ul class="header__list">
         <li class="header__list_item">
-          <a class="lang" href="#" data-primary="Price" data-secondary="Цены">Price</a>
+          <a class="lang" href="./price.html" data-primary="Price" data-secondary="Цены">Price</a>
         </li>
         <li class="header__list_item">
-          <a class="lang" href="#" data-primary="Timetable" data-secondary="Расписание">Timetable</a>
+          <a class="lang" href="./timetable.html" data-primary="Timetable" data-secondary="Расписание">Timetable</a>
         </li>
         <li class="header__list_item">
           <a class="lang" href="./teachers-styles.html" data-primary="Teachers&amp;Styles" data-secondary="Педагоги и Стили">Teachers&amp;Styles</a>
@@ -271,6 +271,27 @@
           </svg>
         </a>
       </div>
+    </div>
+    <div class="modal">
+      <form class="modal__form" action="#" name="callback" id="callback">
+        <div class="modal__close">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+            <path x="0.5" y="0.5" fill="white" stroke="black"></path>
+            <line x1="27.0216" y1="25.9784" x2="73.9151" y2="72.8718" stroke="#F45200" stroke-width="4"></line>
+            <line x1="73.9142" y1="26.9142" x2="27.0208" y2="73.8076" stroke="#F45200" stroke-width="4"></line>
+          </svg>
+        </div>
+        <h2 class="modal__title">мы поможем тебе стать лучше</h2>
+        <label class="modal__form-label" for="name">
+          <input class="modal__form-input" id="name" name="name" type="text" placeholder="ИМЯ">
+        </label>
+        <label class="modal__form-label" for="phone">
+          <input class="modal__form-input" id="phone" name="phone" type="text" placeholder="НОМЕР">
+        </label>
+        <button class="modal__form-button" type="submit">
+          <span>Записаться!</span>
+        </button>
+      </form>
     </div>
   </footer>
 </body>

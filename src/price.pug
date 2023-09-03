@@ -1,0 +1,171 @@
+extends html/static/head
+block variables
+    - var title = 'Цены и залы'
+    - var page = 'price'
+    - var subtitle = ''
+    - var img = '/img/descriptors/index'
+    - var lang = 'ru'
+    - var classMain = 'main-price'
+    - var classBody = 'body-price'
+
+block content
+  include html/static/header
+  main(class=classMain)
+    include html/components/hero-price
+    section.price
+      div(data-id="evening").price__container.active
+        .price__item
+          .price__item-top
+            p Пробный урок
+            h5 5€
+          .price__item-bottom
+            button
+              span ЗАПИСАТЬСЯ
+        .price__item
+          .price__item-top
+            p Одно занятие
+            h5 13€
+          .price__item-bottom
+            button
+              span ЗАПИСАТЬСЯ
+        .price__item
+          .price__item-top
+            p 8 занятий (4 недели)
+            h5 65€
+          .price__item-bottom
+            button
+              span ЗАПИСАТЬСЯ
+        .price__item
+          .price__item-top
+            p 16 занятий (4 недели в двух группах)
+            h5 100€
+          .price__item-bottom
+            button
+              span ЗАПИСАТЬСЯ
+        .price__item
+          .price__item-top
+            p Пробный урок
+            h5 5€
+          .price__item-bottom
+            button
+              span ЗАПИСАТЬСЯ
+        .price__item
+          .price__item-top
+            p Одно занятие
+            h5 13€
+          .price__item-bottom
+            button
+              span ЗАПИСАТЬСЯ
+        
+      div(data-id="day").price__container
+        .price__item
+          .price__item-top
+            p Пробный урок
+            h5 5€
+          .price__item-bottom
+            button
+              span ЗАПИСАТЬСЯ
+        .price__item
+          .price__item-top
+            p Одно занятие
+            h5 13€
+          .price__item-bottom
+            button
+              span ЗАПИСАТЬСЯ
+        .price__item
+          .price__item-top
+            p 8 занятий (4 недели)
+            h5 65€
+          .price__item-bottom
+            button
+              span ЗАПИСАТЬСЯ
+        .price__item
+          .price__item-top
+            p 16 занятий (4 недели в двух группах)
+            h5 100€
+          .price__item-bottom
+            button
+              span ЗАПИСАТЬСЯ
+        .price__item
+          .price__item-top
+            p Пробный урок
+            h5 5€
+          .price__item-bottom
+            button
+              span ЗАПИСАТЬСЯ
+        .price__item
+          .price__item-top
+            p Одно занятие
+            h5 13€
+          .price__item-bottom
+            button
+              span ЗАПИСАТЬСЯ
+        .price__item
+          .price__item-top
+            p 8 занятий (4 недели)
+            h5 65€
+          .price__item-bottom
+            button
+              span ЗАПИСАТЬСЯ
+       
+      div(data-id="halls").price__container
+        .price__item
+          .price__item-top
+            p Пробный урок
+            h5 5€
+          .price__item-bottom
+            button
+              span ЗАПИСАТЬСЯ
+        .price__item
+          .price__item-top
+            p Одно занятие
+            h5 13€
+          .price__item-bottom
+            button
+              span ЗАПИСАТЬСЯ
+        .price__item
+          .price__item-top
+            p 8 занятий (4 недели)
+            h5 65€
+          .price__item-bottom
+            button
+              span ЗАПИСАТЬСЯ
+        .price__item
+          .price__item-top
+            p 16 занятий (4 недели в двух группах)
+            h5 100€
+          .price__item-bottom
+            button
+              span ЗАПИСАТЬСЯ
+        .price__item
+          .price__item-top
+            p Пробный урок
+            h5 5€
+          .price__item-bottom
+            button
+              span ЗАПИСАТЬСЯ
+        .price__item
+          .price__item-top
+            p Одно занятие
+            h5 13€
+          .price__item-bottom
+            button
+              span ЗАПИСАТЬСЯ
+        .price__item
+          .price__item-top
+            p 8 занятий (4 недели)
+            h5 65€
+          .price__item-bottom
+            button
+              span ЗАПИСАТЬСЯ
+        .price__item
+          .price__item-top
+            p 16 занятий (4 недели в двух группах)
+            h5 100€
+          .price__item-bottom
+            button
+              span ЗАПИСАТЬСЯ
+    
+    include html/components/callback
+    include html/components/card
+  include html/static/footer

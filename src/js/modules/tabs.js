@@ -55,4 +55,33 @@ document.addEventListener('DOMContentLoaded', () => {
 			}
 		}
 	}
+
+	// price tabs
+
+	const priceTabs = Array.from(
+		document.querySelectorAll('.hero-price__tabs button')
+	)
+	const priceList = Array.from(document.querySelectorAll('.price__container'))
+
+	if (priceTabs) {
+		let activeTabPrice = priceTabs[0]
+		let activePriceList = priceList[0]
+
+		priceTabs.forEach(tab => {
+			tab.addEventListener('click', e => {
+				const button = e.target
+				activeTabPrice.classList.remove('active')
+				button.classList.add('active')
+
+				activeTabPrice = button
+				priceList.forEach(price => {
+					if (price.dataset.id === activeTabPrice.id) {
+						activePriceList.classList.remove('active')
+						price.classList.add('active')
+						activePriceList = price
+					}
+				})
+			})
+		})
+	}
 })

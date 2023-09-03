@@ -1129,3 +1129,192 @@ form.sent {
 		order: 11;
 	}
 }
+
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba($color: #000000, $alpha: 0.5);
+	z-index: 12;
+
+	opacity: 0;
+	overflow: hidden;
+	visibility: hidden;
+
+	transition: all 0.3s ease;
+
+	&.active {
+		opacity: 1;
+		overflow: visible;
+		visibility: visible;
+	}
+
+	&__form {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		gap: rem(18, 13);
+		background-color: $white;
+		border: 1px solid $black;
+		width: rem(18, 800);
+		height: rem(18, 764);
+		position: relative;
+
+		padding: 0 rem(18, 190);
+
+		@media (max-width: 900px) {
+			@include adaptive-hero(padding-left, 190, 15);
+			@include adaptive-hero(padding-right, 190, 15);
+			padding-top: 46px;
+			padding-bottom: 28px;
+			@include adaptive-hero(width, 800, 360);
+			@include adaptive-hero(height, 764, 575);
+			@include adaptive-hero(gap, 13, 10);
+			justify-content: flex-start;
+		}
+
+		@media (max-width: 500px) {
+			width: 100%;
+			height: 100dvh;
+		}
+
+		&-label {
+			width: 100%;
+			height: rem(18, 65);
+
+			@media (max-width: 900px) {
+				@include adaptive-hero(height, 65, 52);
+			}
+		}
+
+		&-input {
+			width: 100%;
+			height: 100%;
+			border: 1px solid $black;
+			text-align: center;
+
+			color: #403434;
+			font-family: TeX Gyre Heros;
+			font-size: rem(18, 32);
+			font-style: normal;
+			font-weight: 700;
+			line-height: normal;
+
+			@media (max-width: 900px) {
+				@include adaptive-hero(font-size, 32, 24);
+			}
+
+			&::placeholder {
+				color: #d9d9d9;
+				font-family: TeX Gyre Heros;
+				font-size: rem(18, 32);
+				font-style: normal;
+				font-weight: 700;
+				line-height: normal;
+				@media (max-width: 900px) {
+					@include adaptive-hero(font-size, 32, 24);
+				}
+			}
+		}
+
+		&-button {
+			height: rem(18, 242);
+			width: 100%;
+			border: none;
+			background-color: #f45200;
+			position: relative;
+			overflow: hidden;
+			cursor: pointer;
+
+			@media (max-width: 900px) {
+				@include adaptive-hero(height, 242, 191);
+			}
+
+			& span {
+				color: $white;
+				text-align: center;
+				font-family: TeX Gyre Heros;
+				font-size: rem(18, 50);
+				font-weight: 700;
+				line-height: normal;
+				transition: all 0.3s ease;
+				position: relative;
+				z-index: 1;
+
+				@media (max-width: 900px) {
+					@include adaptive-hero(font-size, 50, 40);
+				}
+			}
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: #403434;
+				transition: all 0.3s ease;
+				transform: translateY(110%);
+			}
+
+			&:hover {
+				&::before {
+					transform: translateY(0);
+				}
+			}
+		}
+	}
+
+	&__close {
+		position: absolute;
+		top: rem(18, 33);
+		right: rem(18, 26);
+		border: 1px solid $black;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		width: fit-content;
+		height: fit-content;
+
+		@media (max-width: 900px) {
+			@include adaptive-hero(font-size, 50, 40);
+			position: static;
+			order: 10;
+			margin-top: auto;
+		}
+
+		& svg {
+			width: rem(18, 50);
+			height: rem(18, 50);
+
+			@media (max-width: 900px) {
+				@include adaptive-hero(width, 50, 40);
+				@include adaptive-hero(height, 50, 40);
+			}
+		}
+	}
+
+	&__title {
+		color: #403434;
+		font-family: TeX Gyre Heros Cn;
+		font-size: rem(18, 40);
+		font-weight: 700;
+		line-height: 100%;
+		text-transform: uppercase;
+		margin-bottom: rem(18, 27);
+		width: 100%;
+
+		@media (max-width: 900px) {
+			@include adaptive-hero(font-size, 40, 32);
+			@include adaptive-hero(margin-bottom, 27, 5);
+		}
+	}
+}

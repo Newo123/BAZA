@@ -23,10 +23,10 @@
     <nav class="header__nav">
       <ul class="header__list">
         <li class="header__list_item">
-          <a class="lang" href="#" data-primary="Price" data-secondary="Цены">Price</a>
+          <a class="lang" href="./price.html" data-primary="Price" data-secondary="Цены">Price</a>
         </li>
         <li class="header__list_item">
-          <a class="lang" href="#" data-primary="Timetable" data-secondary="Расписание">Timetable</a>
+          <a class="lang" href="./timetable.html" data-primary="Timetable" data-secondary="Расписание">Timetable</a>
         </li>
         <li class="header__list_item">
           <a class="lang" href="./teachers-styles.html" data-primary="Teachers&amp;Styles" data-secondary="Педагоги и Стили">Teachers&amp;Styles</a>
@@ -52,16 +52,18 @@
   </header>
   <main class="main-timetable">
     <section class="hero-timetable">
-      <h1 class="hero-timetable__title">TIMETABLE</h1>
+      <h1 class="hero-timetable__title">Timetable</h1>
+      <a href="#timetable">see timetable</a>
     </section>
-    <section class="timetable">
+    <section class="timetable" id="timetable">
       <div class="timetable__head">
         <div class="timetable__head-left">
           <p>РЕГИОН:</p>
           <div class="timetable__head-list">
             <div class="timetable__head-dropdown one">
-              <div class="timetable__head-dropdown_button active">ГРИЗИНКАЛНС</div>
-              <div class="timetable__head-dropdown_button">ИМАНТА</div>
+              <a class="country-tab timetable__head-dropdown_button active" href="#">ГРИЗИНКАЛНС</a>
+              <a class="country-tab timetable__head-dropdown_button" href="#">ИМАНТА</a>
+              <a class="country-tab timetable__head-dropdown_button" href="#">ИМАНТА</a>
             </div>
             <div class="timetable__head-dropdown_open-left">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38 22" fill="none">
@@ -74,24 +76,15 @@
           <p>СТИЛИ:</p>
           <div class="timetable__head-list">
             <div class="timetable__head-dropdown two">
-              <div class="timetable__head-dropdown_button active">РАСТЯЖКА</div>
-              <div class="timetable__head-dropdown_button">ДАНСХОЛЛ</div>
-              <div class="timetable__head-dropdown_button">БРЕЙК</div>
-              <div class="timetable__head-dropdown_button">БРЕЙК КИДС</div>
-              <div class="timetable__head-dropdown_button">ХАЙ ХИЛЛС</div>
-              <div class="timetable__head-dropdown_button">ЛЕДИ СТАЙЛ</div>
-              <div class="timetable__head-dropdown_button">ХИП-ХОП</div>
-              <div class="timetable__head-dropdown_button">ХИП-ХОП КИДС</div>
-              <div class="timetable__head-dropdown_button">ХИП-ХОП 12+</div>
-              <div class="timetable__head-dropdown_button">РАСТЯЖКА</div>
-              <div class="timetable__head-dropdown_button">ДАНСХОЛЛ</div>
-              <div class="timetable__head-dropdown_button">БРЕЙК</div>
-              <div class="timetable__head-dropdown_button">БРЕЙК КИДС</div>
-              <div class="timetable__head-dropdown_button">ХАЙ ХИЛЛС</div>
-              <div class="timetable__head-dropdown_button">ЛЕДИ СТАЙЛ</div>
-              <div class="timetable__head-dropdown_button">ХИП-ХОП</div>
-              <div class="timetable__head-dropdown_button">ХИП-ХОП КИДС</div>
-              <div class="timetable__head-dropdown_button">ХИП-ХОП 12+</div>
+              <div class="cat-tab timetable__head-dropdown_button" data-name="РАСТЯЖКА">РАСТЯЖКА</div>
+              <div class="cat-tab timetable__head-dropdown_button" data-name="ДАНСХОЛЛ">ДАНСХОЛЛ</div>
+              <div class="cat-tab timetable__head-dropdown_button" data-name="БРЕЙК">БРЕЙК</div>
+              <div class="cat-tab timetable__head-dropdown_button" data-name="БРЕЙК КИДС">БРЕЙК КИДС</div>
+              <div class="cat-tab timetable__head-dropdown_button" data-name="ХАЙ ХИЛЛС">ХАЙ ХИЛЛС</div>
+              <div class="cat-tab timetable__head-dropdown_button" data-name="ЛЕДИ СТАЙЛ">ЛЕДИ СТАЙЛ</div>
+              <div class="cat-tab timetable__head-dropdown_button" data-name="ХИП-ХОП">ХИП-ХОП</div>
+              <div class="cat-tab timetable__head-dropdown_button" data-name="ХИП-ХОП КИДС">ХИП-ХОП КИДС</div>
+              <div class="cat-tab timetable__head-dropdown_button" data-name="ХИП-ХОП 12+">ХИП-ХОП 12+ </div>
             </div>
             <div class="timetable__head-dropdown_open-right">
               <svg xmlns="http://www.w3.org/2000/svg" width="38" height="22" viewBox="0 0 38 22" fill="none">
@@ -101,7 +94,847 @@
           </div>
         </div>
       </div>
-      <table class="timetable__table" align="center">
+      <table class="timetable__table" align="center" data-name="РАСТЯЖКА">
+        <tr>
+          <td> </td>
+          <td>
+            <p>ПН</p>
+          </td>
+          <td>
+            <p>ВТ</p>
+          </td>
+          <td>
+            <p>СР</p>
+          </td>
+          <td>
+            <p>ЧТ</p>
+          </td>
+          <td>
+            <p>ПТ</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>09:00</p>
+          </td>
+          <td> </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td> </td>
+          <td> </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <p>10:30</p>
+          </td>
+          <td> </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td> </td>
+          <td> </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <p>14:00</p>
+          </td>
+          <td> </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td> </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <p>16:00</p>
+          </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td> </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td> </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <p>17:00</p>
+          </td>
+          <td> </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td> </td>
+          <td> </td>
+          <td></td>
+        </tr>
+      </table>
+      <table class="timetable__table" align="center" data-name="ДАНСХОЛЛ">
+        <tr>
+          <td> </td>
+          <td>
+            <p>ПН</p>
+          </td>
+          <td>
+            <p>ВТ</p>
+          </td>
+          <td>
+            <p>СР</p>
+          </td>
+          <td>
+            <p>ЧТ</p>
+          </td>
+          <td>
+            <p>ПТ</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>09:00</p>
+          </td>
+          <td> </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td> </td>
+          <td> </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <p>10:30</p>
+          </td>
+          <td> </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td> </td>
+          <td> </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <p>14:00</p>
+          </td>
+          <td> </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td> </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <p>16:00</p>
+          </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td> </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td> </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <p>17:00</p>
+          </td>
+          <td> </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td> </td>
+          <td> </td>
+          <td></td>
+        </tr>
+      </table>
+      <table class="timetable__table" align="center" data-name="БРЕЙК">
+        <tr>
+          <td> </td>
+          <td>
+            <p>ПН</p>
+          </td>
+          <td>
+            <p>ВТ</p>
+          </td>
+          <td>
+            <p>СР</p>
+          </td>
+          <td>
+            <p>ЧТ</p>
+          </td>
+          <td>
+            <p>ПТ</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>09:00</p>
+          </td>
+          <td> </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td> </td>
+          <td> </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <p>10:30</p>
+          </td>
+          <td> </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td> </td>
+          <td> </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <p>14:00</p>
+          </td>
+          <td> </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td> </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <p>16:00</p>
+          </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td> </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td> </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <p>17:00</p>
+          </td>
+          <td> </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td> </td>
+          <td> </td>
+          <td></td>
+        </tr>
+      </table>
+      <table class="timetable__table" align="center" data-name="БРЕЙК КИДС">
+        <tr>
+          <td> </td>
+          <td>
+            <p>ПН</p>
+          </td>
+          <td>
+            <p>ВТ</p>
+          </td>
+          <td>
+            <p>СР</p>
+          </td>
+          <td>
+            <p>ЧТ</p>
+          </td>
+          <td>
+            <p>ПТ</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>09:00</p>
+          </td>
+          <td> </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td> </td>
+          <td> </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <p>10:30</p>
+          </td>
+          <td> </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td> </td>
+          <td> </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <p>14:00</p>
+          </td>
+          <td> </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td> </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <p>16:00</p>
+          </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td> </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td> </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <p>17:00</p>
+          </td>
+          <td> </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td> </td>
+          <td> </td>
+          <td></td>
+        </tr>
+      </table>
+      <table class="timetable__table" align="center" data-name="ХАЙ ХИЛЛС">
+        <tr>
+          <td> </td>
+          <td>
+            <p>ПН</p>
+          </td>
+          <td>
+            <p>ВТ</p>
+          </td>
+          <td>
+            <p>СР</p>
+          </td>
+          <td>
+            <p>ЧТ</p>
+          </td>
+          <td>
+            <p>ПТ</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>09:00</p>
+          </td>
+          <td> </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td> </td>
+          <td> </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <p>10:30</p>
+          </td>
+          <td> </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td> </td>
+          <td> </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <p>14:00</p>
+          </td>
+          <td> </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td> </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <p>16:00</p>
+          </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td> </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td> </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <p>17:00</p>
+          </td>
+          <td> </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td> </td>
+          <td> </td>
+          <td></td>
+        </tr>
+      </table>
+      <table class="timetable__table" align="center" data-name="ЛЕДИ СТАЙЛ">
+        <tr>
+          <td> </td>
+          <td>
+            <p>ПН</p>
+          </td>
+          <td>
+            <p>ВТ</p>
+          </td>
+          <td>
+            <p>СР</p>
+          </td>
+          <td>
+            <p>ЧТ</p>
+          </td>
+          <td>
+            <p>ПТ</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>09:00</p>
+          </td>
+          <td> </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td> </td>
+          <td> </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <p>10:30</p>
+          </td>
+          <td> </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td> </td>
+          <td> </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <p>14:00</p>
+          </td>
+          <td> </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td> </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <p>16:00</p>
+          </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td> </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td> </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <p>17:00</p>
+          </td>
+          <td> </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td> </td>
+          <td> </td>
+          <td></td>
+        </tr>
+      </table>
+      <table class="timetable__table" align="center" data-name="ХИП-ХОП">
+        <tr>
+          <td> </td>
+          <td>
+            <p>ПН</p>
+          </td>
+          <td>
+            <p>ВТ</p>
+          </td>
+          <td>
+            <p>СР</p>
+          </td>
+          <td>
+            <p>ЧТ</p>
+          </td>
+          <td>
+            <p>ПТ</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>09:00</p>
+          </td>
+          <td> </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td> </td>
+          <td> </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <p>10:30</p>
+          </td>
+          <td> </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td> </td>
+          <td> </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <p>14:00</p>
+          </td>
+          <td> </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td> </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <p>16:00</p>
+          </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td> </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td> </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <p>17:00</p>
+          </td>
+          <td> </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td> </td>
+          <td> </td>
+          <td></td>
+        </tr>
+      </table>
+      <table class="timetable__table" align="center" data-name="ХИП-ХОП КИДС">
+        <tr>
+          <td> </td>
+          <td>
+            <p>ПН</p>
+          </td>
+          <td>
+            <p>ВТ</p>
+          </td>
+          <td>
+            <p>СР</p>
+          </td>
+          <td>
+            <p>ЧТ</p>
+          </td>
+          <td>
+            <p>ПТ</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>09:00</p>
+          </td>
+          <td> </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td> </td>
+          <td> </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <p>10:30</p>
+          </td>
+          <td> </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td> </td>
+          <td> </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <p>14:00</p>
+          </td>
+          <td> </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td> </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <p>16:00</p>
+          </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td> </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td> </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <p>17:00</p>
+          </td>
+          <td> </td>
+          <td>
+            <p>
+              <span>ХИП-ХОП КИДС / НАЧ</span>
+              <span>ДАРЬЯ ШУБИНА / ЗАЛ 1</span>
+            </p>
+          </td>
+          <td> </td>
+          <td> </td>
+          <td></td>
+        </tr>
+      </table>
+      <table class="timetable__table" align="center" data-name="ХИП-ХОП 12+">
         <tr>
           <td> </td>
           <td>
@@ -261,6 +1094,27 @@
           </svg>
         </a>
       </div>
+    </div>
+    <div class="modal">
+      <form class="modal__form" action="#" name="callback" id="callback">
+        <div class="modal__close">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+            <path x="0.5" y="0.5" fill="white" stroke="black"></path>
+            <line x1="27.0216" y1="25.9784" x2="73.9151" y2="72.8718" stroke="#F45200" stroke-width="4"></line>
+            <line x1="73.9142" y1="26.9142" x2="27.0208" y2="73.8076" stroke="#F45200" stroke-width="4"></line>
+          </svg>
+        </div>
+        <h2 class="modal__title">мы поможем тебе стать лучше</h2>
+        <label class="modal__form-label" for="name">
+          <input class="modal__form-input" id="name" name="name" type="text" placeholder="ИМЯ">
+        </label>
+        <label class="modal__form-label" for="phone">
+          <input class="modal__form-input" id="phone" name="phone" type="text" placeholder="НОМЕР">
+        </label>
+        <button class="modal__form-button" type="submit">
+          <span>Записаться!</span>
+        </button>
+      </form>
     </div>
   </footer>
 </body>

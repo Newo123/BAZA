@@ -37,41 +37,40 @@ document.addEventListener('DOMContentLoaded', () => {
 	slider3.on('slideChange', () => swipeAllSliders(slider3.activeIndex))
 	slider4.on('slideChange', () => swipeAllSliders(slider4.activeIndex))
 
-	new Swiper('.teachers .swiper', {
-		direction: 'horizontal',
-		loop: true,
-		slidesPerView: 3,
-		centredSlides: true,
-		speed: 500,
-		grabCursor: true,
-		spaceBetween: 6,
-		breakpoints: {
-			768: {
-				centredSlides: false,
-				slidesPerView: 4,
-				spaceBetween: 0,
+	if (document.querySelectorAll('.teachers .trank').length > 3) {
+		new Swiper('.teachers .swiper', {
+			direction: 'horizontal',
+			loop: true,
+			slidesPerView: 3,
+			centredSlides: true,
+			speed: 500,
+			grabCursor: true,
+			spaceBetween: 6,
+			breakpoints: {
+				768: {
+					centredSlides: false,
+					slidesPerView: 4,
+					spaceBetween: 0,
+				},
 			},
-		},
-	})
-
-	if (document.querySelectorAll('.teachers swiper-slide').length > 3) {
+		})
 	} else {
-		// new Swiper('.teachers .swiper', {
-		// 	direction: 'horizontal',
-		// 	loop: false,
-		// 	slidesPerView: 'auto',
-		// 	centredSlides: true,
-		// 	speed: 500,
-		// 	grabCursor: true,
-		// 	spaceBetween: 6,
-		// 	breakpoints: {
-		// 		768: {
-		// 			centredSlides: false,
-		// 			slidesPerView: 4,
-		// 			spaceBetween: 0,
-		// 		},
-		// 	},
-		// })
+		new Swiper('.teachers .swiper', {
+			direction: 'horizontal',
+			loop: false,
+			slidesPerView: 'auto',
+			centredSlides: true,
+			speed: 500,
+			grabCursor: true,
+			spaceBetween: 6,
+			breakpoints: {
+				768: {
+					centredSlides: false,
+					slidesPerView: 4,
+					spaceBetween: 0,
+				},
+			},
+		})
 	}
 
 	if (matchMedia('(max-width: 768px)').matches) {
