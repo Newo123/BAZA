@@ -5,10 +5,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	const exitModal = () => {
 		modal.classList.remove('active')
+		document.body.style.overflowY = 'scroll'
 	}
 
 	const inModal = () => {
 		modal.classList.add('active')
+		document.body.style.overflowY = 'hidden'
 	}
 
 	if (modal) {

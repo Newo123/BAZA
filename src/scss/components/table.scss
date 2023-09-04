@@ -1,436 +1,549 @@
 .timetable {
-	margin: 0 rem(18, 60) rem(18, 90);
+  margin: 0 rem(18, 60) rem(18, 90);
 
-	@media (max-width: 768px) {
-		margin-bottom: 80px;
-	}
+  @media (max-width: 768px) {
+    margin-bottom: 80px;
+  }
 
-	&__head {
-		display: flex;
-		justify-content: space-between;
-		margin-bottom: rem(18, 40);
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: rem(18, 40);
 
-		@media (max-width: 900px) {
-			margin-top: 21px;
+    @media (max-width: 900px) {
+      margin-top: 21px;
 
-			margin-bottom: 20px;
-		}
+      margin-bottom: 20px;
+    }
 
-		@media (max-width: 350px) {
-			flex-direction: column;
-			gap: 20px;
-		}
+    @media (max-width: 350px) {
+      flex-direction: column;
+      gap: 20px;
+    }
 
-		&-right {
-			display: flex;
-			@media (max-width: 900px) {
-				flex-direction: column;
-				gap: 5px;
-			}
-			& > p {
-				padding-top: rem(18, 10);
-				margin-right: rem(18, 12.5);
+    &-right {
+      display: flex;
+      @media (max-width: 900px) {
+        flex-direction: column;
+        gap: 5px;
+      }
+      & > p {
+        padding-top: rem(18, 10);
+        margin-right: rem(18, 12.5);
 
-				color: #f45200;
-				font-family: TeX Gyre Heros Cn;
-				font-size: rem(18, 24);
-				font-weight: 700;
-				line-height: 85%;
+        color: #f45200;
+        font-family: TeX Gyre Heros Cn;
+        font-size: rem(18, 24);
+        font-weight: 700;
+        line-height: 85%;
 
-				@media (max-width: 900px) {
-					font-size: 14px;
-				}
-			}
-		}
+        @media (max-width: 900px) {
+          font-size: 14px;
+        }
+      }
+    }
 
-		&-left {
-			display: flex;
-			@media (max-width: 900px) {
-				flex-direction: column;
-				gap: 5px;
-			}
-			& > p {
-				padding-top: rem(18, 10);
-				margin-right: rem(18, 12.5);
+    &-left {
+      display: flex;
+      @media (max-width: 900px) {
+        flex-direction: column;
+        gap: 5px;
+      }
+      & > p {
+        padding-top: rem(18, 10);
+        margin-right: rem(18, 12.5);
 
-				color: #f45200;
-				font-family: TeX Gyre Heros Cn;
-				font-size: rem(18, 24);
-				font-weight: 700;
-				line-height: 85%;
-				@media (max-width: 900px) {
-					font-size: 14px;
-				}
-			}
-		}
+        color: #f45200;
+        font-family: TeX Gyre Heros Cn;
+        font-size: rem(18, 24);
+        font-weight: 700;
+        line-height: 85%;
+        @media (max-width: 900px) {
+          font-size: 14px;
+        }
+      }
+    }
 
-		&-list {
-			border-right: 1px solid $black;
-			border-left: 1px solid $black;
-			border-bottom: 1px solid $black;
-			height: fit-content;
-			@media (max-width: 900px) {
-				border-top: 1px solid $black;
-			}
+    &-list {
+      border-right: 1px solid $black;
+      border-left: 1px solid $black;
+      border-bottom: 1px solid $black;
+      height: fit-content;
+      transition: opacity 0.3s ease;
+      opacity: 0;
+      visibility: hidden;
+      overflow: hidden;
+      max-height: 0;
+      max-width: 0;
 
-			& .timetable__head-dropdown_open-left {
-				height: rem(18, 27);
-				width: 100%;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				cursor: pointer;
-				transition: all 0.3s ease;
-				background: linear-gradient(
-						0deg,
-						rgba(0, 0, 0, 0.05) 0%,
-						rgba(0, 0, 0, 0.05) 100%
-					),
-					#fff;
+      &.active {
+        opacity: 1;
+        visibility: visible;
+        overflow: visible;
+        max-height: 100%;
+        max-width: 100%;
+      }
+      @media (max-width: 900px) {
+        border-top: 1px solid $black;
+      }
 
-				&:hover {
-					background-color: #d9d9d9;
-				}
-				@media (max-width: 900px) {
-					height: 26px;
-				}
+      & .timetable__head-dropdown_open-left {
+        height: rem(18, 27);
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        background: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.05) 0%,
+            rgba(0, 0, 0, 0.05) 100%
+          ),
+          #fff;
 
-				& svg {
-					height: rem(18, 11);
-					width: rem(18, 22);
+        &:hover {
+          background-color: #d9d9d9;
+        }
+        @media (max-width: 900px) {
+          height: 26px;
+        }
 
-					@media (max-width: 900px) {
-						height: 9px;
-						width: 16px;
-					}
-				}
-			}
+        & svg {
+          height: rem(18, 11);
+          width: rem(18, 22);
 
-			& .timetable__head-dropdown_open-right {
-				height: rem(18, 27);
-				width: 100%;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				cursor: pointer;
-				transition: all 0.3s ease;
-				background: linear-gradient(
-						0deg,
-						rgba(0, 0, 0, 0.05) 0%,
-						rgba(0, 0, 0, 0.05) 100%
-					),
-					#fff;
+          @media (max-width: 900px) {
+            height: 9px;
+            width: 16px;
+          }
+        }
+      }
 
-				&:hover {
-					background-color: #d9d9d9;
-				}
+      & .timetable__head-dropdown_open-right {
+        height: rem(18, 27);
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        background: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.05) 0%,
+            rgba(0, 0, 0, 0.05) 100%
+          ),
+          #fff;
 
-				&.active {
-					& svg {
-						transform: rotate(180deg);
-					}
-				}
+        &:hover {
+          background-color: #d9d9d9;
+        }
 
-				@media (max-width: 900px) {
-					height: 26px;
-				}
+        &.active {
+          & svg {
+            transform: rotate(180deg);
+          }
+        }
 
-				& svg {
-					height: rem(18, 11);
-					width: rem(18, 22);
+        @media (max-width: 900px) {
+          height: 26px;
+        }
 
-					@media (max-width: 900px) {
-						height: 9px;
-						width: 16px;
-					}
-				}
-			}
-		}
+        & svg {
+          height: rem(18, 11);
+          width: rem(18, 22);
 
-		&-dropdown {
-			&.one {
-				display: grid;
-				$col: rem(18, 135);
-				grid-template-columns: repeat(2, $col);
-				align-items: center;
+          @media (max-width: 900px) {
+            height: 9px;
+            width: 16px;
+          }
+        }
+      }
+    }
 
-				max-height: rem(18, 49);
-				overflow: hidden;
+    &-country {
+      border-right: 1px solid $black;
+      border-left: 1px solid $black;
+      border-bottom: 1px solid $black;
+      height: fit-content;
 
-				&.active {
-					max-height: 100%;
-				}
+      @media (max-width: 900px) {
+        border-top: 1px solid $black;
+      }
 
-				@media (max-width: 900px) {
-					grid-template-columns: repeat(1, 100px);
-					max-height: 28px;
-				}
+      & .timetable__head-dropdown_open-left {
+        height: rem(18, 27);
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        background: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.05) 0%,
+            rgba(0, 0, 0, 0.05) 100%
+          ),
+          #fff;
 
-				@media (max-width: 768px) {
-					max-height: 56px;
-				}
+        &:hover {
+          background-color: #d9d9d9;
+        }
+        @media (max-width: 900px) {
+          height: 26px;
+        }
 
-				@media (max-width: 350px) {
-					grid-template-columns: 1fr;
-				}
+        & svg {
+          height: rem(18, 11);
+          width: rem(18, 22);
 
-				& .timetable__head-dropdown_button {
-					background-color: $white;
-					border-bottom: 1px solid $black;
-					width: 100%;
-					text-align: center;
-					color: #898989;
-					text-align: center;
-					font-family: TeX Gyre Heros Cn;
-					font-size: rem(18, 20);
-					font-weight: 700;
-					line-height: normal;
-					cursor: pointer;
-					transition: all 0.3s ease;
+          @media (max-width: 900px) {
+            height: 9px;
+            width: 16px;
+          }
+        }
+      }
 
-					&:hover {
-						background-color: #d9d9d9;
-						color: #403434;
-					}
-					&:nth-child(odd) {
-						@media (min-width: 900px) {
-							border-right: 1px solid $black;
-						}
-					}
+      & .timetable__head-dropdown_open-right {
+        height: rem(18, 27);
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        background: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.05) 0%,
+            rgba(0, 0, 0, 0.05) 100%
+          ),
+          #fff;
 
-					&:first-child {
-					}
+        &:hover {
+          background-color: #d9d9d9;
+        }
 
-					&.active {
-						background-color: #d9d9d9;
-						color: #403434;
-						grid-column: 1;
-						grid-row: 1;
-					}
+        &.active {
+          & svg {
+            transform: rotate(180deg);
+          }
+        }
 
-					@media (max-width: 900px) {
-						font-size: 14px;
-						white-space: nowrap;
-					}
-				}
-			}
+        @media (max-width: 900px) {
+          height: 26px;
+        }
 
-			&.two {
-				display: grid;
-				$col: rem(18, 135);
-				grid-template-columns: repeat(9, $col);
-				align-items: center;
-				max-height: rem(18, 49);
-				overflow: hidden;
+        & svg {
+          height: rem(18, 11);
+          width: rem(18, 22);
 
-				@media (max-width: 900px) {
-					grid-template-columns: repeat(6, 100px);
-					max-height: 28px;
-				}
+          @media (max-width: 900px) {
+            height: 9px;
+            width: 16px;
+          }
+        }
+      }
+    }
 
-				@media (max-width: 768px) {
-					grid-template-columns: repeat(2, 100px);
-					max-height: 56px;
-				}
-				@media (max-width: 350px) {
-					grid-template-columns: 1fr;
-				}
+    &-dropdown {
+      &.one {
+        display: grid;
+        $col: rem(18, 135);
+        grid-template-columns: repeat(2, $col);
+        align-items: center;
 
-				&.active {
-					max-height: 100%;
-				}
-				& .timetable__head-dropdown_button {
-					background-color: $white;
-					border-bottom: 1px solid $black;
-					border-right: 1px solid $black;
+        max-height: rem(18, 49);
+        overflow: hidden;
 
-					width: 100%;
-					text-align: center;
-					color: #898989;
-					text-align: center;
-					font-family: TeX Gyre Heros Cn;
-					font-size: rem(18, 20);
-					font-weight: 700;
-					line-height: normal;
-					cursor: pointer;
-					transition: all 0.3s ease;
+        &.active {
+          max-height: 100%;
+        }
 
-					@media (max-width: 900px) {
-						font-size: 14px;
-						white-space: nowrap;
-					}
+        @media (max-width: 900px) {
+          grid-template-columns: repeat(1, 100px);
+          max-height: 28px;
+        }
 
-					@media (max-width: 350px) {
-						border-right: none;
-					}
+        @media (max-width: 768px) {
+          max-height: 56px;
+        }
 
-					&:nth-child(9n) {
-						@media (min-width: 901px) {
-							border-right: none;
-						}
-					}
+        @media (max-width: 350px) {
+          grid-template-columns: 1fr;
+        }
 
-					&:nth-child(6n) {
-						@media (max-width: 900px) {
-							border-right: none;
-						}
-					}
-					&:nth-child(2n) {
-						@media (max-width: 768px) {
-							border-right: none;
-						}
-					}
+        & .timetable__head-dropdown_button {
+          background-color: $white;
+          border-bottom: 1px solid $black;
+          width: 100%;
+          text-align: center;
+          color: #898989;
+          text-align: center;
+          font-family: TeX Gyre Heros Cn;
+          font-size: rem(18, 20);
+          font-weight: 700;
+          line-height: normal;
+          cursor: pointer;
+          transition: all 0.3s ease;
 
-					&:hover {
-						background-color: #d9d9d9;
-						color: #403434;
-					}
+          &:hover {
+            background-color: #d9d9d9;
+            color: #403434;
+          }
+          &:nth-child(odd) {
+            @media (min-width: 900px) {
+              border-right: 1px solid $black;
+            }
+          }
 
-					&.active {
-						background-color: #d9d9d9;
-						color: #403434;
-					}
-				}
-			}
+          &:first-child {
+          }
 
-			&_button {
-				padding: rem(18, 10) 0;
+          &.active {
+            background-color: #d9d9d9;
+            color: #403434;
+          }
 
-				@media (max-width: 900px) {
-					padding: 4px 0;
-				}
-			}
-		}
-	}
+          @media (max-width: 900px) {
+            font-size: 14px;
+            white-space: nowrap;
+          }
+        }
+      }
 
-	&__table {
-		width: 100%;
-		height: 100%;
-		display: none;
+      &.two {
+        display: grid;
+        $col: rem(18, 135);
+        grid-template-columns: repeat(9, $col);
+        align-items: center;
+        max-height: rem(18, 49);
+        overflow: hidden;
 
-		&.active {
-			display: table;
-		}
+        @media (max-width: 900px) {
+          grid-template-columns: repeat(6, 100px);
+          max-height: 28px;
+        }
 
-		@media (max-width: 768px) {
-			border: 1px solid #c1c1c1;
-		}
+        @media (max-width: 768px) {
+          grid-template-columns: repeat(2, 100px);
+          max-height: 56px;
+        }
+        @media (max-width: 350px) {
+          grid-template-columns: 1fr;
+        }
 
-		& td {
-			border-bottom: 1px solid #c1c1c1;
-			border-right: 1px solid #c1c1c1;
-			height: rem(18, 66);
-			color: #403434;
-			font-family: TeX Gyre Heros Cn;
-			font-size: rem(18, 36);
-			font-weight: 700;
-			line-height: 100%;
+        &.active {
+          max-height: 100%;
+        }
+        & .timetable__head-dropdown_button {
+          background-color: $white;
+          border-bottom: 1px solid $black;
+          border-right: 1px solid $black;
 
-			@media (max-width: 768px) {
-				font-size: 12px;
-				border-bottom: none;
-				height: auto;
-				padding-top: 22px;
+          width: 100%;
+          text-align: center;
+          color: #898989;
+          text-align: center;
+          font-family: TeX Gyre Heros Cn;
+          font-size: rem(18, 20);
+          font-weight: 700;
+          line-height: normal;
+          cursor: pointer;
+          transition: all 0.3s ease;
 
-				padding-left: 6px;
-			}
+          @media (max-width: 900px) {
+            font-size: 14px;
+            white-space: nowrap;
+          }
 
-			&:last-child {
-				@media (max-width: 768px) {
-					border-right: none;
-				}
-			}
+          @media (max-width: 350px) {
+            border-right: none;
+          }
 
-			&:first-child {
-				@media (max-width: 768px) {
-					padding-right: 5px;
-					padding-left: 4px;
-				}
-			}
+          &:nth-child(9n) {
+            @media (min-width: 901px) {
+              border-right: none;
+            }
+          }
 
-			& span {
-				color: #403434;
-				font-family: TeX Gyre Heros Cn;
-				font-size: rem(18, 28);
-				font-weight: 700;
-				line-height: 85%;
-				text-transform: uppercase;
+          &:nth-child(6n) {
+            @media (max-width: 900px) {
+              border-right: none;
+            }
+          }
+          &:nth-child(2n) {
+            @media (max-width: 768px) {
+              border-right: none;
+            }
+          }
 
-				@media (max-width: 768px) {
-					font-size: 10px;
-				}
-				&:last-child {
-					color: #898989;
-					font-family: TeX Gyre Heros Cn;
-					font-size: rem(18, 20);
-					font-weight: 700;
-					line-height: 85%;
-					text-transform: uppercase;
-					@media (max-width: 768px) {
-						font-size: 7px;
-					}
-				}
-			}
+          &:hover {
+            background-color: #d9d9d9;
+            color: #403434;
+          }
 
-			& > p {
-				display: flex;
-				align-items: center;
-				flex-direction: column;
-				justify-content: center;
-				gap: rem(18, 4);
-			}
-		}
+          &.active {
+            background-color: #d9d9d9;
+            color: #403434;
+          }
+        }
+      }
 
-		& tr {
-			&:last-child {
-				& td {
-					@media (max-width: 768px) {
-						padding-bottom: 22px;
-					}
-				}
-			}
-			& td {
-				width: rem(18, 330);
-				vertical-align: middle;
-			}
-			&:first-child {
-				& td {
-					border-top: 1px solid #c1c1c1;
-					@media (max-width: 768px) {
-						border: none;
-						border-bottom: 1px solid #c1c1c1;
-						border-right: 1px solid #c1c1c1;
-						padding: 0;
-						height: 37px;
-					}
+      &_button {
+        padding: rem(18, 10) 0;
 
-					&:first-child {
-						@media (max-width: 768px) {
-							border-bottom: 1px solid #c1c1c1;
-						}
-					}
+        @media (max-width: 900px) {
+          padding: 4px 0;
+        }
+      }
+    }
+  }
 
-					&:last-child {
-						@media (max-width: 768px) {
-							border-right: none;
-						}
-					}
-				}
-			}
-			& td {
-				&:first-child {
-					border-left: 1px solid #c1c1c1;
+  &__table {
+    display: none;
 
-					width: rem(18, 151);
+    &.active {
+      display: table;
+    }
 
-					@media (max-width: 768px) {
-						border: none;
-						border-right: 1px solid #c1c1c1;
-						&:first-child {
-						}
-					}
-				}
-			}
-		}
-	}
+    @media (max-width: 768px) {
+      border: 1px solid #c1c1c1;
+    }
+
+    & td {
+      border-bottom: 1px solid #c1c1c1;
+      border-right: 1px solid #c1c1c1;
+      height: rem(18, 66);
+      color: #403434;
+      font-family: TeX Gyre Heros Cn;
+      font-size: rem(18, 36);
+      font-weight: 700;
+      line-height: 100%;
+
+      @media (max-width: 768px) {
+        font-size: 12px;
+        border-bottom: none;
+        height: auto;
+        padding-top: 22px;
+
+        padding-left: 6px;
+      }
+
+      &:last-child {
+        @media (max-width: 768px) {
+          border-right: none;
+        }
+      }
+
+      &:first-child {
+        @media (max-width: 768px) {
+          padding-right: 5px;
+          padding-left: 4px;
+        }
+      }
+
+      & span {
+        color: #403434;
+        font-family: TeX Gyre Heros Cn;
+        font-size: rem(18, 28);
+        font-weight: 700;
+        line-height: 85%;
+        text-transform: uppercase;
+
+        @media (max-width: 768px) {
+          font-size: 10px;
+        }
+        &:last-child {
+          color: #898989;
+          font-family: TeX Gyre Heros Cn;
+          font-size: rem(18, 20);
+          font-weight: 700;
+          line-height: 85%;
+          text-transform: uppercase;
+          @media (max-width: 768px) {
+            font-size: 7px;
+          }
+        }
+      }
+
+      & > p {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        gap: rem(18, 4);
+      }
+    }
+
+    & tr {
+      &:last-child {
+        & td {
+          @media (max-width: 768px) {
+            padding-bottom: 22px;
+          }
+        }
+      }
+      & td {
+        width: rem(18, 330);
+        vertical-align: middle;
+      }
+      &:first-child {
+        & td {
+          border-top: 1px solid #c1c1c1;
+          @media (max-width: 768px) {
+            border: none;
+            border-bottom: 1px solid #c1c1c1;
+            border-right: 1px solid #c1c1c1;
+            padding: 0;
+            height: 37px;
+          }
+
+          &:first-child {
+            @media (max-width: 768px) {
+              border-bottom: 1px solid #c1c1c1;
+            }
+          }
+
+          &:last-child {
+            @media (max-width: 768px) {
+              border-right: none;
+            }
+          }
+        }
+      }
+      & td {
+        &:first-child {
+          border-left: 1px solid #c1c1c1;
+
+          width: rem(18, 151);
+
+          @media (max-width: 768px) {
+            border: none;
+            border-right: 1px solid #c1c1c1;
+            &:first-child {
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.tablet {
+  max-width: 0;
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  transition: all 0.3s ease;
+
+  display: flex;
+
+  &.active {
+    max-width: 100%;
+    max-height: 100%;
+    opacity: 1;
+    visibility: visible;
+    overflow: visible;
+  }
 }
