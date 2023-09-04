@@ -114,6 +114,20 @@
 			max-height: 100%;
 		}
 
+		&.hall {
+			grid-template-columns: repeat(2, 1fr);
+			justify-content: space-between;
+			margin-top: rem(18, 75);
+			gap: rem(18, 80);
+
+			&__item {
+				display: flex;
+				flex-direction: column;
+				gap: rem(18, 85);
+				border: 1px solid #c1c1c1;
+			}
+		}
+
 		@media (max-width: 768px) {
 			grid-template-columns: repeat(2, 1fr);
 			border-top: 1px solid #c1c1c1;
@@ -250,6 +264,113 @@
 					&::before {
 						transform: translateY(0);
 					}
+				}
+			}
+		}
+	}
+}
+
+.hall {
+	&__item {
+		display: flex;
+		flex-direction: column;
+		gap: rem(18, 85);
+		border: 1px solid #c1c1c1;
+		width: 100%;
+		max-width: rem(18, 840);
+
+		& .swiper {
+			width: 100%;
+			height: rem(18, 544);
+			display: flex;
+			flex-direction: column;
+			& .swiper-wrapper {
+				height: fit-content;
+
+				max-height: rem(18, 476);
+
+				& .swiper-slide {
+					max-height: rem(18, 476);
+					& img {
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+						object-position: center;
+						max-height: rem(18, 476);
+					}
+				}
+			}
+		}
+	}
+
+	&__navigation {
+		display: flex;
+		align-items: center;
+		margin-top: rem(18, 30);
+		gap: rem(18, 30);
+		align-self: center;
+
+		@media (max-width: 900px) {
+			margin-top: rem(18, 60);
+			gap: rem(18, 60);
+		}
+
+		& .swiper-pagination {
+			position: static;
+			width: fit-content;
+
+			& .swiper-pagination-bullet {
+				background-color: #c1c1c1;
+				border-radius: 0;
+				opacity: 1;
+				width: rem(18, 8);
+				height: rem(18, 8);
+				margin: 0 rem(18, 4);
+				flex-shrink: 0;
+
+				@media (max-width: 900px) {
+					width: rem(18, 20);
+					height: rem(18, 20);
+					margin: 0 rem(18, 12);
+				}
+
+				&.swiper-pagination-bullet-active {
+					background-color: #403434;
+					opacity: 1;
+				}
+			}
+		}
+
+		& .swiper-button-prev {
+			transform: rotate(0deg);
+		}
+
+		& .swiper-button-prev,
+		& .swiper-button-next {
+			width: rem(18, 50);
+			height: rem(18, 50);
+			display: flex;
+			align-items: center;
+			flex-shrink: 0;
+
+			margin: 0;
+
+			@media (max-width: 900px) {
+				width: rem(18, 100);
+				height: rem(18, 100);
+			}
+
+			&:hover {
+				background-color: rgba(0, 0, 0, 0.1);
+			}
+
+			& svg {
+				width: rem(18, 30);
+				height: rem(18, 30);
+
+				@media (max-width: 900px) {
+					width: rem(18, 60);
+					height: rem(18, 60);
 				}
 			}
 		}

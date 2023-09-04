@@ -1,7 +1,9 @@
 .styles-column {
 	padding: rem(18, 80) rem(18, 60) rem(18, 180);
-	display: grid;
-	grid-template-columns: repeat(2, 50%);
+
+	display: flex;
+	flex-direction: column;
+	gap: rem(18, 50);
 	height: 100%;
 
 	opacity: 0;
@@ -17,60 +19,25 @@
 		transform: translateX(0);
 	}
 
-	@media (max-width: 900px) {
-		grid-template-columns: 1fr;
-	}
-
 	@media (max-width: 680px) {
 		padding: 80px 15px;
-		gap: 30px;
+		gap: 28px;
 	}
 
 	&__card {
-		padding: rem(18, 97) rem(18, 45) rem(18, 70);
 		width: 100%;
-		height: rem(18, 623);
-
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		gap: rem(18, 70);
+		height: rem(18, 528);
+		display: flex;
+		border: 1px solid #c1c1c1;
 
 		@media (max-width: 900px) {
-			height: 100%;
-		}
-		@media (max-width: 680px) {
-			gap: 20px;
+			height: fit-content;
 		}
 
-		&:nth-child(1) {
-			border-top: 1px solid #c1c1c1;
-			border-left: 1px solid #c1c1c1;
-			border-right: 1px solid #c1c1c1;
+		@media (max-width: 768px) {
+			flex-direction: column-reverse;
+			border: none;
 			border-bottom: 1px solid #c1c1c1;
-		}
-
-		&:nth-child(2) {
-			border-top: 1px solid #c1c1c1;
-			border-right: 1px solid #c1c1c1;
-			border-bottom: 1px solid #c1c1c1;
-		}
-		&:nth-child(even) {
-			border-right: 1px solid #c1c1c1;
-			border-bottom: 1px solid #c1c1c1;
-		}
-
-		&:nth-child(odd) {
-			border-left: 1px solid #c1c1c1;
-			border-right: 1px solid #c1c1c1;
-			border-bottom: 1px solid #c1c1c1;
-		}
-
-		@media (max-width: 900px) {
-			grid-template-columns: 1fr;
-			padding: 0;
-			padding-bottom: 20px;
-			border: none !important;
-			border-bottom: 1px solid #c1c1c1 !important;
 		}
 
 		&_left {
@@ -78,11 +45,16 @@
 			flex-direction: column;
 			align-items: flex-start;
 			justify-content: space-between;
+			width: 100%;
+			height: 100%;
+
+			padding: rem(18, 90) rem(18, 140) rem(18, 76) rem(18, 50);
 
 			gap: 15px;
 
 			@media (max-width: 680px) {
 				gap: 20px;
+				padding: 20px 0;
 			}
 		}
 
@@ -96,6 +68,7 @@
 
 			@media (max-width: 900px) {
 				@include adaptive-hero(font-size, 64, 23);
+				margin-bottom: 0;
 			}
 		}
 		&-description {
@@ -161,9 +134,8 @@
 			height: 100%;
 			width: 100%;
 
-			@media (max-width: 900px) {
-				grid-row: 1;
-				height: rem(18, 1200);
+			@media (max-width: 768px) {
+				@include adaptive-hero(height, 1000, 178);
 			}
 
 			& img {

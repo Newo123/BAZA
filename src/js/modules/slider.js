@@ -93,6 +93,24 @@ document.addEventListener('DOMContentLoaded', () => {
 		})
 	}
 
+	const halls = Array.from(document.querySelectorAll('.hall__item'))
+
+	if (halls.length > 0) {
+		halls.forEach((hall, i) => {
+			new Swiper(`.hall__item-${i + 1} .swiper`, {
+				loop: true,
+				navigation: {
+					nextEl: '.hall__navigation .swiper-button-next',
+					prevEl: '.hall__navigation .swiper-button-prev',
+				},
+				pagination: {
+					el: '.hall__navigation .swiper-pagination',
+					type: 'bullets',
+				},
+			})
+		})
+	}
+
 	document.querySelector('.teachers__info-title').innerText =
 		document.querySelector('.teachers .swiper-slide-next').dataset.name
 
