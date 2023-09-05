@@ -1,557 +1,553 @@
 .hero-price {
-	height: 480px;
-	background-color: #403434;
-	position: relative;
-	display: flex;
-	align-items: flex-end;
-	justify-content: flex-start;
+  height: 480px;
+  background-color: #403434;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
 
-	@media (min-width: 1921px) {
-		height: rem(18, 480);
-	}
+  @media (min-width: 1921px) {
+    height: rem(18, 480);
+  }
 
-	@media (max-width: 900px) {
-		height: 100dvh;
-		align-items: center;
-		justify-content: flex-start;
-	}
+  @media (max-width: 900px) {
+    height: 100dvh;
+    align-items: center;
+    justify-content: flex-start;
+  }
 
-	&__title {
-		color: #f45200;
-		font-family: TeX Gyre Heros;
-		font-size: rem(18, 174);
-		font-weight: 700;
-		line-height: 85%;
-		max-width: rem(18, 630);
-		margin-bottom: rem(18, 30);
-		margin-left: rem(18, 690);
-		@media (max-width: 900px) {
-			margin: 0;
-			@include adaptive-hero(font-size, 174, 92);
-			@include adaptive-hero(max-width, 630, 320);
-			@include adaptive-hero(margin-left, 60, 15);
-			@include adaptive-hero(margin-right, 60, 15);
-		}
-	}
+  &__title {
+    color: #f45200;
+    font-family: TeX Gyre Heros;
+    font-size: rem(18, 174);
+    font-weight: 700;
+    line-height: 85%;
+    max-width: rem(18, 630);
+    margin-bottom: rem(18, 30);
+    margin-left: rem(18, 690);
+    @media (max-width: 900px) {
+      margin: 0;
+      @include adaptive-hero(font-size, 174, 92);
+      @include adaptive-hero(max-width, 630, 320);
+      @include adaptive-hero(margin-left, 60, 15);
+      @include adaptive-hero(margin-right, 60, 15);
+    }
+  }
 
-	&__tabs {
-		position: absolute;
-		bottom: rem(18, 30);
-		right: rem(18, 60);
+  &__tabs {
+    position: absolute;
+    bottom: rem(18, 30);
+    right: rem(18, 60);
 
-		display: grid;
-		$col: rem(18, 113);
-		grid-template-columns: repeat(3, $col);
-		z-index: 6;
+    display: grid;
+    $col: rem(18, 113);
+    grid-template-columns: repeat(3, $col);
+    z-index: 6;
 
-		transition: all 0.3s ease;
+    transition: all 0.3s ease;
 
-		@media (max-width: 900px) {
-			position: fixed;
-			@include adaptive-hero(bottom, 73, 63);
-			left: 0;
-			grid-template-columns: repeat(3, 1fr);
-			width: 100%;
-		}
+    @media (max-width: 900px) {
+      position: fixed;
+      @include adaptive-hero(bottom, 73, 63);
+      left: 0;
+      grid-template-columns: repeat(3, 1fr);
+      width: 100%;
+    }
 
-		&.hide {
-			transform: translateY(110%);
-			bottom: 0;
-		}
-		& button {
-			height: rem(18, 40);
-			color: #898989;
-			text-align: center;
-			font-family: TeX Gyre Heros Cn;
-			font-size: rem(18, 20);
-			font-style: normal;
-			font-weight: 700;
-			line-height: normal;
-			background-color: $white;
-			border: 1px solid #000;
-			cursor: pointer;
-			transition: all 0.3s ease;
-			outline: none;
+    &.hide {
+      transform: translateY(110%);
+      bottom: 0;
+    }
+    & button {
+      height: rem(18, 40);
+      color: #898989;
+      text-align: center;
+      font-family: TeX Gyre Heros Cn;
+      font-size: rem(18, 20);
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      background-color: $white;
+      border: 1px solid #000;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      outline: none;
 
-			@media (max-width: 900px) {
-				@include adaptive-hero(height, 40, 36);
-				font-size: 20px;
-			}
+      @media (max-width: 900px) {
+        @include adaptive-hero(height, 40, 36);
+        font-size: 20px;
+      }
 
-			&:hover,
-			&.active {
-				color: #f45200;
-				border-color: #f45200;
-				background-color: #d9d9d9;
-			}
-		}
-	}
+      &:hover,
+      &.active {
+        color: #f45200;
+        border-color: #f45200;
+        background-color: #d9d9d9;
+      }
+    }
+  }
 }
 
 .price {
-	margin: 0 rem(18, 60) rem(18, 90);
+  margin: 0 rem(18, 60) rem(18, 90);
 
-	@media (max-width: 768px) {
-		@include adaptive-hero(margin-left, 60, 15);
-		@include adaptive-hero(margin-right, 60, 15);
-		@include adaptive-hero(margin-top, 90, 80);
-		@include adaptive-hero(margin-bottom, 90, 80);
-	}
+  @media (max-width: 768px) {
+    @include adaptive-hero(margin-left, 60, 15);
+    @include adaptive-hero(margin-right, 60, 15);
+    @include adaptive-hero(margin-top, 90, 80);
+    @include adaptive-hero(margin-bottom, 90, 80);
+  }
 
-	&__container {
-		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		transition: all 0.4s ease;
-		opacity: 0;
-		visibility: hidden;
-		overflow: hidden;
-		max-height: 0;
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    transition: all 0.4s ease;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    max-height: 0;
 
-		&.active {
-			opacity: 1;
-			visibility: visible;
-			overflow: visible;
-			max-height: 100%;
-		}
+    &.active {
+      opacity: 1;
+      visibility: visible;
+      overflow: visible;
+      max-height: 100%;
+    }
 
-		&.hall {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			margin-top: rem(18, 75);
-			flex-wrap: wrap;
-			border-top: none;
-			width: 100%;
+    &.hall {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: rem(18, 75);
+      flex-wrap: wrap;
+      border-top: none;
+      width: 100%;
 
-			@media (max-width: 768px) {
-				flex-direction: column;
-				margin-top: 0;
-			}
-		}
+      @media (max-width: 768px) {
+        flex-direction: column;
+        margin-top: 0;
+      }
+    }
 
-		@media (max-width: 768px) {
-			grid-template-columns: repeat(2, 1fr);
-			border-top: 1px solid #c1c1c1;
-		}
-	}
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+      border-top: 1px solid #c1c1c1;
+    }
+  }
 
-	&__item {
-		border: 1px solid #c1c1c1;
-		border-top: none;
-		border-left: none;
-		&:nth-child(5n),
-		&:first-child {
-			border-left: 1px solid #c1c1c1;
-		}
+  &__item {
+    border: 1px solid #c1c1c1;
+    border-top: none;
+    border-left: none;
+    &:nth-child(5n),
+    &:first-child {
+      border-left: 1px solid #c1c1c1;
+    }
 
-		&:nth-child(5n) {
-			@media (max-width: 768px) {
-				border-left: none;
-			}
-		}
+    &:nth-child(5n) {
+      @media (max-width: 768px) {
+        border-left: none;
+      }
+    }
 
-		&:nth-child(odd) {
-			@media (max-width: 768px) {
-				border-left: 1px solid #c1c1c1;
-			}
-		}
-		@media (max-width: 768px) {
-			grid-template-columns: repeat(2, 1fr);
-		}
+    &:nth-child(odd) {
+      @media (max-width: 768px) {
+        border-left: 1px solid #c1c1c1;
+      }
+    }
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
 
-		&-top {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			gap: rem(18, 25);
-			padding: 0 rem(18, 34) 0 rem(18, 40);
-			border-bottom: 1px solid #c1c1c1;
-			height: rem(18, 210);
+    &-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: rem(18, 25);
+      padding: 0 rem(18, 34) 0 rem(18, 40);
+      border-bottom: 1px solid #c1c1c1;
+      height: rem(18, 210);
 
-			@media (max-width: 768px) {
-				gap: 15px;
-				padding: 24px 30px;
-				flex-direction: column;
-				border-bottom: none;
-				height: auto;
-				justify-content: center;
-			}
+      @media (max-width: 768px) {
+        gap: 15px;
+        padding: 24px 30px;
+        flex-direction: column;
+        border-bottom: none;
+        height: auto;
+        justify-content: center;
+      }
 
-			& p {
-				color: #898989;
-				font-family: TeX Gyre Heros Cn;
-				font-size: rem(18, 36);
-				font-weight: 700;
-				line-height: 100%;
+      & p {
+        color: #898989;
+        font-family: TeX Gyre Heros Cn;
+        font-size: rem(18, 36);
+        font-weight: 700;
+        line-height: 100%;
 
-				@media (max-width: 768px) {
-					@include adaptive-hero(font-size, 36, 16);
-				}
-			}
+        @media (max-width: 768px) {
+          @include adaptive-hero(font-size, 36, 16);
+        }
+      }
 
-			& h5 {
-				color: #403434;
-				font-family: TeX Gyre Heros Cn;
-				font-size: rem(18, 64);
-				font-weight: 700;
-				line-height: 85%;
+      & h5 {
+        color: #403434;
+        font-family: TeX Gyre Heros Cn;
+        font-size: rem(18, 64);
+        font-weight: 700;
+        line-height: 85%;
 
-				@media (max-width: 768px) {
-					@include adaptive-hero(font-size, 64, 23);
-					margin-bottom: 0;
-				}
-			}
-		}
+        @media (max-width: 768px) {
+          @include adaptive-hero(font-size, 64, 23);
+          margin-bottom: 0;
+        }
+      }
+    }
 
-		&-bottom {
-			height: rem(18, 170);
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			@media (max-width: 768px) {
-				height: auto;
-				@include adaptive-hero(padding-left, 94, 27);
-				@include adaptive-hero(padding-right, 94, 27);
-				@include adaptive-hero(padding-bottom, 46, 20);
-			}
-			& button {
-				padding: rem(18, 26) rem(18, 40);
-				background-color: transparent;
-				border: 1px solid $black;
-				position: relative;
-				overflow: hidden;
-				cursor: pointer;
+    &-bottom {
+      height: rem(18, 170);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @media (max-width: 768px) {
+        height: auto;
+        @include adaptive-hero(padding-left, 94, 27);
+        @include adaptive-hero(padding-right, 94, 27);
+        @include adaptive-hero(padding-bottom, 46, 20);
+      }
+      & button {
+        padding: rem(18, 26) rem(18, 40);
+        background-color: transparent;
+        border: 1px solid $black;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
 
-				@media (max-width: 768px) {
-					padding: 0;
-					@include adaptive-hero(padding-bottom, 26, 9);
-					@include adaptive-hero(padding-top, 26, 9);
-					margin-bottom: 0;
-					width: 100%;
-				}
+        @media (max-width: 768px) {
+          padding: 0;
+          @include adaptive-hero(padding-bottom, 26, 9);
+          @include adaptive-hero(padding-top, 26, 9);
+          margin-bottom: 0;
+          width: 100%;
+        }
 
-				& span {
-					color: #403434;
-					font-family: TeX Gyre Heros Cn;
-					font-size: rem(18, 32);
-					font-weight: 700;
-					line-height: 100%;
-					position: relative;
-					z-index: 1;
-					transition: all 0.3s ease;
+        & span {
+          color: #403434;
+          font-family: TeX Gyre Heros Cn;
+          font-size: rem(18, 32);
+          font-weight: 700;
+          line-height: 100%;
+          position: relative;
+          z-index: 1;
+          transition: all 0.3s ease;
 
-					@media (max-width: 768px) {
-						@include adaptive-hero(font-size, 32, 16);
-					}
-				}
+          @media (max-width: 768px) {
+            @include adaptive-hero(font-size, 32, 16);
+          }
+        }
 
-				&::before {
-					content: '';
-					position: absolute;
-					top: 0;
-					left: 0;
-					width: 100%;
-					height: 100%;
-					background-color: #f45200;
-					transition: all 0.3s ease;
-					transform: translateY(110%);
-				}
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: #f45200;
+          transition: all 0.3s ease;
+          transform: translateY(110%);
+        }
 
-				&:hover {
-					& span {
-						color: $white;
-					}
+        &:hover {
+          & span {
+            color: $white;
+          }
 
-					&::before {
-						transform: translateY(0);
-					}
-				}
-			}
-		}
-	}
+          &::before {
+            transform: translateY(0);
+          }
+        }
+      }
+    }
+  }
 }
 
 .hall {
-	&__item {
-		display: flex;
-		flex-direction: column;
-		gap: rem(18, 85);
-		border: 1px solid #c1c1c1;
-		width: 48%;
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: rem(18, 85);
+    border: 1px solid #c1c1c1;
+    width: 48%;
 
-		padding-bottom: rem(18, 50);
-		margin-bottom: rem(18, 50);
-		position: relative;
+    padding-bottom: rem(18, 50);
+    margin-bottom: rem(18, 50);
+    position: relative;
 
-		&::before {
-			content: '';
-			position: absolute;
-			top: -20px;
-			width: 100vw;
-			height: 1px;
-			background-color: #c1c1c1;
-			@include adaptive-hero(left, -60, -15);
-			display: none;
+    &::before {
+      content: '';
+      position: absolute;
+      top: -20px;
+      width: 100vw;
+      height: 1px;
+      background-color: #c1c1c1;
+      @include adaptive-hero(left, -60, -15);
+      display: none;
 
-			@media (max-width: 768px) {
-				display: block;
-			}
-		}
+      @media (max-width: 768px) {
+        display: block;
+      }
+    }
 
-		@media (max-width: 768px) {
-			width: 100%;
-			padding-bottom: 20px;
-			padding-top: 20px;
-			margin-bottom: 23px;
-			border: none;
-		}
+    @media (max-width: 768px) {
+      width: 100%;
+      padding-bottom: 20px;
+      padding-top: 20px;
+      margin-bottom: 23px;
+      border: none;
+    }
 
-		&-content {
-			display: flex;
-			flex-direction: column;
-			justify-content: space-between;
-			min-height: rem(18, 250);
-			gap: 10px;
+    &-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: rem(18, 250);
+      gap: 10px;
 
-			@media (max-width: 767px) {
-				@include adaptive-hero(gap, 43, 10);
-			}
-		}
+      @media (max-width: 767px) {
+        @include adaptive-hero(gap, 43, 10);
+      }
+    }
 
-		&-bottom {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			padding: 0 rem(18, 60) 0 rem(18, 60);
+    &-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 rem(18, 60) 0 rem(18, 60);
 
-			@media (max-width: 767px) {
-				padding: 0;
-				margin: 0 15px;
-			}
-		}
+      @media (max-width: 767px) {
+        padding: 0;
+        margin: 0 15px;
+      }
+    }
 
-		&-price {
-			color: #403434;
-			font-family: TeX Gyre Heros;
-			font-size: rem(18, 36);
-			font-weight: 700;
-			line-height: 85%;
+    &-price {
+      color: #403434;
+      font-family: TeX Gyre Heros;
+      font-size: rem(18, 36);
+      font-weight: 700;
+      line-height: 85%;
 
-			@media (max-width: 767px) {
-				@include adaptive-hero(font-size, 36, 18);
-			}
-		}
+      @media (max-width: 767px) {
+        @include adaptive-hero(font-size, 36, 18);
+      }
+    }
 
-		&-action {
-			min-width: rem(18, 240);
-			position: relative;
-			overflow: hidden;
-			background-color: transparent;
-			border: 1px solid #000;
-			padding: rem(18, 20) rem(18, 8);
-			cursor: pointer;
+    &-action {
+      min-width: rem(18, 240);
+      position: relative;
+      overflow: hidden;
+      background-color: transparent;
+      border: 1px solid #000;
+      padding: rem(18, 20) rem(18, 8);
+      cursor: pointer;
 
-			@media (max-width: 767px) {
-				@include adaptive-hero(padding-top, 20, 10);
-				@include adaptive-hero(padding-bottom, 20, 10);
-				@include adaptive-hero(padding-left, 20, 10);
-				@include adaptive-hero(padding-right, 20, 10);
-				min-width: 0;
-			}
-			& span {
-				color: #403434;
-				text-align: center;
-				font-family: TeX Gyre Heros Cn;
-				font-size: rem(18, 32);
-				font-weight: 700;
-				line-height: normal;
-				position: relative;
-				z-index: 1;
-				transition: all 0.3s ease;
+      @media (max-width: 767px) {
+        @include adaptive-hero(padding-top, 20, 10);
+        @include adaptive-hero(padding-bottom, 20, 10);
+        @include adaptive-hero(padding-left, 20, 10);
+        @include adaptive-hero(padding-right, 20, 10);
+        min-width: 0;
+      }
+      & span {
+        color: #403434;
+        text-align: center;
+        font-family: TeX Gyre Heros Cn;
+        font-size: rem(18, 32);
+        font-weight: 700;
+        line-height: normal;
+        position: relative;
+        z-index: 1;
+        transition: all 0.3s ease;
 
-				@media (max-width: 767px) {
-					@include adaptive-hero(font-size, 32, 16);
-				}
-			}
+        @media (max-width: 767px) {
+          @include adaptive-hero(font-size, 32, 16);
+        }
+      }
 
-			&::before {
-				content: '';
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				background-color: #f45200;
-				transform: translateY(110%);
-				transition: all 0.3s ease;
-			}
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #f45200;
+        transform: translateY(110%);
+        transition: all 0.3s ease;
+      }
 
-			&:hover {
-				& span {
-					color: $white;
-				}
+      &:hover {
+        & span {
+          color: $white;
+        }
 
-				&::before {
-					transform: translateY(0);
-				}
-			}
-		}
+        &::before {
+          transform: translateY(0);
+        }
+      }
+    }
 
-		&-head {
-			display: flex;
-			gap: rem(18, 70);
-			justify-content: space-between;
-			padding: 0 rem(18, 60) 0 rem(18, 60);
+    &-head {
+      display: flex;
+      gap: rem(18, 70);
+      justify-content: space-between;
+      padding: 0 rem(18, 60) 0 rem(18, 60);
 
-			@media (max-width: 767px) {
-				@include adaptive-hero(gap, 70, 20);
-			}
+      @media (max-width: 767px) {
+        @include adaptive-hero(gap, 70, 20);
+      }
 
-			@media (max-width: 550px) {
-				padding: 0;
-				flex-direction: column;
-				margin-left: 15px;
-				margin-right: 15px;
-			}
+      @media (max-width: 550px) {
+        padding: 0;
+        flex-direction: column;
+        margin-left: 15px;
+        margin-right: 15px;
+      }
 
-			& ul {
-				& li {
-					color: #898989;
-					font-family: TeX Gyre Heros;
-					font-size: rem(18, 16);
-					font-weight: 700;
-					line-height: normal;
+      & ul {
+        & li {
+          color: #898989;
+          font-family: TeX Gyre Heros;
+          font-size: rem(18, 16);
+          font-weight: 700;
+          line-height: normal;
 
-					@media (max-width: 767px) {
-						@include adaptive-hero(font-size, 16, 12);
-					}
-				}
-			}
-		}
+          @media (max-width: 767px) {
+            @include adaptive-hero(font-size, 16, 12);
+          }
+        }
+      }
+    }
 
-		&-title {
-			color: #403434;
-			font-family: TeX Gyre Heros Cn;
-			font-size: rem(18, 64);
-			font-weight: 700;
-			line-height: 100%;
-			text-transform: uppercase;
+    &-title {
+      color: #403434;
+      font-family: TeX Gyre Heros Cn;
+      font-size: rem(18, 64);
+      font-weight: 700;
+      line-height: 100%;
+      text-transform: uppercase;
 
-			@media (max-width: 767px) {
-				@include adaptive-hero(font-size, 64, 23);
-			}
-		}
+      @media (max-width: 767px) {
+        @include adaptive-hero(font-size, 64, 23);
+      }
+    }
 
-		& .swiper {
-			width: 100%;
-			height: rem(18, 544);
-			display: flex;
-			flex-direction: column;
+    & .swiper {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
 
-			@media (max-width: 900px) {
-				height: auto;
-			}
-			& .swiper-wrapper {
-				height: fit-content;
+      & .swiper-wrapper {
+        height: fit-content;
 
-				max-height: rem(18, 476);
+        max-height: rem(18, 476);
 
-				@media (max-width: 768px) {
-					@include adaptive-hero(max-height, 1000, 184);
-				}
+        @media (max-width: 768px) {
+          @include adaptive-hero(max-height, 1000, 184);
+        }
 
-				& .swiper-slide {
-					max-height: rem(18, 476);
+        & .swiper-slide {
+          max-height: rem(18, 476);
 
-					@media (max-width: 768px) {
-						@include adaptive-hero(max-height, 1000, 184);
-					}
-					& img {
-						width: 100%;
-						height: 100%;
-						object-fit: cover;
-						object-position: center;
-						max-height: rem(18, 476);
+          @media (max-width: 768px) {
+            @include adaptive-hero(max-height, 1000, 184);
+          }
+          & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            max-height: rem(18, 476);
 
-						@media (max-width: 768px) {
-							@include adaptive-hero(max-height, 1000, 184);
-						}
-					}
-				}
-			}
-		}
-	}
+            @media (max-width: 768px) {
+              @include adaptive-hero(max-height, 1000, 184);
+            }
+          }
+        }
+      }
+    }
+  }
 
-	&__navigation {
-		display: flex;
-		align-items: center;
-		margin-top: rem(18, 30);
-		gap: rem(18, 30);
-		align-self: center;
+  &__navigation {
+    display: flex;
+    align-items: center;
+    margin-top: rem(18, 30);
+    gap: rem(18, 30);
+    align-self: center;
 
-		@media (max-width: 900px) {
-			margin-top: rem(18, 60);
-			gap: rem(18, 60);
-		}
+    @media (max-width: 900px) {
+      margin-top: rem(18, 60);
+      gap: rem(18, 60);
+    }
 
-		& .swiper-pagination {
-			position: static;
-			width: fit-content;
+    & .swiper-pagination {
+      position: static;
+      width: fit-content;
 
-			& .swiper-pagination-bullet {
-				background-color: #c1c1c1;
-				border-radius: 0;
-				opacity: 1;
-				width: rem(18, 8);
-				height: rem(18, 8);
-				margin: 0 rem(18, 4);
-				flex-shrink: 0;
+      & .swiper-pagination-bullet {
+        background-color: #c1c1c1;
+        border-radius: 0;
+        opacity: 1;
+        width: rem(18, 8);
+        height: rem(18, 8);
+        margin: 0 rem(18, 4);
+        flex-shrink: 0;
 
-				@media (max-width: 900px) {
-					width: rem(18, 20);
-					height: rem(18, 20);
-					margin: 0 rem(18, 12);
-				}
+        @media (max-width: 900px) {
+          width: rem(18, 20);
+          height: rem(18, 20);
+          margin: 0 rem(18, 12);
+        }
 
-				&.swiper-pagination-bullet-active {
-					background-color: #403434;
-					opacity: 1;
-				}
-			}
-		}
+        &.swiper-pagination-bullet-active {
+          background-color: #403434;
+          opacity: 1;
+        }
+      }
+    }
 
-		& .swiper-button-prev {
-			transform: rotate(0deg);
-		}
+    & .swiper-button-prev {
+      transform: rotate(0deg);
+    }
 
-		& .swiper-button-prev,
-		& .swiper-button-next {
-			width: rem(18, 50);
-			height: rem(18, 50);
-			display: flex;
-			align-items: center;
-			flex-shrink: 0;
+    & .swiper-button-prev,
+    & .swiper-button-next {
+      width: rem(18, 50);
+      height: rem(18, 50);
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
 
-			margin: 0;
+      margin: 0;
 
-			@media (max-width: 900px) {
-				width: rem(18, 100);
-				height: rem(18, 100);
-			}
+      @media (max-width: 900px) {
+        width: rem(18, 100);
+        height: rem(18, 100);
+      }
 
-			&:hover {
-				background-color: rgba(0, 0, 0, 0.1);
-			}
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
 
-			& svg {
-				width: rem(18, 30);
-				height: rem(18, 30);
+      & svg {
+        width: rem(18, 30);
+        height: rem(18, 30);
 
-				@media (max-width: 900px) {
-					width: rem(18, 60);
-					height: rem(18, 60);
-				}
-			}
-		}
-	}
+        @media (max-width: 900px) {
+          width: rem(18, 60);
+          height: rem(18, 60);
+        }
+      }
+    }
+  }
 }
