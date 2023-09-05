@@ -1,0 +1,16 @@
+extends html/static/head
+block variables
+    - var title = 'Контакты'
+    - var page = 'contacts'
+    - var subtitle = ''
+    - var img = '/img/descriptors/index'
+    - var lang = 'ru'
+    - var classMain = 'main-contacts'
+    - var classBody = 'body-contacts'
+
+block content
+  include html/static/header
+  main(class=classMain)
+    include html/components/hero-contacts
+    include html/components/card
+  include html/static/footer

@@ -1,0 +1,98 @@
+.faq {
+  margin-top: rem(18, 180);
+  margin-bottom: rem(18, 90);
+
+  @media (max-width: 900px) {
+    @include adaptive-hero(margin-top, 180, 60);
+    @include adaptive-hero(margin-bottom, 90, 80);
+  }
+
+  &__item {
+    padding: rem(18, 50) rem(18, 60);
+    border-bottom: 1px solid $black;
+
+    &:first-child {
+      border-top: 1px solid $black;
+    }
+
+    @media (max-width: 900px) {
+      @include adaptive-hero(padding-top, 50, 30);
+      @include adaptive-hero(padding-bottom, 50, 30);
+      @include adaptive-hero(padding-left, 60, 15);
+      @include adaptive-hero(padding-right, 60, 15);
+    }
+
+    &-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      & h2 {
+        color: #403434;
+        font-family: TeX Gyre Heros;
+        font-size: rem(18, 64);
+        font-weight: 700;
+        line-height: 100%;
+        margin-bottom: 0;
+
+        @media (max-width: 900px) {
+          @include adaptive-hero(font-size, 64, 20);
+        }
+      }
+
+      & svg {
+        width: rem(18, 17);
+        height: rem(18, 12);
+        transition: all 0.3s ease;
+
+        @media (max-width: 900px) {
+          @include adaptive-hero(width, 17, 16);
+          @include adaptive-hero(height, 12, 11);
+        }
+      }
+    }
+
+    & p {
+      color: #898989;
+      font-family: TeX Gyre Heros;
+      font-size: rem(18, 20);
+      font-weight: 700;
+      line-height: 140%;
+
+      max-width: rem(18, 813);
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      visibility: hidden;
+      transition: all 0.3s ease;
+
+      @media (max-width: 900px) {
+        @include adaptive-hero(font-size, 20, 10);
+        max-width: 80%;
+      }
+
+      @media (max-width: 600px) {
+        max-width: 100%;
+      }
+    }
+
+    &.active {
+      & .faq__item-head {
+        & svg {
+          transform: rotate(180deg);
+        }
+      }
+      & p {
+        margin-top: rem(18, 70);
+        max-height: 100%;
+        opacity: 1;
+        overflow: visible;
+        visibility: visible;
+
+        @media (max-width: 900px) {
+          @include adaptive-hero(margin-top, 70, 15);
+        }
+      }
+    }
+  }
+}

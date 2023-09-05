@@ -1,0 +1,15 @@
+extends html/static/head
+block variables
+    - var title = 'Спасибо за заявку'
+    - var page = 'thank'
+    - var subtitle = ''
+    - var img = '/img/descriptors/index'
+    - var lang = 'ru'
+    - var classMain = 'main-thank'
+    - var classBody = 'body-thank'
+
+block content
+  include html/static/header
+  main(class=classMain)
+    include html/components/hero-thank
+  include html/static/footer

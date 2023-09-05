@@ -1,0 +1,18 @@
+extends html/static/head
+block variables
+    - var title = 'Вопросы и ответы'
+    - var page = 'faq'
+    - var subtitle = ''
+    - var img = '/img/descriptors/index'
+    - var lang = 'ru'
+    - var classMain = 'main-faq'
+    - var classBody = 'body-faq'
+
+block content
+  include html/static/header
+  main(class=classMain)
+    include html/components/hero-faq
+    include html/components/faq
+    include html/components/callback
+    include html/components/card
+  include html/static/footer

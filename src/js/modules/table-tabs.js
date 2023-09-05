@@ -7,6 +7,37 @@ document.addEventListener('DOMContentLoaded', () => {
   );
   const tablets = Array.from(document.querySelectorAll('.tablet'));
 
+  const openButtonRight = Array.from(
+    document.querySelectorAll('.timetable__head-dropdown_open-right'),
+  );
+  const openButtonLeft = document.querySelector(
+    '.timetable__head-dropdown_open-left',
+  );
+
+  console.log(openButtonRight);
+
+  const openTabs = e => {
+    e.currentTarget.classList.contains('active')
+      ? e.currentTarget.classList.remove('active')
+      : e.currentTarget.classList.add('active');
+
+    console.log(e.currentTarget);
+
+    e.currentTarget.previousElementSibling.classList.contains('active')
+      ? e.currentTarget.previousElementSibling.classList.remove('active')
+      : e.currentTarget.previousElementSibling.classList.add('active');
+  };
+
+  if (openButtonLeft) {
+    openButtonLeft.addEventListener('click', openTabs);
+  }
+
+  if (openButtonRight.length > 0) {
+    openButtonRight.forEach(open => {
+      open.addEventListener('click', openTabs);
+    });
+  }
+
   if (country.length > 0) {
     country[0].classList.add('active');
     listStyles[0].classList.add('active');
@@ -72,16 +103,31 @@ document.addEventListener('DOMContentLoaded', () => {
           button => button.dataset.country === e.target.dataset.country,
         );
 
+        const tableFilter = tables.filter(
+          table => table.dataset.country === e.target.dataset.country,
+        );
         // Добавляем событие по клику переключать таблицу в активном регионе по табам стилей
         buttonCountry.forEach(button => {
           button.addEventListener('click', e => {
             const activeButton = buttonCountry.find(button =>
               button.classList.contains('active'),
             );
-            console.log(activeButton);
+            const activeTable = tableFilter.find(table =>
+              table.classList.contains('active'),
+            );
+
             if (e.target.classList.contains('active')) {
               return;
             }
+
+            activeButton.classList.remove('active');
+            e.target.classList.add('active');
+
+            activeTable.classList.remove('active');
+
+            tableFilter
+              .find(table => table.dataset.name === e.target.dataset.name)
+              .classList.add('active');
           });
         });
 
@@ -99,116 +145,5 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log(activeTablets);
       });
     });
-
-    // country[0].classList.add('active');
-    //   listStyles.forEach((list, i) => {
-    //     if (list.dataset.country === country[0].dataset.country) {
-    //       list.classList.add('active');
-    //       let tabs = Array.from(list.children[0].children);
-    //       tabs.forEach(tab => {
-    //         if (localStorage.getItem('tableTab') === tab.dataset.name) {
-    //           tab.classList.add('active');
-    //         }
-    //       });
-    //       if (!tabs.find(tab => tab.classList.contains('active'))) {
-    //         tabs[0].classList.add('active');
-
-    //         const tablet = tablets.find(
-    //           table => table.dataset.country === country[0].dataset.country,
-    //         );
-
-    //         tablet.classList.add('active');
-    //         const tabletChilds = Array.from(tablet.children);
-
-    //         tabletChilds.forEach(child => {
-    //           if (
-    //             child.dataset.name ===
-    //             tabs.find(tab => tab.classList.contains('active')).dataset.name
-    //           ) {
-    //             child.classList.add('active');
-    //           }
-    //         });
-    //       }
-    //     }
-    //   });
-    // if (!countryStore) {
-
-    // } else {
-    //   const count =
-    //     country.find(
-    //       coun => coun.dataset.country === localStorage.getItem('country'),
-    //     ) || country[0];
-    //   const countryList =
-    //     listStyles.find(
-    //       list => list.dataset.country === count.dataset.country,
-    //     ) || listStyles[0];
-    //   const listTab = Array.from(countryList.children[0].children);
-    //   const activeTab =
-    //     listTab.find(
-    //       tab => tab.dataset.name === localStorage.getItem('tableName'),
-    //     ) || listTab[0];
-    //   const activeTablet =
-    //     tablets.find(
-    //       tablet =>
-    //         tablet.dataset.country === localStorage.getItem('activeTablet'),
-    //     ) || tablets[0];
-
-    //   const tableOnTablet = Array.from(activeTablet.children);
-    //   const activeTable = tableOnTablet.find(
-    //     table => table.dataset.name === activeTab.dataset.name,
-    //   );
-
-    //   activeTab.classList.add('active');
-    //   count.classList.add('active');
-    //   countryList.classList.add('active');
-    //   activeTablet.classList.add('active');
-    //   activeTable.classList.add('active');
-    // }
   }
-
-  // if (buttonStyles.length > 0) {
-  //   const store = localStorage.getItem('tableTab');
-  //   let activeTab = buttonStyles.forEach(button => {
-  //     if (button.dataset.name === store) {
-  //       button.classList.add('active');
-  //     }
-  //   });
-
-  //   let activeTable = tables.forEach(table => {
-  //     if (table.dataset.name === store) {
-  //       table.classList.add('active');
-  //     }
-  //   });
-
-  //   if (!store) {
-  //     buttonStyles[0].classList.add('active');
-  //     tables[0].classList.add('active');
-  //   }
-
-  //   buttonStyles.forEach(button => {
-  //     button.addEventListener('click', e => {
-  //       const btn = e.target;
-
-  //       if (!btn.classList.contains('active')) {
-  //         buttonStyles.forEach(btn => {
-  //           btn.classList.remove('active');
-  //         });
-  //         localStorage.setItem('tableTab', btn.dataset.name);
-  //         btn.classList.add('active');
-  //       } else {
-  //         return;
-  //       }
-
-  //       const tabelActive = tables.find(
-  //         table => table.dataset.name === btn.dataset.name,
-  //       );
-
-  //       if (tabelActive) {
-  //         tables.forEach(table => table.classList.remove('active'));
-  //       }
-
-  //       tabelActive.classList.add('active');
-  //     });
-  //   });
-  // }
 });
