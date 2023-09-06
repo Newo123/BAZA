@@ -14,8 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
     '.timetable__head-dropdown_open-left',
   );
 
-  console.log(openButtonRight);
-
   const openTabs = e => {
     e.currentTarget.classList.contains('active')
       ? e.currentTarget.classList.remove('active')

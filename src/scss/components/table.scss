@@ -262,11 +262,11 @@
 
         @media (max-width: 900px) {
           grid-template-columns: repeat(1, 100px);
-          max-height: 29px;
+          max-height: 28px;
         }
 
         @media (max-width: 768px) {
-          max-height: 58px;
+          max-height: 56px;
         }
 
         @media (max-width: 350px) {
@@ -313,24 +313,27 @@
       }
 
       &.two {
-        display: grid;
-        $col: rem(18, 135);
-        grid-template-columns: repeat(9, $col);
+        display: flex;
         align-items: center;
         max-height: rem(18, 49);
         overflow: hidden;
-
+        width: 100%;
         @media (max-width: 900px) {
-          grid-template-columns: repeat(6, 100px);
-          max-height: 29px;
+          max-height: 56px;
+          max-width: 300px;
+          flex-wrap: wrap;
         }
 
         @media (max-width: 768px) {
-          grid-template-columns: repeat(2, 100px);
-          max-height: 58px;
         }
+        @media (max-width: 450px) {
+          max-width: 200px;
+          max-height: 56px;
+        }
+
         @media (max-width: 350px) {
-          grid-template-columns: 1fr;
+          max-width: 100%;
+          align-items: center;
         }
 
         &.active {
@@ -340,8 +343,7 @@
           background-color: $white;
           border-bottom: 1px solid $black;
           border-right: 1px solid $black;
-
-          width: 100%;
+          width: rem(18, 135);
           text-align: center;
           color: #898989;
           text-align: center;
@@ -352,31 +354,60 @@
           cursor: pointer;
           transition: all 0.3s ease;
 
-          @media (max-width: 900px) {
-            font-size: 14px;
-            white-space: nowrap;
-          }
-
-          @media (max-width: 350px) {
+          &:last-child {
             border-right: none;
           }
 
-          &:nth-child(9n) {
-            @media (min-width: 901px) {
+          &:nth-child(3n) {
+            @media (max-width: 768px) {
+              border-right: none;
+            }
+
+            @media (max-width: 450px) {
+              border-right: 1px solid $black;
+            }
+            @media (max-width: 350px) {
               border-right: none;
             }
           }
 
-          &:nth-child(6n) {
-            @media (max-width: 900px) {
-              border-right: none;
-            }
-          }
           &:nth-child(2n) {
-            @media (max-width: 768px) {
+            @media (max-width: 450px) {
               border-right: none;
             }
           }
+
+          @media (max-width: 900px) {
+            font-size: 14px;
+            white-space: nowrap;
+            width: 100px;
+          }
+
+          @media (max-width: 350px) {
+            width: 100%;
+            border-right: none;
+          }
+
+          // @media (max-width: 350px) {
+          //   border-right: none;
+          // }
+
+          // &:nth-child(9n) {
+          //   @media (min-width: 901px) {
+          //     border-right: none;
+          //   }
+          // }
+
+          // &:nth-child(6n) {
+          //   @media (max-width: 900px) {
+          //     border-right: none;
+          //   }
+          // }
+          // &:nth-child(2n) {
+          //   @media (max-width: 768px) {
+          //     border-right: none;
+          //   }
+          // }
 
           &:hover {
             background-color: #d9d9d9;

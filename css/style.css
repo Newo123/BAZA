@@ -4764,8 +4764,8 @@ form.sendler.error > * {
   -webkit-transition: right 0.5s;
   transition: right 0.5s;
   /*
-     @todo скроллбар должен быть определен глобально - см выше
-      */
+   @todo скроллбар должен быть определен глобально - см выше
+    */
 }
 @media screen and (max-width: 768px) {
   .float-box .float-box_inset {
@@ -7555,6 +7555,33 @@ form .wrong,
   z-index: 1;
 }
 
+.teachers-styles-videos__block {
+  position: relative;
+}
+.teachers-styles-videos__block .player-video {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+}
+.teachers-styles-videos__block .player-video img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
 .jazz {
   max-height: 55.5555555556rem;
   overflow: hidden;
@@ -10095,12 +10122,12 @@ form .wrong,
   .timetable__head-dropdown.one {
     -ms-grid-columns: (100px)[1];
     grid-template-columns: repeat(1, 100px);
-    max-height: 29px;
+    max-height: 28px;
   }
 }
 @media (max-width: 768px) {
   .timetable__head-dropdown.one {
-    max-height: 58px;
+    max-height: 56px;
   }
 }
 @media (max-width: 350px) {
@@ -10144,34 +10171,36 @@ form .wrong,
   }
 }
 .timetable__head-dropdown.two {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (7.5rem)[9];
-  grid-template-columns: repeat(9, 7.5rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   max-height: 2.7222222222rem;
   overflow: hidden;
+  width: 100%;
 }
 @media (max-width: 900px) {
   .timetable__head-dropdown.two {
-    -ms-grid-columns: (100px)[6];
-    grid-template-columns: repeat(6, 100px);
-    max-height: 29px;
+    max-height: 56px;
+    max-width: 300px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 450px) {
   .timetable__head-dropdown.two {
-    -ms-grid-columns: (100px)[2];
-    grid-template-columns: repeat(2, 100px);
-    max-height: 58px;
+    max-width: 200px;
+    max-height: 56px;
   }
 }
 @media (max-width: 350px) {
   .timetable__head-dropdown.two {
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
+    max-width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 .timetable__head-dropdown.two.active {
@@ -10181,7 +10210,7 @@ form .wrong,
   background-color: #ffffff;
   border-bottom: 1px solid #000000;
   border-right: 1px solid #000000;
-  width: 100%;
+  width: 7.5rem;
   text-align: center;
   color: #898989;
   text-align: center;
@@ -10193,29 +10222,39 @@ form .wrong,
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
+.timetable__head-dropdown.two .timetable__head-dropdown_button:last-child {
+  border-right: none;
+}
+@media (max-width: 768px) {
+  .timetable__head-dropdown.two .timetable__head-dropdown_button:nth-child(3n) {
+    border-right: none;
+  }
+}
+@media (max-width: 450px) {
+  .timetable__head-dropdown.two .timetable__head-dropdown_button:nth-child(3n) {
+    border-right: 1px solid #000000;
+  }
+}
+@media (max-width: 350px) {
+  .timetable__head-dropdown.two .timetable__head-dropdown_button:nth-child(3n) {
+    border-right: none;
+  }
+}
+@media (max-width: 450px) {
+  .timetable__head-dropdown.two .timetable__head-dropdown_button:nth-child(2n) {
+    border-right: none;
+  }
+}
 @media (max-width: 900px) {
   .timetable__head-dropdown.two .timetable__head-dropdown_button {
     font-size: 14px;
     white-space: nowrap;
+    width: 100px;
   }
 }
 @media (max-width: 350px) {
   .timetable__head-dropdown.two .timetable__head-dropdown_button {
-    border-right: none;
-  }
-}
-@media (min-width: 901px) {
-  .timetable__head-dropdown.two .timetable__head-dropdown_button:nth-child(9n) {
-    border-right: none;
-  }
-}
-@media (max-width: 900px) {
-  .timetable__head-dropdown.two .timetable__head-dropdown_button:nth-child(6n) {
-    border-right: none;
-  }
-}
-@media (max-width: 768px) {
-  .timetable__head-dropdown.two .timetable__head-dropdown_button:nth-child(2n) {
+    width: 100%;
     border-right: none;
   }
 }

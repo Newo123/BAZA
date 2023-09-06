@@ -1,153 +1,173 @@
 .videos {
-	margin: rem(18, 180) 0;
-	padding: 0 rem(18, 120);
+  margin: rem(18, 180) 0;
+  padding: 0 rem(18, 120);
 
-	@media (max-width: 1920px) {
-		@include adaptive-hero(margin-top, 180, 80);
-		@include adaptive-hero(margin-bottom, 120, 60);
+  @media (max-width: 1920px) {
+    @include adaptive-hero(margin-top, 180, 80);
+    @include adaptive-hero(margin-bottom, 120, 60);
 
-		@include adaptive-hero(padding-left, 120, 0);
+    @include adaptive-hero(padding-left, 120, 0);
 
-		@include adaptive-hero(padding-right, 120, 0);
-	}
+    @include adaptive-hero(padding-right, 120, 0);
+  }
 
-	@media (max-width: 900px) {
-		padding-left: 0;
-		padding-right: 0;
-		@include adaptive-hero(margin-bottom, 180, 80);
-	}
+  @media (max-width: 900px) {
+    padding-left: 0;
+    padding-right: 0;
+    @include adaptive-hero(margin-bottom, 180, 80);
+  }
 
-	& .swiper-slide {
-		width: 100%;
-		height: rem(18, 800);
-		position: relative;
+  & .swiper-slide {
+    width: 100%;
+    height: rem(18, 800);
+    position: relative;
 
-		& iframe {
-			width: 100%;
-			height: 100%;
-			position: absolute;
-			top: 0;
-			left: 0;
-		}
+    & iframe {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
 
-		& .to-play {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			display: flex;
-			align-items: center;
-			justify-content: center;
+    & .to-play {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-			& img {
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				object-fit: cover;
-				object-position: center;
-				z-index: 0;
-			}
-		}
-	}
+      & img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        z-index: 0;
+      }
+    }
+  }
 
-	& .swiper {
-		overflow: visible;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-	&__navigation {
-		display: flex;
-		align-items: center;
-		margin-top: rem(18, 30);
-		gap: rem(18, 30);
+  & .swiper {
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__navigation {
+    display: flex;
+    align-items: center;
+    margin-top: rem(18, 30);
+    gap: rem(18, 30);
 
-		@media (max-width: 900px) {
-			margin-top: rem(18, 60);
-			gap: rem(18, 60);
-		}
+    @media (max-width: 900px) {
+      margin-top: rem(18, 60);
+      gap: rem(18, 60);
+    }
 
-		& .swiper-pagination {
-			position: static;
+    & .swiper-pagination {
+      position: static;
 
-			& .swiper-pagination-bullet {
-				background-color: #c1c1c1;
-				border-radius: 0;
-				opacity: 1;
-				width: rem(18, 8);
-				height: rem(18, 8);
-				margin: 0 rem(18, 4);
-				flex-shrink: 0;
+      & .swiper-pagination-bullet {
+        background-color: #c1c1c1;
+        border-radius: 0;
+        opacity: 1;
+        width: rem(18, 8);
+        height: rem(18, 8);
+        margin: 0 rem(18, 4);
+        flex-shrink: 0;
 
-				@media (max-width: 900px) {
-					width: rem(18, 20);
-					height: rem(18, 20);
-					margin: 0 rem(18, 12);
-				}
+        @media (max-width: 900px) {
+          width: rem(18, 20);
+          height: rem(18, 20);
+          margin: 0 rem(18, 12);
+        }
 
-				&.swiper-pagination-bullet-active {
-					background-color: #403434;
-					opacity: 1;
-				}
-			}
-		}
+        &.swiper-pagination-bullet-active {
+          background-color: #403434;
+          opacity: 1;
+        }
+      }
+    }
 
-		& .swiper-button-prev {
-			transform: rotate(0deg);
-		}
+    & .swiper-button-prev {
+      transform: rotate(0deg);
+    }
 
-		& .swiper-button-prev,
-		& .swiper-button-next {
-			width: rem(18, 50);
-			height: rem(18, 50);
-			display: flex;
-			align-items: center;
-			flex-shrink: 0;
+    & .swiper-button-prev,
+    & .swiper-button-next {
+      width: rem(18, 50);
+      height: rem(18, 50);
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
 
-			margin: 0;
+      margin: 0;
 
-			@media (max-width: 900px) {
-				width: rem(18, 100);
-				height: rem(18, 100);
-			}
+      @media (max-width: 900px) {
+        width: rem(18, 100);
+        height: rem(18, 100);
+      }
 
-			&:hover {
-				background-color: rgba(0, 0, 0, 0.1);
-			}
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
 
-			& svg {
-				width: rem(18, 30);
-				height: rem(18, 30);
+      & svg {
+        width: rem(18, 30);
+        height: rem(18, 30);
 
-				@media (max-width: 900px) {
-					width: rem(18, 60);
-					height: rem(18, 60);
-				}
-			}
-		}
-	}
+        @media (max-width: 900px) {
+          width: rem(18, 60);
+          height: rem(18, 60);
+        }
+      }
+    }
+  }
 
-	&__video {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		object-position: center;
-	}
+  &__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
 }
 
 .to-play {
-	cursor: pointer;
+  cursor: pointer;
 
-	& svg {
-		width: rem(18, 68);
-		height: rem(18, 48);
-		position: relative;
-		z-index: 1;
-	}
+  & svg {
+    width: rem(18, 68);
+    height: rem(18, 48);
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.teachers-styles-videos__block {
+  position: relative;
+  & .player-video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    & img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
 }
